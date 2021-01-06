@@ -8,26 +8,26 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | --- | --- |
 | $N^{\text{P90/P50/P10}}$ | Initial Oil in Place |
 | $G^{\text{P90/P50/P10}}$ | Initial Gas in Place |
-| $N_{p, g}$ | Oil Gross Cumulative Production |
-| $N_{p, g}^c$ | Condensate Gross Cumulative Production |
-| $G_{p, g}$ | Non Associated Gas Gross Cumulative Production|
-| $G_{p, g}^a$ | Associated Gas Net Cumulative Production |
-| $N_{p, n}$ | Oil Net Cumulative Production |
-| $N_{p, n}^c$ | Condensate Net Cumulative Production |
-| $G_{p, n}$ | Non Associated Gas Net Cumulative Production|
-| $G_{p, n}^a$ | Associated Gas Net Cumulative Production |
-| $N_{p, s}$ | Oil Sales Cumulative Production |
-| $N_{p, s}^c$ | Condensate Sales Cumulative Production |
-| $G_{p, s}$ | Non Associated Gas Sales Cumulative Production|
-| $G_{p, s}^a$ | Associated Gas Sales Cumulative Production |
-| $\Delta N_{p, n}^{\text{P90/P50/P10}}$| Oil GRR/CR/PR |
-| $\Delta N_{p, n}^{c \text{ P90/P50/P10}}$ | Condensate GRR/CR/PR |
-| $\Delta G_{p, n}^{\text{P90/P50/P10}}$ | Non Associated Gas GRR/CR/PR |
-| $\Delta G_{p, n}^{a \text{ P90/P50/P10}}$ | Associated Gas GRR/CR/PR |
-| $\Delta N_{p, s}^{\text{1P/2P/3P}}$| Oil Reserves |
-| $\Delta N_{p, s}^{c \text{ 1P/2P/3P}}$ | Condensate Reserves |
-| $\Delta G_{p, s}^{\text{1P/2P/3P}}$ | Non Associated Gas Reserves |
-| $\Delta G_{p, s}^{a \text{ 1P/2P/3P}}$ | Associated Gas Reserves |
+| $N_{pg}$ | Oil Gross Cumulative Production |
+| $N_{pg}^c$ | Condensate Gross Cumulative Production |
+| $G_{pg}$ | Non Associated Gas Gross Cumulative Production|
+| $G_{pg}^a$ | Associated Gas Net Cumulative Production |
+| $N_{pn}$ | Oil Net Cumulative Production |
+| $N_{pn}^c$ | Condensate Net Cumulative Production |
+| $G_{pn}$ | Non Associated Gas Net Cumulative Production|
+| $G_{pn}^a$ | Associated Gas Net Cumulative Production |
+| $N_{ps}$ | Oil Sales Cumulative Production |
+| $N_{ps}^c$ | Condensate Sales Cumulative Production |
+| $G_{ps}$ | Non Associated Gas Sales Cumulative Production|
+| $G_{ps}^a$ | Associated Gas Sales Cumulative Production |
+| $\Delta N_{pn}^{\text{P90/P50/P10}}$| Oil GRR/CR/PR |
+| $\Delta N_{pn}^{c \text{ P90/P50/P10}}$ | Condensate GRR/CR/PR |
+| $\Delta G_{pn}^{\text{P90/P50/P10}}$ | Non Associated Gas GRR/CR/PR |
+| $\Delta G_{pn}^{a \text{ P90/P50/P10}}$ | Associated Gas GRR/CR/PR |
+| $\Delta N_{ps}^{\text{1P/2P/3P}}$| Oil Reserves |
+| $\Delta N_{ps}^{c \text{ 1P/2P/3P}}$ | Condensate Reserves |
+| $\Delta G_{ps}^{\text{1P/2P/3P}}$ | Non Associated Gas Reserves |
+| $\Delta G_{ps}^{a \text{ 1P/2P/3P}}$ | Associated Gas Reserves |
 | $\Delta D_{N}^\text{um P90/P50/P10}$ | Oil Discrepancy from Update Model |
 | $\Delta D_{N^c}^\text{um P90/P50/P10}$ | Condensate Discrepancy from Update Model |
 | $\Delta D_{G}^\text{um P90/P50/P10}$ | Non Associated Gas Discrepancy from Update Model |
@@ -39,7 +39,15 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $\Delta D_{N}^\text{wi P90/P50/P10}$ | Oil Discrepancy from Well Intervention |
 | $\Delta D_{N^c}^\text{wi P90/P50/P10}$ | Condensate Discrepancy from Well Intervention |
 | $\Delta D_{G}^\text{wi P90/P50/P10}$ | Non Associated Gas Discrepancy from Well Intervention |
-| $\Delta D_{G^a}^\text{wi P90/P50/P10}$ | Associated Gas Discrepancy from Well Intervention |
+| $\Delta D_{G^a}^\text{gtr P90/P50/P10}$ | Associated Gas Discrepancy from Well Intervention |
+| $\Delta D_{N}^\text{gtr P90/P50/P10}$ | Oil Discrepancy from Commerciality |
+| $\Delta D_{N^c}^\text{gtr P90/P50/P10}$ | Condensate Discrepancy from Commerciality |
+| $\Delta D_{G}^\text{gtr P90/P50/P10}$ | Non Associated Gas Discrepancy from Commerciality |
+| $\Delta D_{G^a}^\text{gtr P90/P50/P10}$ | Associated Gas Discrepancy from Commerciality |
+| $\Delta D_{N}^\text{cio P90/P50/P10}$ | Oil Discrepancy from Consumed in Operations |
+| $\Delta D_{N^c}^\text{cio P90/P50/P10}$ | Condensate Discrepancy from Consumed in Operations |
+| $\Delta D_{G}^\text{cio P90/P50/P10}$ | Non Associated Gas Discrepancy from Consumed in Operations |
+| $\Delta D_{G^a}^\text{cioConsumed in Operations P90/P50/P10}$ | Associated Gas Discrepancy from Consumed in Operations |
 | $q_{o, t \dots t_n}^{s}$ | Oil Sales yearly rate forecast|
 | $q_{c, t \dots t_n}^{s}$ | Condensate Sales yearly rate forecast|
 | $q_{a, t \dots t_n}^{s}$ | Associated Gas Sales yearly rate forecast|
@@ -72,6 +80,21 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | `gcf_srock` | - | zone, field, working area | `mean` | GCF Source Rock |
 | `depth_avg` | - | zone, field, working area, basin, vol. calc. method, all play elements | `mean`| Average Reservoir Depth
 
+## Syntax reference
+| Keyword | Group Type | Description |
+| ------- | ---------- | --- |
+| `oil`   | fluid_type | Oil         |
+| `con`   | fluid_type | Condensate  |
+| `ga`    | fluid_type | Associated Gas |
+| `gn`    | fluid_type | Non Associated Gas |
+| `grs`   | commerciality | Gross |
+| `sls`   | commerciality | Sales |
+| `um`    | discrepancy | Update Model |
+| `ppa`   | discrepancy | Production Performance Analysis |
+| `wi`    | discrepancy | Well Intervention |
+| `gtr`   | discrepancy | GRR to Reserves |
+| `cio`   | discrepancy | Consumed in Operations |
+
 ## Syntax for eSDC Rules
 
 eSDC module API:
@@ -80,8 +103,11 @@ eSDC module API:
 import esdc
 
 esdc.inplace[fluid_type][uncert_level][time_ref]
-esdc.cumprod[commerciality][fluid_type][time_ref].groupby('field')
-esdc.resources[fluid_type][uncert_level][time_ref].groupby('field')
+esdc.cumprod[fluid_type][commerciality][time_ref].groupby('') # group by field, working area
+esdc.resources[fluid_type][uncert_level][time_ref].groupby('') # group by field, working area
+esdc.forecast[fluid_type][commerciality][time_ref][forecast_time].groupby('') # group by field, working area
+esdc.forecast_wpnb[time_ref][forecast_time]
+esdc.discrepancy[fluid_type]
 ```
 
 ## Rules Definition
