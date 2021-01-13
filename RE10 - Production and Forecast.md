@@ -452,7 +452,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$q_{o, t\dots t_n}^{s} \leq q_{o, t\dots t_n}^{\text{tp}}$$
+$$q_{o, t\dots t_m}^{s} \leq q_{o, t\dots t_m}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -466,7 +466,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$q_{c, t\dots t_n}^{s} \leq q_{c, t\dots t_n}^{\text{tp}}$$
+$$q_{c, t\dots t_m}^{s} \leq q_{c, t\dots t_m}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -480,7 +480,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$q_{a, t\dots t_n}^{s} \leq q_{a, t\dots t_n}^{\text{tp}}$$
+$$q_{a, t\dots t_m}^{s} \leq q_{a, t\dots t_m}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -508,7 +508,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{o, t}^{s} = \Delta N_{p, s}^{\text{2P}}$$
+$$\sum_{t=t}^m q_{o, t}^{s} = \Delta N_{p, s}^{\text{2P}}$$
 
 ```python
 import esdc
@@ -522,7 +522,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{c, t}^{s} = \Delta N_{p, s}^{c\text{ 2P}}$$
+$$\sum_{t=t}^m q_{c, t}^{s} = \Delta N_{p, s}^{c\text{ 2P}}$$
 
 ```python
 import esdc
@@ -536,7 +536,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{a, t}^{s} = \Delta G_{p, s}^{a \text{ 2P}}$$
+$$\sum_{t=t}^m q_{a, t}^{s} = \Delta G_{p, s}^{a \text{ 2P}}$$
 
 ```python
 import esdc
@@ -550,7 +550,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{n, t}^{s} = \Delta G_{p, s}^{\text{2P}}$$
+$$\sum_{t=t}^m q_{n, t}^{s} = \Delta G_{p, s}^{\text{2P}}$$
 
 ```python
 import esdc
@@ -564,7 +564,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{o, t}^{\text{tp}} = \Delta N_{p, n}^{\text{P50}}$$
+$$\sum_{t=t}^m q_{o, t}^{\text{tp}} = \Delta N_{p, n}^{\text{P50}}$$
 
 ```python
 import esdc
@@ -578,7 +578,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{c, t}^{\text{tp}} = \Delta N_{p, n}^{c\text{ P50}}$$
+$$\sum_{t=t}^m q_{c, t}^{\text{tp}} = \Delta N_{p, n}^{c\text{ P50}}$$
 
 ```python
 import esdc
@@ -592,7 +592,7 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{a\text{ P50}}$$
+$$\sum_{t=t}^m q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{a\text{ P50}}$$
 
 ```python
 import esdc
@@ -606,10 +606,36 @@ Severity: `strict`
 
 The following equation must be true:
 
-$$\sum_{t=t}^n q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{\text{P50}}$$
+$$\sum_{t=t}^m q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{\text{P50}}$$
 
 ```python
 import esdc
 
 return esdc.forecast['gn']['tp'][-1].groupby('project').sum() == esdc.resources['gn']['mid'][-1]
+```
+
+### RE1045 - Sum of Oil + Condensate Sales Forecast per year: sum of Oil + Condensate Sales Forecast per year must equal to reported WP&B Forecast per year
+
+Severity: `strict`
+
+The following equation must be true:
+
+$$q_{oc, t \dots t_m}^{\text{wpnb}} = \left. q_{o, t \dots t_n}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{c, t \dots t_n}^{s} \right \vert_{\sum \text{Working Area}}$$
+
+```python
+import esdc
+
+```
+
+### RE1046 - Sum of Associated + Non Associated Sales Forecast per year: sum of Associated + Non Associated Sales Forecast per year must equal to reported WP&B Forecast per year
+
+Severity: `strict`
+
+The following equation must be true:
+
+$$q_{an, t \dots t_m}^{\text{wpnb}} = \left. q_{a, t \dots t_m}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{c, t \dots t_m}^{s} \right \vert_{\sum \text{Working Area}}$$
+
+```python
+import esdc
+
 ```
