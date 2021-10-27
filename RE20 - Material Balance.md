@@ -1,6 +1,6 @@
 ### RE2001 - Oil GRR/CR/PR: Current 1R/1C/1U must be consistent with previous 1R/1C/1U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -19,7 +19,7 @@ return esdc.resources['oil']['low'][-1] == new_resources
 
 ### RE2002 - Condensate GRR/CR/PR: Current 1R/1C/1U must be consistent with previous 1R/1C/1U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -38,7 +38,7 @@ return esdc.resources['con']['low'][-1] == new_resources
 
 ### RE2003 - Associated Gas GRR/CR/PR: Current 1R/1C/1U must be consistent with previous 1R/1C/1U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -57,7 +57,7 @@ return esdc.resources['ga']['low'][-1] == new_resources
 
 ### RE2004 - Non Associated Gas GRR/CR/PR: Current 1R/1C/1U must be consistent with previous 1R/1C/1U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -76,7 +76,7 @@ return esdc.resources['gn']['low'][-1] == new_resources
 
 ### RE2005 - Oil GRR/CR/PR: Current 2R/2C/2U must be consistent with previous 2R/2C/2U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -95,7 +95,7 @@ return esdc.resources['oil']['mid'][-1] == new_resources
 
 ### RE2006 - Condensate GRR/CR/PR: Current 2R/2C/2U must be consistent with previous 2R/2C/2U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -114,7 +114,7 @@ return esdc.resources['con']['mid'][-1] == new_resources
 
 ### RE2007 - Associated Gas GRR/CR/PR: Current 2R/2C/2U must be consistent with previous 2R/2C/2U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -133,7 +133,7 @@ return esdc.resources['ga']['mid'][-1] == new_resources
 
 ### RE2008 - Non Associated Gas GRR/CR/PR: Current 2R/2C/2U must be consistent with previous 2R/2C/2U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -152,7 +152,7 @@ return esdc.resources['gn']['mid'][-1] == new_resources
 
 ### RE2009 - Oil GRR/CR/PR: Current 3R/3C/3U must be consistent with previous 3R/3C/3U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -171,7 +171,7 @@ return esdc.resources['oil']['hgh'][-1] == new_resources
 
 ### RE2010 - Condensate GRR/CR/PR: Current 3R/3C/3U must be consistent with previous 3R/3C/3U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -190,7 +190,7 @@ return esdc.resources['con']['hgh'][-1] == new_resources
 
 ### RE2011 - Associated Gas GRR/CR/PR: Current 3R/3C/3U must be consistent with previous 3R/3C/3U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -209,7 +209,7 @@ return esdc.resources['ga']['hgh'][-1] == new_resources
 
 ### RE2012 - Non Associated Gas GRR/CR/PR: Current 3R/3C/3U must be consistent with previous 3R/3C/3U, all discprepancies, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -228,7 +228,7 @@ return esdc.resources['gn']['hgh'][-1] == new_resources
 
 ### RE2013 - Oil Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -245,7 +245,7 @@ return esdc.resources['oil']['low'][-1] == new_resources
 
 ### RE2014 - Condensate Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -262,7 +262,7 @@ return esdc.resources['con']['low'][-1] == new_resources
 
 ### RE2015 - Associated Gas Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -279,7 +279,7 @@ return esdc.resources['ga']['low'][-1] == new_resources
 
 ### RE2016 - Non Associated Gas Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -296,7 +296,7 @@ return esdc.resources['gn']['low'][-1] == new_resources
 
 ### RE2017 - Oil Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -313,7 +313,7 @@ return esdc.resources['oil']['mid'][-1] == new_resources
 
 ### RE2018 - Condensate Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -330,7 +330,7 @@ return esdc.resources['con']['mid'][-1] == new_resources
 
 ### RE2019 - Associated Gas Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -347,7 +347,7 @@ return esdc.resources['ga']['mid'][-1] == new_resources
 
 ### RE2020 - Non Associated Gas Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -364,7 +364,7 @@ return esdc.resources['gn']['mid'][-1] == new_resources
 
 ### RE2021 - Oil Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -381,7 +381,7 @@ return esdc.resources['oil']['hgh'][-1] == new_resources
 
 ### RE2022 - Condensate Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -398,7 +398,7 @@ return esdc.resources['con']['hgh'][-1] == new_resources
 
 ### RE2023 - Associated Gas Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -415,7 +415,7 @@ return esdc.resources['ga']['hgh'][-1] == new_resources
 
 ### RE2024 - Non Associated Gas Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -432,7 +432,9 @@ return esdc.resources['ga']['hgh'][-1] == new_resources
 
 ### RE2025 - IOIP Mid: IOIP Mid should be higher than Sum of all projects Oil Ultimate GRR/CR/PR 3R/3C/3U if Sum of all projects Oil Ultimate GRR/CR/PR 3R/3C/3U higher than 0
 
-Severity: `warning`
+Severity: `warning` :warning:
+
+The following equation should be true:
 
 $$\sum_{i=1}^n \left(\Delta N_{p, n, i}^{\text{P10}} + N_{p, s, i}\right) > 0  \implies N^{\text{P50}} > \sum_{i=1}^n \left(\Delta N_{p, n, i}^{\text{P10}} + N_{p, s, i}\right)$$
 
@@ -445,7 +447,9 @@ return esdc.inplace['oil']['mid'][-1] > eur_P10 if eur_P10 > 0
 
 ### RE2026 - IGIP Mid: IGIP Mid should be higher than Sum of all projects Non Associated Gas Ultimate 3R/3C/3U if Sum of all projects Non Associated Gas Ultimate 3R/3C/3U higher than 0
 
-Severity: `warning`
+Severity: `warning` :warning:
+
+The following equation should be true:
 
 $$ \sum_{i=1}^n \left(\Delta G_{p, n, i}^{\text{P10}} + G_{p, s, i}\right) > 0 \implies G^{\text{P50}} > \sum_{i=1}^n \left(\Delta G_{p, n, i}^{\text{P10}} + G_{p, s, i}\right)$$
 
@@ -458,6 +462,10 @@ return esdc.inplace['gn']['mid'][-1] > eur_P10 if eur_P10 > 0
 
 ### RE2027 - IGIP Low: IGIP Low Case must be higher than 0 if Sum of all projects Condensate GRR/CR/PR 3R/3C/3U higher than 0
 
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
 $$\sum_{i=1}^n \left( \Delta N_{p, n, i}^{c\text{ P10}} + N_{p, s, i}^c \right) > 0 \implies G^{\text{P50}} > 0$$
 
 ```python
@@ -467,6 +475,10 @@ return esdc.inplace['gn']['low'][-1] > 0 if esdc.resources['con']['hgh'][-1].gro
 ```
 
 ### RE2028 - IOIP Low: IOIP Low Case must be higher than 0 if Sum of all projects Associated Gas GRR/CR/PR 3R/3C/3U higher than 0
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
 
 $$\sum_{i=1}^n \left( \Delta G_{p, n, i}^{a\text{ P10}} + G_{p, s, i}^a \right) > 0 \implies N^{\text{P50}} > 0$$
 

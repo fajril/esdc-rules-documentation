@@ -1,6 +1,6 @@
 ### RE1001 - Oil Gross Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -14,7 +14,7 @@ return esdc.cumprod['oil']['grs'][-1] >= 0
 
 ### RE1002 - Condensate Gross Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -28,7 +28,7 @@ return esdc.cumprod['con']['grs'][-1] >= 0
 
 ### RE1003 - Associated Gas Gross Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -42,7 +42,7 @@ return esdc.cumprod['ga']['grs'][-1] >= 0
 
 ### RE1004 - Non Associated Gas Gross Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -56,7 +56,7 @@ return esdc.cumprod['gn']['grs'][-1] >= 0
 
 ### RE1005 - Oil Net Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -70,7 +70,7 @@ return esdc.cumprod['oil']['net'][-1] >= 0
 
 ### RE1006 - Condensate Net Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -84,7 +84,7 @@ return esdc.cumprod['con']['net'][-1] >= 0
 
 ### RE1007 - Associated Gas Net Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -98,7 +98,7 @@ return esdc.cumprod['ga']['net'][-1] >= 0
 
 ### RE1008 - Non Associated Gas Net Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -112,7 +112,7 @@ return esdc.cumprod['gn']['net'][-1] >= 0
 
 ### RE1009 - Oil Sales Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -126,7 +126,7 @@ return esdc.cumprod['oil']['sls'][-1] >= 0
 
 ### RE1010 - Condensate Sales Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -140,7 +140,7 @@ return esdc.cumprod['con']['sls'][-1] >= 0
 
 ### RE1011 - Associated Gas Sales Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -154,7 +154,7 @@ return esdc.cumprod['ga']['net'][-1] >= 0
 
 ### RE1012 - Non Associated Gas Sales Cumprod: Must be positive or equal to 0
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -168,7 +168,7 @@ return esdc.cumprod['gn']['net'][-1] >= 0
 
 ### RE1013 - Oil Gross Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -182,7 +182,7 @@ return esdc.cumprod['oil']['grs'][-1] >= esdc.cumprod['oil']['grs'][-2]
 
 ### RE1014 - Condensate Gross Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -196,7 +196,7 @@ return esdc.cumprod['con']['grs'][-1] >= esdc.cumprod['con']['grs'][-2]
 
 ### RE1015 - Associated Gas Gross Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -210,7 +210,7 @@ return esdc.cumprod['ga']['grs'][-1] >= esdc.cumprod['ga']['grs'][-2]
 
 ### RE1016 - Non Associated Gas Gross Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -224,7 +224,7 @@ return esdc.cumprod['gn']['grs'][-1] >= esdc.cumprod['gn']['grs'][-2]
 
 ### RE1017 - Oil Net Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -238,7 +238,7 @@ return esdc.cumprod['oil']['net'][-1] >= esdc.cumprod['oil']['net'][-2]
 
 ### RE1018 - Condensate Net Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -252,7 +252,7 @@ return esdc.cumprod['con']['net'][-1] >= esdc.cumprod['con']['net'][-2]
 
 ### RE1019 - Associated Gas Net Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -266,7 +266,7 @@ return esdc.cumprod['ga']['net'][-1] >= esdc.cumprod['ga']['net'][-2]
 
 ### RE1020 - Non Associated Gas Net Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -280,7 +280,7 @@ return esdc.cumprod['oil']['net'][-1] >= esdc.cumprod['oil']['net'][-2]
 
 ### RE1021 - Oil Sales Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -294,7 +294,7 @@ return esdc.cumprod['oil']['sls'][-1] >= esdc.cumprod['oil']['sls'][-2]
 
 ### RE1022 - Condensate Sales Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -308,7 +308,7 @@ return esdc.cumprod['con']['sls'][-1] >= esdc.cumprod['con']['sls'][-2]
 
 ### RE1023 - Associated Gas Sales Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -322,7 +322,7 @@ return esdc.cumprod['ga']['sls'][-1] >= esdc.cumprod['ga']['sls'][-2]
 
 ### RE1024 - Non Associated Gas Sales Cumprod: Can only increase or equal to previous Cumprod
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -336,7 +336,7 @@ return esdc.cumprod['gn']['sls'][-1] >= esdc.cumprod['gn']['sls'][-2]
 
 ### RE1025 - Oil Cumprod: Net Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -350,7 +350,7 @@ return esdc.cumprod['oil']['net'][-1] <= esdc.cumprod['oil']['grs'][-1]
 
 ### RE1026 - Condensate Cumprod: Net Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -364,7 +364,7 @@ return esdc.cumprod['con']['net'][-1] <= esdc.cumprod['con']['grs'][-1]
 
 ### RE1027 - Associated Gas Cumprod: Net Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -378,7 +378,7 @@ return esdc.cumprod['ga']['net'][-1] <= esdc.cumprod['ga']['grs'][-1]
 
 ### RE1028 - Non Associated Gas Cumprod: Net Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -392,7 +392,7 @@ return esdc.cumprod['gn']['net'][-1] <= esdc.cumprod['gn']['grs'][-1]
 
 ### RE1029 - Oil Cumprod: Sales Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -406,7 +406,7 @@ return esdc.cumprod['oil']['sls'][-1] <= esdc.cumprod['oil']['grs'][-1]
 
 ### RE1030 - Condensate Cumprod: Sales Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -420,7 +420,7 @@ return esdc.cumprod['con']['sls'][-1] <= esdc.cumprod['con']['grs'][-1]
 
 ### RE1031 - Associated Gas Cumprod: Sales Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -434,7 +434,7 @@ return esdc.cumprod['ga']['sls'][-1] <= esdc.cumprod['ga']['grs'][-1]
 
 ### RE1032 - Non Associated Gas Cumprod: Sales Volume must be less than or equal to Gross Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -448,7 +448,7 @@ return esdc.cumprod['gn']['sls'][-1] <= esdc.cumprod['gn']['grs'][-1]
 
 ### RE1033 - Oil Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -462,7 +462,7 @@ return esdc.forecast['oil']['sls'][-1] <= esdc.forecast['oil']['tp'][:][-1]
 
 ### RE1034 - Condensate Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -476,7 +476,7 @@ return esdc.forecast['con']['sls'][-1] <= esdc.forecast['con']['tp'][:][-1]
 
 ### RE1035 - Associated Gas Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -490,7 +490,7 @@ return esdc.forecast['ga']['sls'][-1] <= esdc.forecast['ga']['tp'][:][-1]
 
 ### RE1036 - Non Associated Gas Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -504,7 +504,7 @@ return esdc.forecast['gn']['sls'][-1] <= esdc.forecast['gn']['tp'][:][-1]
 
 ### RE1037 - Oil Sales Forecast: Sum of Yearly Forecast must be equal to 2P Reserves
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -518,7 +518,7 @@ return esdc.forecast['oil']['sls'][-1].groupby('project') == esdc.reserves['oil'
 
 ### RE1038 - Condensate Sales Forecast: Sum of Yearly Forecast must be equal to 2P Reserves
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -532,7 +532,7 @@ return esdc.forecast['con']['sls'][-1].groupby('project') == esdc.reserves['con'
 
 ### RE1039 - Associated Gas Sales Forecast: Sum of Yearly Forecast must be equal to 2P Reserves
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -546,7 +546,7 @@ return esdc.forecast['ga']['sls'][-1].groupby('project') == esdc.reserves['ga'][
 
 ### RE1040 - Non Associated Gas Sales Forecast: Sum of Yearly Forecast must be equal to 2P Reserves
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -560,7 +560,7 @@ return esdc.forecast['gn']['sls'][-1].groupby('project') == esdc.reserves['gn'][
 
 ### RE1041 - Oil Total Potential Forecast: Sum of Yearly Forecast must be equal to 2R GRR/CR/PR
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -574,7 +574,7 @@ return esdc.forecast['oil']['tp'][-1].groupby('project').sum() == esdc.resources
 
 ### RE1042 - Condensate Total Potential Forecast: Sum of Yearly Forecast must be equal to 2R GRR/CR/PR
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -588,7 +588,7 @@ return esdc.forecast['con']['tp'][-1].groupby('project').sum() == esdc.resources
 
 ### RE1043 - Associated  Gas Total Potential Forecast: Sum of Yearly Forecast must be equal to 2R GRR/CR/PR
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -602,7 +602,7 @@ return esdc.forecast['ga']['tp'][-1].groupby('project').sum() == esdc.resources[
 
 ### RE1044 - Non Associated Gas Total Potential Forecast: Sum of Yearly Forecast must be equal to 2R GRR/CR/PR
 
-Severity: `strict`
+Severity: `strict` :no_entry:
 
 The following equation must be true:
 
@@ -614,9 +614,9 @@ import esdc
 return esdc.forecast['gn']['tp'][-1].groupby('project').sum() == esdc.resources['gn']['mid'][-1]
 ```
 
-### RE1045 - Sum of Oil + Condensate Sales Forecast per year: sum of Oil + Condensate Sales Forecast per year must equal to reported WP&B Forecast per year
+### RE1045 - Sum of Oil + Condensate Sales Forecast per year: sum of Oil + Condensate Sales Forecast per year should equal to reported WP&B Forecast per year
 
-Severity: `strict`
+Severity: `warning` :warning:
 
 The following equation must be true:
 
@@ -627,9 +627,9 @@ import esdc
 
 ```
 
-### RE1046 - Sum of Associated + Non Associated Sales Forecast per year: sum of Associated + Non Associated Sales Forecast per year must equal to reported WP&B Forecast per year
+### RE1046 - Sum of Associated Gas + Non Associated Gas Sales Forecast per year: sum of Associated Gas + Non Associated Gas Sales Forecast per year should equal to reported WP&B Forecast per year
 
-Severity: `strict`
+Severity: `warning` :warning:
 
 The following equation must be true:
 

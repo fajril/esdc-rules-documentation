@@ -58,6 +58,7 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $q_{n, t \dots t_m}^{\text{tp}}$ | Non Associated Gas Total Potential yearly rate forecast|
 | $q_{oc, t \dots t_m}^{\text{wpnb}}$ | Oil + Condensate yearly rate forecast reported in WP&B|
 | $q_{an, t \dots t_m}^{\text{wpnb}}$ | Associated + Non Associated Gas yearly rate forecast reported in WP&B |
+| $M$ | Maturity Level, $\left\{E_0, \dots, E_8, X_0, \dots, X_6 \right\}$ |
 
 ## Keyword Reference
 
@@ -69,7 +70,7 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | `reserves` | fluid type, uncertainty, time reference | project, field, working area | `sum` | Reserves |
 | `forecast` | fluid type, commerciality, time reference | project, field, working area | `sum` | Production Forecast |
 | `forecast_wpnb` | - | working area | `sum` | reported WP&B production forecast |
-| `project_level` | - | - | - | project level, E0 - X6 ~ 0 - 14 |
+| `project_level` | time reference | - | - | project level, E0 - X6 ~ 0 - 16 |
 | `discrepancy` | fluid type, uncertainty,  discrepancy sources, time reference | field, working area | `sum` | Discrepancy |
 | `grv` | uncertainty | zone, field, working area | `sum` | Gross Rock Volume |
 | `ntg` | uncertainty | zone, field, working area | `mean` | Net to Gross, weighted to GRV |
@@ -123,3 +124,26 @@ esdc.discrepancy[fluid_type]
 | RE2        | Material Balance        |
 | RE3        | Reservoir Properties    |
 | RE4        | Analytics               |
+
+## Project Maturity Level
+
+Refer to Indonesia's Framework of Petroleum Resources for more complete definitions.
+
+| id | code | stage  | class  | project_level                      |
+| -- | ---- | -----  | -----  | ---------------------------------- |
+| 0  | E0   | E      | R      | E0. On Production                  |
+| 1  | E1   | E      | R      | E1. Production on Hold             |
+| 2  | E2   | E      | R      | E2. Under Development              |
+| 3  | E3   | E      | R      | E3. Justified for Development      |
+| 4  | E4   | E      | C      | E4. Production Pending             |
+| 5  | E5   | E      | C      | E5. Development Unclarified        |
+| 6  | E6   | E      | C      | E6. Further Development            |
+| 7  | E7   | E      | C      | E7. Production not Viable          |
+| 8  | E8   | E      | C      | E8. Further Development not Viable |
+| 9  | X0   | X      | C      | X0. Development Pending            |
+| 10 | X1   | X      | C      | X1. Discovery under Evaluation     |
+| 11 | X2   | X      | C      | X2. Development Undetermined       |
+| 12 | X3   | X      | C      | X3. Development not Viable         |
+| 13 | X4   | X      | U      | X4. Inconclusive Flow              |
+| 14 | X5   | X      | U      | X5. Prospect                       |
+| 15 | X6   | X      | U      | X6. Lead                           |
