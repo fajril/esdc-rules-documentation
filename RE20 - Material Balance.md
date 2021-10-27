@@ -226,7 +226,7 @@ new_resources = esdc.resources['gn']['hgh'][-2] + discr - prod
 return esdc.resources['gn']['hgh'][-1] == new_resources
 ```
 
-### RE2013 - Oil Reserves: Current 1P must be consistent with previous 1P, all discprepancies, and production
+### RE2013 - Oil Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -243,7 +243,7 @@ new_resources = esdc.resources['oil']['low'][-2] + esdc.discrepancy['oil']['low'
 return esdc.resources['oil']['low'][-1] == new_resources
 ```
 
-### RE2014 - Condensate Reserves: Current 1P must be consistent with previous 1P, all discprepancies, and production
+### RE2014 - Condensate Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -260,7 +260,7 @@ new_resources = esdc.resources['con']['low'][-2] + esdc.discrepancy['con']['low'
 return esdc.resources['con']['low'][-1] == new_resources
 ```
 
-### RE2015 - Associated Gas Reserves: Current 1P must be consistent with previous 1P, all discprepancies, and production
+### RE2015 - Associated Gas Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -277,7 +277,7 @@ new_resources = esdc.resources['ga']['low'][-2] + esdc.discrepancy['ga']['low'][
 return esdc.resources['ga']['low'][-1] == new_resources
 ```
 
-### RE2016 - Non Associated Gas Reserves: Current 1P must be consistent with previous 1P, all discprepancies, and production
+### RE2016 - Non Associated Gas Reserves: Current 1P must be consistent with previous 1P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -289,12 +289,12 @@ $$\Delta G_{p, n, t}^{\text{P90}} = \Delta G_{p, n, t - 1}^{\text{P90}} + \Delta
 import esdc
 
 prod = esdc.cumprod['gn']['sls'][-1] - esdc.cumprod['gn']['sls'][-2]
-new_resources = esdc.resources['gn']['low'][-2] + diesdc.discrepancy['gn']['low']['gtr'][-1]scr - prod
+new_resources = esdc.resources['gn']['low'][-2] + esdc.discrepancy['gn']['low']['gtr'][-1] - prod
 
 return esdc.resources['gn']['low'][-1] == new_resources
 ```
 
-### RE2017 - Oil Reserves: Current 2P must be consistent with previous 2P, all discprepancies, and production
+### RE2017 - Oil Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -311,7 +311,7 @@ new_resources = esdc.resources['oil']['mid'][-2] + esdc.discrepancy['oil']['mid'
 return esdc.resources['oil']['mid'][-1] == new_resources
 ```
 
-### RE2018 - Condensate Reserves: Current 2P must be consistent with previous 2P, all discprepancies, and production
+### RE2018 - Condensate Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -328,7 +328,7 @@ new_resources = esdc.resources['con']['mid'][-2] + esdc.discrepancy['con']['mid'
 return esdc.resources['con']['mid'][-1] == new_resources
 ```
 
-### RE2019 - Associated Gas Reserves: Current 2P must be consistent with previous 2P, all discprepancies, and production
+### RE2019 - Associated Gas Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -345,7 +345,7 @@ new_resources = esdc.resources['ga']['mid'][-2] + esdc.discrepancy['ga']['mid'][
 return esdc.resources['ga']['mid'][-1] == new_resources
 ```
 
-### RE2020 - Non Associated Gas Reserves: Current 2P must be consistent with previous 2P, all discprepancies, and production
+### RE2020 - Non Associated Gas Reserves: Current 2P must be consistent with previous 2P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -362,7 +362,7 @@ new_resources = esdc.resources['gn']['mid'][-2] + esdc.discrepancy['gn']['mid'][
 return esdc.resources['gn']['mid'][-1] == new_resources
 ```
 
-### RE2021 - Oil Reserves: Current 3P must be consistent with previous 3P, all discprepancies, and production
+### RE2021 - Oil Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -379,7 +379,7 @@ new_resources = esdc.resources['oil']['hgh'][-2] + esdc.discrepancy['oil']['hgh'
 return esdc.resources['oil']['hgh'][-1] == new_resources
 ```
 
-### RE2022 - Condensate Reserves: Current 3P must be consistent with previous 3P, all discprepancies, and production
+### RE2022 - Condensate Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -396,7 +396,7 @@ new_resources = esdc.resources['con']['hgh'][-2] + esdc.discrepancy['con']['hgh'
 return esdc.resources['con']['hgh'][-1] == new_resources
 ```
 
-### RE2023 - Associated Gas Reserves: Current 3P must be consistent with previous 3P, all discprepancies, and production
+### RE2023 - Associated Gas Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -413,7 +413,7 @@ new_resources = esdc.resources['ga']['hgh'][-2] + esdc.discrepancy['ga']['hgh'][
 return esdc.resources['ga']['hgh'][-1] == new_resources
 ```
 
-### RE2024 - Non Associated Gas Reserves: Current 3P must be consistent with previous 3P, all discprepancies, and production
+### RE2024 - Non Associated Gas Reserves: Current 3P must be consistent with previous 3P, Change from Commerciality, and production
 
 Severity: `strict`
 
@@ -430,9 +430,9 @@ new_resources = esdc.resources['ga']['hgh'][-2] + esdc.discrepancy['ga']['hgh'][
 return esdc.resources['ga']['hgh'][-1] == new_resources
 ```
 
-### RE2025 - IOIP Mid: IOIP Mid must be higher than Sum of all projects Oil Ultimate GRR/CR/PR 3R/3C/3U if Sum of all projects Oil Ultimate GRR/CR/PR 3R/3C/3U higher than 0
+### RE2025 - IOIP Mid: IOIP Mid should be higher than Sum of all projects Oil Ultimate GRR/CR/PR 3R/3C/3U if Sum of all projects Oil Ultimate GRR/CR/PR 3R/3C/3U higher than 0
 
-Severity: `strict`
+Severity: `warning`
 
 $$\sum_{i=1}^n \left(\Delta N_{p, n, i}^{\text{P10}} + N_{p, s, i}\right) > 0  \implies N^{\text{P50}} > \sum_{i=1}^n \left(\Delta N_{p, n, i}^{\text{P10}} + N_{p, s, i}\right)$$
 
@@ -443,9 +443,9 @@ eur_P10 = esdc.resources['oil']['hgh'][-1].groupby('field').sum() + esdc.cumprod
 return esdc.inplace['oil']['mid'][-1] > eur_P10 if eur_P10 > 0
 ```
 
-### RE2026 - IGIP Mid: IGIP Mid must be higher than Sum of all projects Non Associated Gas Ultimate 3R/3C/3U if Sum of all projects Non Associated Gas Ultimate 3R/3C/3U higher than 0
+### RE2026 - IGIP Mid: IGIP Mid should be higher than Sum of all projects Non Associated Gas Ultimate 3R/3C/3U if Sum of all projects Non Associated Gas Ultimate 3R/3C/3U higher than 0
 
-Severity: `strict`
+Severity: `warning`
 
 $$ \sum_{i=1}^n \left(\Delta G_{p, n, i}^{\text{P10}} + G_{p, s, i}\right) > 0 \implies G^{\text{P50}} > \sum_{i=1}^n \left(\Delta G_{p, n, i}^{\text{P10}} + G_{p, s, i}\right)$$
 

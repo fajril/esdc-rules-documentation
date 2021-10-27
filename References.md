@@ -69,6 +69,7 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | `reserves` | fluid type, uncertainty, time reference | project, field, working area | `sum` | Reserves |
 | `forecast` | fluid type, commerciality, time reference | project, field, working area | `sum` | Production Forecast |
 | `forecast_wpnb` | - | working area | `sum` | reported WP&B production forecast |
+| `project_level` | - | - | - | project level, E0 - X6 ~ 0 - 14 |
 | `discrepancy` | fluid type, uncertainty,  discrepancy sources, time reference | field, working area | `sum` | Discrepancy |
 | `grv` | uncertainty | zone, field, working area | `sum` | Gross Rock Volume |
 | `ntg` | uncertainty | zone, field, working area | `mean` | Net to Gross, weighted to GRV |
@@ -83,6 +84,7 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | `depth_avg` | - | zone, field, working area, basin, vol. calc. method, all play elements | `mean`| Average Reservoir Depth
 
 ## Syntax reference
+
 | Keyword | Group Type | Description |
 | ------- | ---------- | --- |
 | `oil`   | fluid_type | Oil         |
