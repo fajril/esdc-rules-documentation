@@ -1,4 +1,6 @@
-# Volumetric Rules
+# RE0 - Volumetric Rules
+
+## List of Rules
 
 ### RE0001 - IOIP: Low Case must be positive or equal to 0
 
@@ -628,7 +630,7 @@ The following equation must be true:
 
 $$
 M_s = \left\{E_0, E_1, E_2, E_3 \right\} \\
-\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_t \notin M_s 
+\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_t \notin M_s
 $$
 
 ```python
