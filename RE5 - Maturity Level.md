@@ -1,12 +1,12 @@
 # RE5 - Maturity Level
 
-## List of Rules
+## List of Rule
 
 ### RE5001 - Project Level: If last year hydrocarbon production is more than zero, then the project level must be in E0. On Production
 
 Severity: `strict` :no_entry:
 
-The following rules must be true:
+The following rule must be true:
 
 $$
 \left( q_{o, t-1} > 0 \right) \land \left( q_{c, t-1} > 0 \right) \land \left( q_{a, t-1} > 0 \right) \land \left( q_{n, t-1} > 0 \right) \implies M_t = E_0
@@ -20,7 +20,7 @@ import esdc
 
 Severity: `strict` :no_entry:
 
-The following rules must be true:
+The following rule must be true:
 
 $$
 \left( q_{o, t-1} = q_{c, t-1}= q_{a, t-1} = q_{n, t-1} = 0 \right) \implies M_t \neq E_0
@@ -34,7 +34,7 @@ import esdc
 
 Severity: `strict` :no_entry:
 
-The following rules must be true:
+The following rule must be true:
 
 $$
 \left( q_{o, t-1} = q_{c, t-1}= q_{a, t-1} = q_{n, t-1} = 0 \right) \land \left(M_{t-1} = E_1\right) \land \left(G_r \equiv \bot \right) \implies M_t =E_4
@@ -48,7 +48,7 @@ import esdc
 
 Severity: `strict` :no_entry:
 
-The following rules should be true:
+The following rule should be true:
 
 $$
 \left( q_{o, t-1} = q_{c, t-1}= q_{a, t-1} = q_{n, t-1} = 0 \right) \land \left(M_{t-1}=M_{t-2} = M_{t - 3} = E_1\right)  \implies M_t = E_4
@@ -62,7 +62,7 @@ import esdc
 
 Severity: `strict` :no_entry:
 
-The following rules must be true:
+The following rule must be true:
 
 $$
 \left( q_{o, t-1} = q_{c, t-1}= q_{a, t-1} = q_{n, t-1} = 0 \right) \land \left(M_{t-1} = E_4\right) \land \left(G_r \equiv \bot \right) \implies M_t = E_7
@@ -76,7 +76,7 @@ import esdc
 
 Severity: `strict` :no_entry:
 
-The following rules must be true:
+The following rule must be true:
 
 $$
 \left( q_{o, t-1} = q_{c, t-1}= q_{a, t-1} = q_{n, t-1} = 0 \right) \land \left(M_{t-1} = E_4\right) \land \left(G_r \equiv \top \right) \implies M_t = E_7
@@ -91,7 +91,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 \left( q_{o, t-1} = q_{c, t-1}= q_{a, t-1} = q_{n, t-1} = 0 \right) \land \left(M_{t-1}=M_{t-2} = M_{t - 3} = E_2\right) \land \left(G_r \equiv \bot \right) \implies M_t = E_5
@@ -106,7 +106,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 \left( q_{o, t-1} = q_{c, t-1}= q_{a, t-1} = q_{n, t-1} = 0 \right) \land \left(M_{t-1}=M_{t-2} = M_{t - 3} = E_3\right) \land \left(G_r \equiv \bot \right) \implies M_t = E_5
@@ -121,7 +121,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2, E_5\right\} \\
@@ -137,7 +137,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2, E_3, E_5\right\} \\
@@ -153,7 +153,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2 E_5\right\} \\
@@ -194,7 +194,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_4, E_7\right\} \\
@@ -210,7 +210,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2, E_3,E_8\right\} \\
@@ -226,7 +226,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2, E_3, X_0, X_2, X_3\right\} \\
@@ -242,7 +242,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2, E_3, X_0, X_1, X_2\right\} \\
@@ -257,7 +257,7 @@ import esdc
 
 Severity: `strict` :no_entry:
 
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_{t - 1} = M_{t - 2} = X_1 \implies M_t \neq X_1
@@ -272,7 +272,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2, E_3, X_0, X_2\right\} \\
@@ -288,7 +288,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_2, E_3, X_3\right\} \\
@@ -304,7 +304,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{ E_3, X_0, X_1, X_4\right\} \\
@@ -320,7 +320,7 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{ X_0, X_1, X_4, X_5\right\} \\
@@ -336,11 +336,141 @@ import esdc
 Severity: `warning` :warning:
 
 The severity of the rule will be changed into `strict` next year.
-The following rules must be true:
+The following rule must be true:
 
 $$
 M_s = \left\{ X_1, X_4, X_5, X_6\right\} \\
 M_{t - 1} = X_6 \implies M_t \in M_s
+$$
+
+```python
+import esdc
+```
+
+### RE5024 - Project Level: If 0 < GCF Total < 1, then project level is either X6. Lead or X5. Prospect
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_s = \left\{X_5, X_6\right\} \\
+0 < P_g < 1 \implies M_t \in M_s
+$$
+
+```python
+import esdc
+```
+
+### RE5025 - Project Level: If GCF Total = 1, then project level should be X4 or higher
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_E = \left\{E_0, \dots, E_8 \right\} \\
+M_s = \left\{M_E, X_0, \dots X_4 \right\} \\
+P_g = 1 \implies M_t \in M_s
+$$
+
+```python
+import esdc
+```
+
+### RE5026 - Project Level: If GCF Total = 0, then project should be dry or dissolved
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_A = \left\{A_0, A_1 \right\} \\
+P_g = 0 \implies M_t \in M_A
+$$
+
+```python
+import esdc
+```
+
+### RE5027 - GCF Source Rock: If last year GCF Source Rock is not 50% - Neutral, then GCF Source Rock should not 50% - Neutral
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, s, t - 1} \neq 0.5 \implies P_{g, s, t} \neq 0.5
+$$
+
+```python
+import esdc
+```
+
+### RE5028 - GCF Reservoir: If last year GCF Reservoir is not 50% - Neutral, then GCF Reservoir should not 50% - Neutral
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, r, t - 1} \neq 0.5 \implies P_{g, r, t} \neq 0.5
+$$
+
+```python
+import esdc
+```
+
+### RE5029 - GCF Trap and Seal: If last year GCF Trap and Seal is not 50% - Neutral, then GCF Trap and Seal should not 50% - Neutral
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, ts, t - 1} \neq 0.5 \implies P_{g, ts, t} \neq 0.5
+$$
+
+```python
+import esdc
+```
+
+### RE5030 - GCF Migration: If last year GCF Migration is not 50% - Neutral, then GCF Migration should not 50% - Neutral
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, m, t - 1} \neq 0.5 \implies P_{g, m, t} \neq 0.5
+$$
+
+```python
+import esdc
+```
+
+### RE5031 - GCF Total: If last year project level is X6. Lead and current project level is X5. Prospect, then current GCF total should be higher than last year
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+\left(M_{t - 1} = X_6\right) \land \left(M_t = X_5\right) \implies P_{g, t - 1} \leq P_{g, t}
+$$
+
+```python
+import esdc
+```
+
+### RE5032 - Project Level: If one of GCF element is 50% - Neutral, then Project Level should be X6. Lead
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+\left( P_{g, s, t} = 0.5\right) \lor \left( P_{g, r, t} = 0.5 \right) \lor \left( P_{g, ts, t} = 0.5 \right) \lor \left( P_{g, m, t} = 0.5 \right) \implies M_t = X_6
 $$
 
 ```python
