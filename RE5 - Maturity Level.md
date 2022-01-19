@@ -9,7 +9,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-\left( q_{o, t-1} > 0 \right) \land \left( q_{c, t-1} > 0 \right) \land \left( q_{a, t-1} > 0 \right) \land \left( q_{n, t-1} > 0 \right) \implies M_t = E_0
+\left( q_{o, t-1} > 0 \right) \lor \left( q_{c, t-1} > 0 \right) \lor \left( q_{a, t-1} > 0 \right) \lor \left( q_{n, t-1} > 0 \right) \implies M_t = E_0
 $$
 
 ```python
