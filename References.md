@@ -48,6 +48,7 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $\Delta D_{N^c}^\text{cio P90/P50/P10}$ | Condensate Discrepancy from Consumed in Operations |
 | $\Delta D_{G}^\text{cio P90/P50/P10}$ | Non Associated Gas Discrepancy from Consumed in Operations |
 | $\Delta D_{G^a}^\text{cio P90/P50/P10}$ | Associated Gas Discrepancy from Consumed in Operations |
+| $t_R$ | current reporting time for resources report |
 | $q_{o, t \dots t_m}^{s}$ | Oil Sales yearly rate forecast|
 | $q_{c, t \dots t_m}^{s}$ | Condensate Sales yearly rate forecast|
 | $q_{a, t \dots t_m}^{s}$ | Associated Gas Sales yearly rate forecast|

@@ -198,7 +198,7 @@ import esdc
 return esdc.reserves['gn']['low'][-1] >= 0
 ```
 
-### RE0015 - Oil GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
+### RE0015 - Oil GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
 
 Severity:  `strict` :no_entry:
 
@@ -212,7 +212,7 @@ import esdc
 return esdc.resources['oil']['low'][-1] <= esdc.resources['oil']['mid'][-1]
 ```
 
-### RE0016 - Oil GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
+### RE0016 - Oil GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
 
 Severity:  `strict` :no_entry:
 
@@ -226,7 +226,7 @@ import esdc
 return esdc.resources['oil']['mid'][-1] <= esdc.resources['oil']['hgh'][-1]
 ```
 
-### RE0017 - Condensate GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
+### RE0017 - Condensate GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
 
 Severity:  `strict` :no_entry:
 
@@ -240,7 +240,7 @@ import esdc
 return esdc.resources['con']['low'][-1] <= esdc.resources['con']['mid'][-1]
 ```
 
-### RE0018 - Condensate GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
+### RE0018 - Condensate GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
 
 Severity:  `strict` :no_entry:
 
@@ -254,7 +254,7 @@ import esdc
 return esdc.resources['con']['mid'][-1] <= esdc.resources['con']['hgh'][-1]
 ```
 
-### RE0019 - Associated Gas GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
+### RE0019 - Associated Gas GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
 
 Severity:  `strict` :no_entry:
 
@@ -268,7 +268,7 @@ import esdc
 return esdc.resources['ga']['low'][-1] <= esdc.resources['ga']['mid'][-1]
 ```
 
-### RE0020 - Associated Gas GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
+### RE0020 - Associated Gas GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
 
 Severity:  `strict` :no_entry:
 
@@ -282,7 +282,7 @@ import esdc
 return esdc.resources['ga']['mid'][-1] <= esdc.resources['ga']['hgh'][-1]
 ```
 
-### RE0021 - Non Associated Gas GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
+### RE0021 - Non Associated Gas GRR/CR/PR: 1R/1C/1U must be less than or equal to 2R/2C/2U
 
 Severity:  `strict` :no_entry:
 
@@ -296,7 +296,7 @@ import esdc
 return esdc.resources['gn']['low'][-1] <= esdc.resources['gn']['mid'][-1]
 ```
 
-### RE0022 - Non Associated Gas GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
+### RE0022 - Non Associated Gas GRR/CR/PR: 2R/2C/2U must be less than or equal to 3R/3C/3U
 
 Severity:  `strict` :no_entry:
 
@@ -310,7 +310,7 @@ import esdc
 return esdc.resources['gn']['mid'][-1] <= esdc.resources['gn']['hgh'][-1]
 ```
 
-### RE0023 - Oil Reserves: 1P must be less than or equal to 2P
+### RE0023 - Oil Reserves: 1P must be less than or equal to 2P
 
 Severity:  `strict` :no_entry:
 
@@ -324,7 +324,7 @@ import esdc
 return esdc.reserves['oil']['low'][-1] <= esdc.reserves['oil']['mid'][-1]
 ```
 
-### RE0024 - Oil Reserves: 2P must be less than or equal to 3P
+### RE0024 - Oil Reserves: 2P must be less than or equal to 3P
 
 Severity:  `strict` :no_entry:
 
@@ -338,7 +338,7 @@ import esdc
 return esdc.reserves['oil']['mid'][-1] <= esdc.reserves['oil']['hgh'][-1]
 ```
 
-### RE0025 - Condensate Reserves: 1P must be less than or equal to 2P
+### RE0025 - Condensate Reserves: 1P must be less than or equal to 2P
 
 Severity:  `strict` :no_entry:
 
@@ -352,7 +352,7 @@ import esdc
 return esdc.reserves['con']['low'][-1] <= esdc.reserves['con']['mid'][-1]
 ```
 
-### RE0026 - Condensate Reserves: 2P must be less than or equal to 3P
+### RE0026 - Condensate Reserves: 2P must be less than or equal to 3P
 
 Severity:  `strict` :no_entry:
 
@@ -366,7 +366,7 @@ import esdc
 return esdc.reserves['con']['mid'][-1] <= esdc.reserves['con']['hgh'][-1]
 ```
 
-### RE0027 - Associated Gas Reserves: 1P must be less than or equal to 2P
+### RE0027 - Associated Gas Reserves: 1P must be less than or equal to 2P
 
 Severity:  `strict` :no_entry:
 
@@ -380,7 +380,7 @@ import esdc
 return esdc.reserves['ga']['low'][-1] <= esdc.reserves['ga']['mid'][-1]
 ```
 
-### RE0028 - Associated Gas Reserves: 2P must be less than or equal to 3P
+### RE0028 - Associated Gas Reserves: 2P must be less than or equal to 3P
 
 Severity:  `strict` :no_entry:
 
@@ -394,7 +394,7 @@ import esdc
 return esdc.reserves['ga']['mid'][-1] <= esdc.reserves['ga']['hgh'][-1]
 ```
 
-### RE0029 - Non Associated Gas Reserves: 1P must be less than or equal to 2P
+### RE0029 - Non Associated Gas Reserves: 1P must be less than or equal to 2P
 
 Severity:  `strict` :no_entry:
 
@@ -408,7 +408,7 @@ import esdc
 return esdc.reserves['gn']['low'][-1] <= esdc.reserves['gn']['mid'][-1]
 ```
 
-### RE0030 - Non Associated Gas Reserves: 2P must be less than or equal to 3P
+### RE0030 - Non Associated Gas Reserves: 2P must be less than or equal to 3P
 
 Severity:  `strict` :no_entry:
 
@@ -598,7 +598,7 @@ The following equation must be true:
 
 $$
 M_s = \left\{E_7, E_8, A_1, A_2 \right\} \\
-\left( \Delta N_{pn}^{\text{ P90}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P90}} > 0 \right) \implies M_t \in M_s
+\left( \Delta N_{pn}^{\text{ P90}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P90}} > 0 \right) \implies M_{t_R} \in M_s
 $$
 
 ```python
@@ -614,7 +614,7 @@ The following equation must be true:
 
 $$
 M_s = \left\{E_0, E_1, E_2, E_3 \right\} \\
-\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_t \in M_s
+\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_{t_R} \in M_s
 $$
 
 ```python
@@ -630,7 +630,7 @@ The following equation must be true:
 
 $$
 M_s = \left\{E_0, E_1, E_2, E_3 \right\} \\
-\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_t \notin M_s
+\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_{t_R} \notin M_s
 $$
 
 ```python

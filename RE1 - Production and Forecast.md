@@ -450,13 +450,13 @@ import esdc
 return esdc.cumprod['gn']['sls'][-1] <= esdc.cumprod['gn']['grs'][-1]
 ```
 
-### RE1033 - Oil Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
+### RE1033 - Oil Sales Forecast: For each year, yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$q_{o, t\dots t_m}^{s} \leq q_{o, t\dots t_m}^{\text{tp}}$$
+$$ \forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{o, t}^{s} \leq q_{o, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -464,13 +464,13 @@ import esdc
 return esdc.forecast['oil']['sls'][-1] <= esdc.forecast['oil']['tp'][:][-1]
 ```
 
-### RE1034 - Condensate Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
+### RE1034 - Condensate Sales Forecast: For each year, yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$q_{c, t\dots t_m}^{s} \leq q_{c, t\dots t_m}^{\text{tp}}$$
+$$\forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{c, t}^{s} \leq q_{c, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -478,13 +478,13 @@ import esdc
 return esdc.forecast['con']['sls'][-1] <= esdc.forecast['con']['tp'][:][-1]
 ```
 
-### RE1035 - Associated Gas Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
+### RE1035 - Associated Gas Sales Forecast: for each year, yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$q_{a, t\dots t_m}^{s} \leq q_{a, t\dots t_m}^{\text{tp}}$$
+$$\forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{a, t}^{s} \leq q_{a, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -492,13 +492,13 @@ import esdc
 return esdc.forecast['ga']['sls'][-1] <= esdc.forecast['ga']['tp'][:][-1]
 ```
 
-### RE1036 - Non Associated Gas Sales Forecast: Yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
+### RE1036 - Non Associated Gas Sales Forecast:  for each year, yearly Sales Volume must be less than or equal to Yearly Total Potential Volume
 
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$q_{n, t}^{s} \leq q_{n, t}^{\text{tp}}$$
+$$\forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{n, t}^{s} \leq q_{n, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -512,7 +512,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{o, t}^{s} = \Delta N_{p, s}^{\text{2P}}$$
+$$\sum_{t=t_R + 1}^m q_{o, t}^{s} = \Delta N_{p, s}^{\text{2P}}$$
 
 ```python
 import esdc
@@ -526,7 +526,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{c, t}^{s} = \Delta N_{p, s}^{c\text{ 2P}}$$
+$$\sum_{t=t_R + 1}^m q_{c, t}^{s} = \Delta N_{p, s}^{c\text{ 2P}}$$
 
 ```python
 import esdc
@@ -540,7 +540,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{a, t}^{s} = \Delta G_{p, s}^{a \text{ 2P}}$$
+$$\sum_{t=t_R + 1}^m q_{a, t}^{s} = \Delta G_{p, s}^{a \text{ 2P}}$$
 
 ```python
 import esdc
@@ -554,7 +554,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{n, t}^{s} = \Delta G_{p, s}^{\text{2P}}$$
+$$\sum_{t=t_R + 1}^m q_{n, t}^{s} = \Delta G_{p, s}^{\text{2P}}$$
 
 ```python
 import esdc
@@ -568,7 +568,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{o, t}^{\text{tp}} = \Delta N_{p, n}^{\text{P50}}$$
+$$\sum_{t=t_R + 1}^m q_{o, t}^{\text{tp}} = \Delta N_{p, n}^{\text{P50}}$$
 
 ```python
 import esdc
@@ -582,7 +582,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{c, t}^{\text{tp}} = \Delta N_{p, n}^{c\text{ P50}}$$
+$$\sum_{t=t_R + 1}^m q_{c, t}^{\text{tp}} = \Delta N_{p, n}^{c\text{ P50}}$$
 
 ```python
 import esdc
@@ -596,7 +596,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{a\text{ P50}}$$
+$$\sum_{t=t_R + 1}^m q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{a\text{ P50}}$$
 
 ```python
 import esdc
@@ -610,7 +610,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{t=t}^m q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{\text{P50}}$$
+$$\sum_{t=t_R + 1}^m q_{a, t}^{\text{tp}} = \Delta G_{p, n}^{\text{P50}}$$
 
 ```python
 import esdc
@@ -624,7 +624,7 @@ Severity: `warning` :warning:
 
 The following equation must be true:
 
-$$q_{oc, t \dots t_m}^{\text{wpnb}} = \left. q_{o, t \dots t_n}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{c, t \dots t_n}^{s} \right \vert_{\sum \text{Working Area}}$$
+$$\forall t \in \left\{t_R + 1, \dots , t_R + n \right\} \mid q_{oc, t}^{\text{wpnb}} = \left. q_{o, t}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{c, t}^{s} \right \vert_{\sum \text{Working Area}}$$
 
 ```python
 import esdc
@@ -637,7 +637,7 @@ Severity: `warning` :warning:
 
 The following equation must be true:
 
-$$q_{an, t \dots t_m}^{\text{wpnb}} = \left. q_{a, t \dots t_m}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{c, t \dots t_m}^{s} \right \vert_{\sum \text{Working Area}}$$
+$$\forall t \in \left\{t_R + 1, \dots , t_R + n \right\} \mid q_{an, t}^{\text{wpnb}} = \left. q_{a, t}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{n, t}^{s} \right \vert_{\sum \text{Working Area}}$$
 
 ```python
 import esdc
