@@ -65,6 +65,15 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $P_{g, r}$ | Probability of reservoir exist |
 | $P_{g, ts}$ | Probability of trap and seal exist |
 | $P_{g, m}$ | Probability of migration |
+| $V_{gr}$ | Gross Rock Volume (GRV) |
+| $NTG$ | Net to Gross ratio |
+| $\phi$ | Porosity |
+| $k$ | Absolute permeability |
+| $S_o$ | Oil saturation |
+| $S_g$ | Gas saturation |
+| $S_w$ | Water saturation
+| $E_o$ | Oil shrinkage factor |
+| $E_g$ | Gas shrinkage factor |
 
 ## Keyword Reference
 

@@ -1,6 +1,6 @@
 # RE5 - Maturity Level
 
-## List of Rule
+## List of Rules
 
 ### RE5001 - Project Level: If in the current report the sales production is more than zero, then the project level must be in E0. On Production
 
