@@ -79,7 +79,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-\left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1} = E_4\right) \land \left(G_r \equiv \top \right) \implies M_{t_R} = E_7
+\left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1} = E_4\right) \land \left(G_r \equiv \top \right) \implies M_{t_R} = E_4
 $$
 
 ```python
