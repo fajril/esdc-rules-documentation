@@ -757,3 +757,87 @@ $$
 
 import esdc
 ```
+
+### RE0054 - IOIP: Low Case value should be equal to the result of GGR Study Report
+
+severity: `warning` :warning:
+
+The following equation should be true:
+
+$$
+N^{\text{P90}}_{\text{study, field}} \neq \empty \implies N^{\text{P90}} = N^{\text{P90}}_{\text{study, field}}
+$$
+
+```python
+import esdc
+```
+
+### RE0055 - IOIP: Mid Case value should be equal to the result of GGR Study Report
+
+severity: `warning` :warning:
+
+The following equation should be true:
+
+$$
+N^{\text{P50}}_{\text{study, field}} \neq \empty \implies N^{\text{P50}} = N^{\text{P50}}_{\text{study, field}}
+$$
+
+```python
+import esdc
+```
+
+### RE0056 - IOIP: High Case value should be equal to the result of GGR Study Report
+
+severity: `warning` :warning:
+
+The following equation should be true:
+
+$$
+N^{\text{P10}}_{\text{study, field}} \neq \empty \implies N^{\text{P10}} = N^{\text{P10}}_{\text{study, field}}
+$$
+
+```python
+import esdc
+```
+
+### RE0057 - IGIP: Low Case value should be equal to the result of GGR Study Report
+
+severity: `warning` :warning:
+
+The following equation should be true:
+
+$$
+G^{\text{P90}}_{\text{study, field}} \neq \empty \implies G^{\text{P90}} = G^{\text{P90}}_{\text{study, field}}
+$$
+
+```python
+import esdc
+```
+
+### RE0058 - IGIP: Mid Case value should be equal to the result of GGR Study Report
+
+severity: `warning` :warning:
+
+The following equation should be true:
+
+$$
+G^{\text{P50}}_{\text{study, field}}\neq \empty \implies G^{\text{P50}} = G^{\text{P50}}_{\text{study, field}}
+$$
+
+```python
+import esdc
+```
+
+### RE0059 - IGIP: High Case value should be equal to the result of GGR Study Report
+
+severity: `warning` :warning:
+
+The following equation should be true:
+
+$$
+G^{\text{P10}}_{\text{study, field}} \neq \empty \implies G^{\text{P10}} = G^{\text{P10}}_{\text{study, field}}
+$$
+
+```python
+import esdc
+```

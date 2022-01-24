@@ -2,91 +2,7 @@
 
 ## List of Rules
 
-### RE3001 - IOIP: Low Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-N^{\text{P90}}_{\text{field, GGR Study Report}} \neq \empty \implies N^{\text{P90}} _{\text{Resources Report}} = N^{\text{P90}}_{\text{field, GGR Study Report}}
-$$
-
-```python
-import esdc
-```
-
-### RE3002 - IOIP: Mid Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-N^{\text{P50}}_{\text{field, GGR Study Report}} \neq \empty \implies N^{\text{P50}} _{\text{Resources Report}} = N^{\text{P50}}_{\text{field,GGR Study Report}}
-$$
-
-```python
-import esdc
-```
-
-### RE3003 - IOIP: High Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-N^{\text{P10}}_{\text{field, GGR Study Report}} \neq \empty \implies N^{\text{P10}} _{\text{Resources Report}} = N^{\text{P10}}_{\text{field,GGR Study Report}}
-$$
-
-```python
-import esdc
-```
-
-### RE3004 - IGIP: Low Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-G^{\text{P90}}_{\text{field, GGR Study Report}} \neq \empty \implies G^{\text{P90}} _{\text{Resources Report}} = G^{\text{P90}}_{\text{field, GGR Study Report}}
-$$
-
-```python
-import esdc
-```
-
-### RE3005 - IGIP: Mid Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-G^{\text{P50}}_{\text{field, GGR Study Report}} \neq \empty \implies G^{\text{P50}} _{\text{Resources Report}} = G^{\text{P50}}_{\text{field,GGR Study Report}}
-$$
-
-```python
-import esdc
-```
-
-### RE3006 - IGIP: High Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-G^{\text{P10}}_{\text{field, GGR Study Report}} \neq \empty \implies G^{\text{P10}} _{\text{Resources Report}} = G^{\text{P10}}_{\text{field,GGR Study Report}}
-$$
-
-```python
-import esdc
-```
-
-### RE3007 - IOIP: Low Case value should be lower than or equal to the result of Volumetric Method
+### RE3001 - IOIP: Low Case value should be lower than or equal to the result of Volumetric Method
 
 severity: `warning` :warning:
 
@@ -100,7 +16,7 @@ $$
 import esdc
 ```
 
-### RE3008 - IOIP: Mid Case value should be lower than or equal to the result of Volumetric Method
+### RE3002 - IOIP: Mid Case value should be lower than or equal to the result of Volumetric Method
 
 severity: `warning` :warning:
 
@@ -114,7 +30,7 @@ $$
 import esdc
 ```
 
-### RE3009 - IOIP: High Case value should be lower than or equal to the result of Volumetric Method
+### RE3003 - IOIP: High Case value should be lower than or equal to the result of Volumetric Method
 
 severity: `warning` :warning:
 
@@ -128,7 +44,7 @@ $$
 import esdc
 ```
 
-### RE3010 - IGIP: Low Case value should be lower than or equal to the result of Volumetric Method
+### RE3004 - IGIP: Low Case value should be lower than or equal to the result of Volumetric Method
 
 severity: `warning` :warning:
 
@@ -142,21 +58,21 @@ $$
 import esdc
 ```
 
-### RE3011 - IGIP: Mid Case value should be lower than or equal to the result of Volumetric Method
+### RE3005 - IGIP: Mid Case value should be lower than or equal to the result of Volumetric Method
 
 severity: `warning` :warning:
 
 The following equation should be true:
 
 $$
-V_{gr}^{\text{P50}} = NTG^{\text{P50}} = \phi^{\text{P50}} = S_g^{\text{P50}} = E_g^{\text{P50}} \neq \empty \implies 43560 \cdot G^{\text{P50}} \leq 7758 \cdot V_{gr}^{\text{P50}} \cdot NTG^{\text{P50}} \cdot \phi^{\text{P50}} \cdot S_g^{\text{P50}} \cdot E_g^{\text{P50}}
+V_{gr}^{\text{P50}} = NTG^{\text{P50}} = \phi^{\text{P50}} = S_g^{\text{P50}} = E_g^{\text{P50}} \neq \empty \implies G^{\text{P50}} \leq  43560 \cdot V_{gr}^{\text{P50}} \cdot NTG^{\text{P50}} \cdot \phi^{\text{P50}} \cdot S_g^{\text{P50}} \cdot E_g^{\text{P50}}
 $$
 
 ```python
 import esdc
 ```
 
-### RE3012 - IGIP: High Case value should be lower than or equal to the result of Volumetric Method
+### RE3006 - IGIP: High Case value should be lower than or equal to the result of Volumetric Method
 
 severity: `warning` :warning:
 
@@ -169,4 +85,3 @@ $$
 ```python
 import esdc
 ```
-
