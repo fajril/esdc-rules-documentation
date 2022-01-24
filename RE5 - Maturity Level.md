@@ -400,7 +400,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-P_{g, s, t_R - 1} \neq 0.5 \implies P_{g, s, t} \neq 0.5
+P_{g, s, t_R - 1} \neq 0.5 \implies P_{g, s, t_R} \neq 0.5
 $$
 
 ```python
@@ -414,7 +414,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-P_{g, r, t_R - 1} \neq 0.5 \implies P_{g, r, t} \neq 0.5
+P_{g, r, t_R - 1} \neq 0.5 \implies P_{g, r, t_R} \neq 0.5
 $$
 
 ```python
@@ -428,21 +428,21 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-P_{g, ts, t_R - 1} \neq 0.5 \implies P_{g, ts, t} \neq 0.5
+P_{g, ts, t_R - 1} \neq 0.5 \implies P_{g, ts, t_R} \neq 0.5
 $$
 
 ```python
 import esdc
 ```
 
-### RE5030 - GCF Migration: If in the previous report the GCF Migration is not 50% - Neutral, then GCF Migration should not be 50% - Neutral
+### RE5030 - GCF Dynamic: If in the previous report the GCF Dynamic is not 50% - Neutral, then GCF Dynamic should not be 50% - Neutral
 
 Severity: `warning` :warning:
 
 The following rule should be true:
 
 $$
-P_{g, m, t_R - 1} \neq 0.5 \implies P_{g, m, t} \neq 0.5
+P_{g, m, t_R - 1} \neq 0.5 \implies P_{g, m, t_R} \neq 0.5
 $$
 
 ```python
@@ -456,7 +456,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-\left(M_{t_R - 1} = X_6\right) \land \left(M_{t_R} = X_5\right) \implies P_{g, t_R - 1} \leq P_{g, t}
+\left(M_{t_R - 1} = X_6\right) \land \left(M_{t_R} = X_5\right) \implies P_{g, t_R - 1} \leq P_{g, t_R}
 $$
 
 ```python
@@ -470,7 +470,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-\left( P_{g, s, t} = 0.5\right) \lor \left( P_{g, r, t} = 0.5 \right) \lor \left( P_{g, ts, t} = 0.5 \right) \lor \left( P_{g, m, t} = 0.5 \right) \implies M_{t_R} = X_6
+\left( P_{g, s, t_R} = 0.5\right) \lor \left( P_{g, r, t_R} = 0.5 \right) \lor \left( P_{g, ts, t_R} = 0.5 \right) \lor \left( P_{g, m, t_R} = 0.5 \right) \implies M_{t_R} = X_6
 $$
 
 ```python
