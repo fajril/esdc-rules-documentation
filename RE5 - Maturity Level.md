@@ -385,7 +385,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_A = \left\{A_0, A_1 \right\} \\
+M_A = \left\{A_1, A_2 \right\} \\
 P_g = 0 \implies M_{t_R} \in M_A
 $$
 
@@ -471,6 +471,66 @@ The following rule should be true:
 
 $$
 \left( P_{g, s, t_R} = 0.5\right) \lor \left( P_{g, r, t_R} = 0.5 \right) \lor \left( P_{g, ts, t_R} = 0.5 \right) \lor \left( P_{g, m, t_R} = 0.5 \right) \implies M_{t_R} = X_6
+$$
+
+```python
+import esdc
+```
+
+### RE5033 - GCF Source Rock: If project is abandoned, then the GCF source rock should be either 0% or 100%
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+M_A = \left\{A_1, A_2 \right\} \\
+M_{t_R} \in M_A \implies \left( P_{g, s, t_R} = 1\right) \lor \left( P_{g, s, t_R} = 0\right)
+$$
+
+```python
+import esdc
+```
+
+### RE5034 - GCF Reservoir: If project is abandoned, then the GCF reservoir should be either 0% or 100%
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+M_A = \left\{A_1, A_2 \right\} \\
+M_{t_R} \in M_A \implies \left( P_{g, r, t_R} = 1\right) \lor \left( P_{g, r, t_R} = 0\right)
+$$
+
+```python
+import esdc
+```
+
+### RE5035 - GCF Trap and Seal: If project is abandoned, then the GCF Trap and Seal should be either 0% or 100%
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+M_A = \left\{A_1, A_2 \right\} \\
+M_{t_R} \in M_A \implies \left( P_{g, ts, t_R} = 1\right) \lor \left( P_{g, ts, t_R} = 0\right)
+$$
+
+```python
+import esdc
+```
+
+### RE5036 - GCF Dynamic: If project is abandoned, then the GCF Dynamic should be either 0% or 100%
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+M_A = \left\{A_1, A_2 \right\} \\
+M_{t_R} \in M_A \implies \left( P_{g, m, t_R} = 1\right) \lor \left( P_{g, m, t_R} = 0\right)
 $$
 
 ```python
