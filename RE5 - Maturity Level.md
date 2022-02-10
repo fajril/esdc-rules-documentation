@@ -536,3 +536,59 @@ $$
 ```python
 import esdc
 ```
+
+### RE5037 - GCF Source Rock: If previous GCF Source Rock is higher than 0.5, then the GCF source rock should be higher than or equal to previous GCF Source Rock
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, s, t_R - 1} > 0.5 \implies P_{g, s, t_R} \geq P_{g, s, t_R - 1}
+$$
+
+```python
+import esdc
+```
+
+### RE5038 - GCF Reservoir: If previous GCF Reservoir is higher than 0.5, then the GCF Reservoir should be higher than or equal to previous GCF Reservoir
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, r, t_R - 1} > 0.5 \implies P_{g, r, t_R} \geq P_{g, r, t_R - 1}
+$$
+
+```python
+import esdc
+```
+
+### RE5039 - GCF Trap and Seal: If previous GCF Trap and Seal is higher than 0.5, then the GCF Trap and Seal should be higher than or equal to previous GCF Trap and Seal
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, ts, t_R - 1} > 0.5 \implies P_{g, ts, t_R} \geq P_{g, ts, t_R - 1}
+$$
+
+```python
+import esdc
+```
+
+### RE5040 - GCF Dynamic: If previous GCF Dynamic is higher than 0.5, then the GCF Dynamic should be higher than or equal to previous GCF Dynamic
+
+Severity: `warning` :warning:
+
+The following rule should be true:
+
+$$
+P_{g, m, t_R - 1} > 0.5 \implies P_{g, m, t_R} \geq P_{g, m, t_R - 1}
+$$
+
+```python
+import esdc
+```

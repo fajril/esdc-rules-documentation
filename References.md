@@ -139,6 +139,7 @@ esdc.discrepancy[fluid_type]
 | RE2        | Material Balance        |
 | RE3        | Reservoir Properties    |
 | RE4        | Analytics               |
+| RE5        | Maturity Level          |
 
 ## Project Maturity Level
 
