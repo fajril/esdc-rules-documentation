@@ -173,11 +173,11 @@ The probability of existence of element in petroleum system is defined as follow
 |  1 |  99%     |  99% - Extremely Favorable    |
 |  2 |  90%     |  90% - Highly Favorable       |
 |  3 |  80%     |  80% - Favorable              |
-|  4 |  70%     |  70% - Very Encouraging       |
+|  4 |  70%     |  70% - Highly Encouraging     |
 |  5 |  60%     |  60% - Encouraging            |
 |  6 |  50%     |  50% - Neutral                |
 |  7 |  40%     |  40% - Questionable           |
-|  8 |  30%     |  30% - Very Questionable      |
+|  8 |  30%     |  30% - Highly Questionable    |
 |  9 |  20%     |  20% - Unfavorable            |
 | 10 |  10%     |  10% - Highly Unfavorable     |
 | 11 |   1%     |   1% - Extremely Unvavorable  |
