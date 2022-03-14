@@ -16,6 +16,24 @@ import esdc
 return esdc.inplace['oil']['low'][-1] >= 0
 ```
 
+The following example should pass:
+
+``` al
+if
+    oil in place = 1000
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    oil in place = -1000
+then
+    validation result is False
+```
+
 ### RE0002 - IGIP: Low Case must be positive or equal to 0
 
 Severity:  `strict` :no_entry:
