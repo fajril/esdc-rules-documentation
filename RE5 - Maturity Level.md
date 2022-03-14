@@ -56,7 +56,6 @@ then
     validation result is False
 ```
 
-
 ### RE5002 - Project Level: If in the current report the sales production is zero, then the project level cannot be in E0. On Production
 
 Severity: `strict` :no_entry:
