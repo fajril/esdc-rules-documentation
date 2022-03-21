@@ -624,6 +624,34 @@ $$
 import esdc
 ```
 
+The following example should pass:
+
+``` al
+if
+    Oil GRR/CR/PR = 1000
+    project level is E0. On Production
+
+then
+    Validation result is True
+
+```
+
+The following example should fail:
+
+``` al
+if
+    Oil GRR/CR/PR = 0
+    con GRR/CR/PR = 0
+    ga GRR/CR/PR = 0
+    gn GRR/CR/PR = 0
+    project level is E0. On Production
+
+then
+    Validation result is False
+
+```
+
+
 ### RE0044 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must have reserves for project maturity level E0, E1, E2, E3
 
 Severity:  `strict` :no_entry:
@@ -640,6 +668,34 @@ $$
 import esdc
 ```
 
+The following example should pass:
+
+``` al
+if
+    Oil Reserves = 1000
+    project level is E0. On Production
+
+then
+    Validation result is True
+
+```
+
+The following example should fail:
+
+``` al
+if
+    Oil reserves = 0
+    con reserves = 0
+    ga reserves = 0
+    gn reserves = 0
+
+    project level is E0. On Production
+
+then
+    Validation result is False
+```
+
+
 ### RE0045 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must not have reserves for project maturity level E4 to X6
 
 Severity:  `strict` :no_entry:
@@ -654,6 +710,36 @@ $$
 ```python
 
 import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    Oil reserves = 0
+    con reserves = 0
+    ga reserves = 0
+    gn reserves = 0
+
+    project level is X0. Development Pending
+
+then
+    Validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Oil reserves = 0
+    con reserves = 0
+    ga reserves = 0
+    gn reserves = 0
+
+    project level is E3. Justified for Development
+
+then
+    Validation result is False
 ```
 
 ### RE0046 - Oil Reserves: 1P should be higher than zero if 2P is higher than zero
