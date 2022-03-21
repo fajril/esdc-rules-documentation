@@ -714,10 +714,10 @@ The following example should pass:
 
 ``` al
 if
-    Oil reserves = 0
-    con reserves = 0
-    ga reserves = 0
-    gn reserves = 0
+    Oil reserves 1P = 0
+    con reserves 1P = 0
+    ga reserves 1P = 0
+    gn reserves 1P = 0
 
     project level is X0. Development Pending
 
@@ -729,10 +729,10 @@ The following example should fail:
 
 ``` al
 if
-    Oil reserves = 0
-    con reserves = 0
-    ga reserves = 0
-    gn reserves = 0
+    Oil reserves 1P = 0
+    con reserves 1P = 0
+    ga reserves 1P = 0
+    gn reserves 1P = 0
 
     project level is E3. Justified for Development
 
