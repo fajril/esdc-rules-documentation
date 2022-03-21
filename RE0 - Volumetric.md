@@ -628,7 +628,7 @@ The following example should pass:
 
 ``` al
 if
-    Oil GRR/CR/PR = 1000
+    Oil GRR/CR/PR Low Value = 1000
     project level is E0. On Production
 
 then
@@ -640,10 +640,10 @@ The following example should fail:
 
 ``` al
 if
-    Oil GRR/CR/PR = 0
-    con GRR/CR/PR = 0
-    ga GRR/CR/PR = 0
-    gn GRR/CR/PR = 0
+    Oil GRR/CR/PR Low Value = 0
+    con GRR/CR/PR Low Value = 0
+    ga GRR/CR/PR Low Value = 0
+    gn GRR/CR/PR Low Value = 0
     project level is E0. On Production
 
 then
@@ -671,7 +671,7 @@ The following example should pass:
 
 ``` al
 if
-    Oil Reserves = 1000
+    Oil Reserves 1P = 1000
     project level is E0. On Production
 
 then
@@ -683,10 +683,10 @@ The following example should fail:
 
 ``` al
 if
-    Oil reserves = 0
-    con reserves = 0
-    ga reserves = 0
-    gn reserves = 0
+    Oil reserves 1P = 0
+    con reserves 1P = 0
+    ga reserves 1P = 0
+    gn reserves 1P = 0
 
     project level is E0. On Production
 
