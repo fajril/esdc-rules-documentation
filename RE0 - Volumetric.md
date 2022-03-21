@@ -616,7 +616,7 @@ The following equation must be true:
 
 $$
 M_s = \left\{E_7, E_8, A_1, A_2 \right\} \\
-\left( \Delta N_{pn}^{\text{ P90}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P90}} > 0 \right) \implies M_{t_R} \in M_s
+\left( \Delta N_{pn}^{\text{ P90}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P90}} > 0 \right) \implies M_{t_R} \not \in M_s
 $$
 
 ```python
@@ -650,7 +650,6 @@ then
     Validation result is False
 
 ```
-
 
 ### RE0044 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must have reserves for project maturity level E0, E1, E2, E3
 
@@ -694,7 +693,6 @@ if
 then
     Validation result is False
 ```
-
 
 ### RE0045 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must not have reserves for project maturity level E4 to X6
 
