@@ -2376,3 +2376,45 @@ if
 then
     validation result is False
 ```
+
+### RE5041 - Project Level: If the project sales cumulative production is more than zero, then the project level must be either E0, E1, E4, or E7
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_s = \left\{E_0, E_1, E_4, E_7 \right\} \\
+\left( N_{ps, t_R} > 0 \right) \lor \left( N_{ps, t_R}^c > 0 \right) \lor \left( G_{ps, t_R}^a > 0 \right) \lor \left( G_{ps, t_R} > 0 \right) \implies M_{t_R} = M_s
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    current sales oil cumulative production = 1200
+
+    project level is E0. On Production
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    current sales oil cumulative production = 0
+    current sales con cumulative production = 0
+    current sales ga cumulative production = 0
+    current sales gn cumulative production = 0
+
+    project level is E7. Production not Viable
+
+then 
+    validation result is False
+```
