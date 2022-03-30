@@ -2385,7 +2385,7 @@ The following rule must be true:
 
 $$
 M_s = \left\{E_0, E_1, E_4, E_7 \right\} \\
-\left( N_{ps, t_R} > 0 \right) \lor \left( N_{ps, t_R}^c > 0 \right) \lor \left( G_{ps, t_R}^a > 0 \right) \lor \left( G_{ps, t_R} > 0 \right) \implies M_{t_R} = M_s
+\left( N_{ps, t_R} > 0 \right) \lor \left( N_{ps, t_R}^c > 0 \right) \lor \left( G_{ps, t_R}^a > 0 \right) \lor \left( G_{ps, t_R} > 0 \right) \implies M_{t_R} \in M_s
 $$
 
 ```python
