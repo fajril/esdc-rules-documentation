@@ -608,7 +608,7 @@ import esdc
 return esdc.reserves['gn']['hgh'][-1] <= esdc.resources['gn']['hgh'][-1]
 ```
 
-### RE0043 - Oil, Condensate, Associated Gas, Non Associated Gas GRR/CR/PR P90: Project must have hydrocarbon volume for every project maturity level except E7, E8, A1, A2
+### RE0043 - Oil, Condensate, Associated Gas, Non Associated Gas GRR/CR/PR P90: If project does not have hydrocarbon volume then the project level must be either E7, E8, A1, or A2
 
 Severity:  `strict` :no_entry:
 
@@ -616,7 +616,7 @@ The following equation must be true:
 
 $$
 M_s = \left\{E_7, E_8, A_1, A_2 \right\} \\
-\left( \Delta N_{pn}^{\text{ P90}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P90}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P90}} > 0 \right) \implies M_{t_R} \not \in M_s
+\Delta N_{pn}^{\text{ P10}} = \Delta N_{pn}^{c \text{ P10}} = \Delta G_{pn}^{a \text{ P10}} = \Delta G_{pn}^{\text{P10}} = 0 \implies M_{t_R} \in M_s
 $$
 
 ```python
@@ -628,7 +628,7 @@ The following example should pass:
 
 ``` al
 if
-    Oil GRR/CR/PR Low Value = 1000
+    Oil GRR/CR/PR High Value = 1000
     project level is E0. On Production
 
 then
@@ -640,10 +640,10 @@ The following example should fail:
 
 ``` al
 if
-    Oil GRR/CR/PR Low Value = 0
-    con GRR/CR/PR Low Value = 0
-    ga GRR/CR/PR Low Value = 0
-    gn GRR/CR/PR Low Value = 0
+    Oil GRR/CR/PR High Value = 0
+    con GRR/CR/PR High Value = 0
+    ga GRR/CR/PR High Value = 0
+    gn GRR/CR/PR High Value = 0
     project level is E0. On Production
 
 then
