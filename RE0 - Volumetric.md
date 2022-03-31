@@ -608,7 +608,7 @@ import esdc
 return esdc.reserves['gn']['hgh'][-1] <= esdc.resources['gn']['hgh'][-1]
 ```
 
-### RE0043 - Oil, Condensate, Associated Gas, Non Associated Gas GRR/CR/PR P90: If project does not have hydrocarbon volume then the project level must be either E7, E8, A1, or A2
+### RE0043 - Oil, Condensate, Associated Gas, Non Associated Gas GRR/CR/PR P10: If project does not have hydrocarbon volume then the project level must be either E7, E8, A1, or A2
 
 Severity:  `strict` :no_entry:
 
