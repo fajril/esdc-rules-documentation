@@ -2452,3 +2452,40 @@ if
 then 
     validation result is False
 ```
+
+### RE5043 - Project Level: If the project have hydrocarbon volume, project level can not be in A1. Dry nor A2. Dissolved
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_s = \left\{A_1, A_2 \right\}\\
+\left( \Delta N_{pn}^{\text{ P10}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P10}} > 0 \right) \implies M_{t_R} \not \in M_s
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project level is E0. On Production
+    Oil GRR/CR/PR High Value = 1000
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project level is A1. Dry
+    Oil GRR/CR/PR High Value = 1000
+
+then 
+    validation result is False
+```
