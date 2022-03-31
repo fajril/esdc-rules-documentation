@@ -2418,3 +2418,37 @@ if
 then 
     validation result is False
 ```
+
+### RE5042 - Project Level: Project level must be filled
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_{t_R} \not \in \empty
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project level is E0. On Production
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project level is null
+
+then 
+    validation result is False
+```
