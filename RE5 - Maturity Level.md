@@ -2377,7 +2377,7 @@ then
     validation result is False
 ```
 
-### RE5041 - Project Level: If the project sales cumulative production is more than zero, then the project level must be either E0, E1, E4, or E7
+### RE5041 - Project Level: If sales cumulative production is more than zero, then the project level must be either E0, E1, E4, or E7
 
 Severity: `strict` :no_entry:
 
