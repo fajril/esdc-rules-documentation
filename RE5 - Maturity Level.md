@@ -2489,3 +2489,139 @@ if
 then 
     validation result is False
 ```
+
+### RE5044 - GCF Source Rock: GCF Source Rock must be filled
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+P_{g, s, t_R} \not \in \empty
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Source Rock = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Source Rock is null
+
+then 
+    validation result is False
+```
+
+### RE5045 - GCF Reservoir: GCF Reservoir must be filled
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+P_{g, r, t_R} \not \in \empty
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Reservoir = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Reservoir is null
+
+then 
+    validation result is False
+```
+
+### RE5046 - GCF Trap and Seal: GCF Trap and Seal must be filled
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+P_{g, ts, t_R} \not \in \empty
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Trap and Seal = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Trap and Seal is null
+
+then 
+    validation result is False
+```
+
+### RE5047 - GCF Dynamic: GCF Dynamic must be filled
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+P_{g, m, t_R} \not \in \empty
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Dynamic = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Dynamic is null
+
+then 
+    validation result is False
+```
