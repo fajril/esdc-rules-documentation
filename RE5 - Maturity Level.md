@@ -480,7 +480,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_5\right\} \\
+M_s = \lbrace E_0, E_2, E_5\rbrace\\
 M_{t_R - 1} = E_2 \implies M_{t_R} \in M_s
 $$
 
@@ -536,7 +536,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_3, E_5\right\} \\
+M_s = \lbrace E_0, E_2, E_3, E_5\rbrace\\
 M_{t_R - 1} = E_3 \implies M_{t_R} \in M_s
 $$
 
@@ -601,7 +601,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_5\right\} \\
+M_s = \lbrace E_0, E_2, E_5\rbrace\\
 M_{t_R - 1} = E_5 \implies M_{t_R} \in M_s
 $$
 
@@ -654,7 +654,7 @@ then
 Severity: `strict` :no_entry:
 
 $$
-M_s = \left\{E_0, E_2, E_3, E_8\right\} \\
+M_s = \lbrace E_0, E_2, E_3, E_8 \rbrace \\
 M_{t_R - 1} = E_6 \implies M_{t_R} \in M_s
 $$
 
@@ -757,7 +757,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_4, E_7\right\} \\
+M_s = \lbrace E_0, E_4, E_7 \rbrace \\
 M_{t_R - 1} = E_7 \implies M_{t_R} \in M_s
 $$
 
@@ -813,7 +813,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_3,E_8\right\} \\
+M_s = \left\lbrace E_0, E_2, E_3,E_8\right\rbrace \\
 M_{t_R - 1} = E_8 \implies M_{t_R} \in M_s
 $$
 
@@ -878,7 +878,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_3, X_0, X_2, X_3\right\} \\
+M_s = \left\lbrace E_0, E_2, E_3, X_0, X_2, X_3\right\rbrace \\
 M_{t_R - 1} = X_0 \implies M_{t_R} \in M_s
 $$
 
@@ -960,7 +960,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_3, X_0, X_1, X_2\right\} \\
+M_s = \left\lbrace E_0, E_2, E_3, X_0, X_1, X_2\right\rbrace \\
 M_{t_R - 1} = X_1 \implies M_{t_R} \in M_s
 $$
 
@@ -1081,7 +1081,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_3, X_0, X_2\right\} \\
+M_s = \left\lbrace E_0, E_2, E_3, X_0, X_2\right\rbrace \\
 M_{t_R - 1} = X_2 \implies M_{t_R} \in M_s
 $$
 
@@ -1155,7 +1155,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_2, E_3, X_3\right\} \\
+M_s = \left\lbrace E_0, E_2, E_3, X_3\right\rbrace \\
 M_{t_R - 1} = X_3 \implies M_{t_R} \in M_s
 $$
 
@@ -1220,7 +1220,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{ E_3, X_0, X_1, X_4\right\} \\
+M_s = \lbrace E_3, X_0, X_1, X_4 \rbrace \\
 M_{t_R - 1} = X_4 \implies M_{t_R} \in M_s
 $$
 
@@ -1279,7 +1279,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{ X_0, X_1, X_4, X_5\right\} \\
+M_s = \lbrace X_0, X_1, X_4, X_5\rbrace \\
 M_{t_R - 1} = X_5 \implies M_{t_R} \in M_s
 $$
 
@@ -1339,7 +1339,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \left\{ X_1, X_4, X_5, X_6\right\} \\
+M_s = \lbrace X_1, X_4, X_5, X_6\rbrace \\
 M_{t_R - 1} = X_6 \implies M_{t_R} \in M_s
 $$
 
@@ -1398,7 +1398,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_s = \left\{X_5, X_6\right\} \\
+M_s = \lbrace X_5, X_6\rbrace \\
 0 < P_g < 1 \implies M_{t_R} \in M_s
 $$
 
@@ -1441,8 +1441,8 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_E = \left\{E_0, \dots, E_8 \right\} \\
-M_s = \left\{M_E, X_0, \dots X_4 \right\} \\
+M_E = \lbrace E_0, \dots, E_8 \rbrace\\
+M_s = \lbrace M_E, X_0, \dots X_4 \rbrace\\
 P_g = 1 \implies M_{t_R} \in M_s
 $$
 
@@ -1485,7 +1485,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 P_g = 0 \implies M_{t_R} \in M_A
 $$
 
@@ -1816,7 +1816,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, s, t_R} = 1\right) \lor \left( P_{g, s, t_R} = 0\right)
 $$
 
@@ -1889,7 +1889,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, r, t_R} = 1\right) \lor \left( P_{g, r, t_R} = 0\right)
 $$
 
@@ -1962,7 +1962,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, ts, t_R} = 1\right) \lor \left( P_{g, ts, t_R} = 0\right)
 $$
 
@@ -2035,7 +2035,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, m, t_R} = 1\right) \lor \left( P_{g, m, t_R} = 0\right)
 $$
 
@@ -2108,7 +2108,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, s, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, s, t_R} \geq P_{g, s, t_R - 1}
 $$
 
@@ -2177,7 +2177,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, r, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, r, t_R} \geq P_{g, r, t_R - 1}
 $$
 
@@ -2246,7 +2246,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, ts, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, ts, t_R} \geq P_{g, ts, t_R - 1}
 $$
 
@@ -2315,7 +2315,7 @@ Severity: `warning` :warning:
 The following rule should be true:
 
 $$
-M_A = \left\{A_1, A_2 \right\} \\
+M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, m, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, m, t_R} \geq P_{g, m, t_R - 1}
 $$
 
@@ -2384,7 +2384,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_s = \left\{E_0, E_1, E_4, E_7 \right\} \\
+M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
 \left( N_{ps, t_R} > 0 \right) \lor \left( N_{ps, t_R}^c > 0 \right) \lor \left( G_{ps, t_R}^a > 0 \right) \lor \left( G_{ps, t_R} > 0 \right) \implies M_{t_R} \in M_s
 $$
 
@@ -2460,7 +2460,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_s = \left\{A_1, A_2 \right\}\\
+M_s = \lbrace A_1, A_2 \right\}\\
 \left( \Delta N_{pn}^{\text{ P10}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P10}} > 0 \right) \implies M_{t_R} \not \in M_s
 $$
 
@@ -2779,7 +2779,7 @@ Severity: `strict` :no_entry:
 Related to RE5041. The following rule must be true:
 
 $$
-    M_s = \left\{E_0, E_1, E_4, E_7 \right\} \\
+    M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
     N_{ps} = N_{ps}^c = G_{ps}^a = G_{ps} = 0 \implies M_{t_R} \not \in M_s
 $$
 
@@ -2816,7 +2816,7 @@ Notes: _Moved from RE0, previously RE0043_
 The following equation must be true:
 
 $$
-M_s = \left\{E_7, E_8, A_1, A_2 \right\} \\
+M_s = \lbrace E_7, E_8, A_1, A_2 \rbrace\\
 \Delta N_{pn}^{\text{ P10}} = \Delta N_{pn}^{c \text{ P10}} = \Delta G_{pn}^{a \text{ P10}} = \Delta G_{pn}^{\text{P10}} = 0 \implies M_{t_R} \in M_s
 $$
 
@@ -2861,7 +2861,7 @@ Notes: _Moved from RE0, previously RE0044_
 The following equation must be true:
 
 $$
-M_s = \left\{E_0, E_1, E_2, E_3 \right\} \\
+M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
 \left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_{t_R} \in M_s
 $$
 
@@ -2906,7 +2906,7 @@ Notes: _Moved from RE0, previously RE0045_
 The following equation must be true:
 
 $$
-M_s = \left\{E_0, E_1, E_2, E_3 \right\} \\
+M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
 \left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_{t_R} \notin M_s
 $$
 
