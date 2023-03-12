@@ -608,21 +608,15 @@ import esdc
 return esdc.reserves['gn']['hgh'][-1] <= esdc.resources['gn']['hgh'][-1]
 ```
 
-### RE0043 - Oil, Condensate, Associated Gas, Non Associated Gas GRR/CR/PR P10: If project does not have hydrocarbon volume then the project level must be either E7, E8, A1, or A2
+### RE0043 - IOIP Low: Sum of Project IOIP Low must be equal to IOIP Low
 
 Severity:  `strict` :no_entry:
 
-Notes: _should be moved to RE5_
-
 The following equation must be true:
 
-$$
-M_s = \left\{E_7, E_8, A_1, A_2 \right\} \\
-\Delta N_{pn}^{\text{ P10}} = \Delta N_{pn}^{c \text{ P10}} = \Delta G_{pn}^{a \text{ P10}} = \Delta G_{pn}^{\text{P10}} = 0 \implies M_{t_R} \in M_s
-$$
+$$\sum_{i=1}^n N^{\text{P90}}_{\text{prj}} = N^{\text{P90}}$$
 
 ```python
-
 import esdc
 ```
 
@@ -630,102 +624,10 @@ The following example should pass:
 
 ``` al
 if
-    Oil GRR/CR/PR High Value = 1000
-    project level is E0. On Production
+    project Apple IOIP Low = 1000
+    project Mango IOIP Low = 500
 
-then
-    Validation result is True
-
-```
-
-The following example should fail:
-
-``` al
-if
-    Oil GRR/CR/PR High Value = 0
-    con GRR/CR/PR High Value = 0
-    ga GRR/CR/PR High Value = 0
-    gn GRR/CR/PR High Value = 0
-    project level is E0. On Production
-
-then
-    Validation result is False
-
-```
-
-### RE0044 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must have reserves for project maturity level E0, E1, E2, E3
-
-Severity:  `strict` :no_entry:
-
-Notes: _should be moved to RE5_
-
-The following equation must be true:
-
-$$
-M_s = \left\{E_0, E_1, E_2, E_3 \right\} \\
-\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_{t_R} \in M_s
-$$
-
-```python
-
-import esdc
-```
-
-The following example should pass:
-
-``` al
-if
-    Oil Reserves 1P = 1000
-    project level is E0. On Production
-
-then
-    Validation result is True
-
-```
-
-The following example should fail:
-
-``` al
-if
-    Oil reserves 1P = 0
-    con reserves 1P = 0
-    ga reserves 1P = 0
-    gn reserves 1P = 0
-
-    project level is E0. On Production
-
-then
-    Validation result is False
-```
-
-### RE0045 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must not have reserves for project maturity level E4 to X6
-
-Severity:  `strict` :no_entry:
-
-Notes: _should be moved to RE5_
-
-The following equation must be true:
-
-$$
-M_s = \left\{E_0, E_1, E_2, E_3 \right\} \\
-\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_{t_R} \notin M_s
-$$
-
-```python
-
-import esdc
-```
-
-The following example should pass:
-
-``` al
-if
-    Oil reserves 1P = 0
-    con reserves 1P = 0
-    ga reserves 1P = 0
-    gn reserves 1P = 0
-
-    project level is X0. Development Pending
+    field Fruit IOIP Low = 1500
 
 then
     Validation result is True
@@ -735,25 +637,213 @@ The following example should fail:
 
 ``` al
 if
-    Oil reserves 1P = 0
-    con reserves 1P = 0
-    ga reserves 1P = 0
-    gn reserves 1P = 0
+    project Apple IOIP Low = 1000
+    project Mango IOIP Low = 500
 
-    project level is E3. Justified for Development
+    field Fruit IOIP Low = 2000
 
 then
     Validation result is False
 ```
 
-### RE0046 - Oil Reserves: 1P should be higher than zero if 2P is higher than zero
+### RE0044 - IOIP Mid: Sum of Project IOIP Mid must be equal to IOIP Mid
 
-Severity: `warning` :warning:
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+
+$$\sum_{i=1}^n N^{\text{P50}}_{\text{prj}} = N^{\text{P50}}$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project Apple IOIP Mid = 1000
+    project Mango IOIP Mid = 500
+
+    field Fruit IOIP Mid = 1500
+
+then
+    Validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project Apple IOIP Mid = 1000
+    project Mango IOIP Mid = 500
+
+    field Fruit IOIP Mid = 2000
+
+then
+    Validation result is False
+```
+
+### RE0045 - IOIP High: Sum of Project IOIP High must be equal to IOIP High
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+
+$$\sum_{i=1}^n N^{\text{P10}}_{\text{prj}} = N^{\text{P10}}$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project Apple IOIP High = 1000
+    project Mango IOIP High = 500
+
+    field Fruit IOIP High = 1500
+
+then
+    Validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project Apple IOIP High = 1000
+    project Mango IOIP High = 500
+
+    field Fruit IOIP High = 2000
+
+then
+    Validation result is False
+```
+
+### RE0046 - IGIP Low: Sum of Project IGIP Low must be equal to IGIP Low
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+
+$$\sum_{i=1}^n G^{\text{P90}}_{\text{prj}} = G^{\text{P90}}$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project Apple IGIP Low = 1000
+    project Mango IGIP Low = 500
+
+    field Fruit IGIP Low = 1500
+
+then
+    Validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project Apple IGIP Low = 1000
+    project Mango IGIP Low = 500
+
+    field Fruit IGIP Low = 2000
+
+then
+    Validation result is False
+```
+
+### RE0047 - IGIP Mid: Sum of Project IGIP Mid must be equal to IGIP Mid
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+
+$$\sum_{i=1}^n G^{\text{P50}}_{\text{prj}} = G^{\text{P50}}$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project Apple IGIP Mid = 1000
+    project Mango IGIP Mid = 500
+
+    field Fruit IGIP Mid = 1500
+
+then
+    Validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project Apple IGIP Mid = 1000
+    project Mango IGIP Mid = 500
+
+    field Fruit IGIP Mid = 2000
+
+then
+    Validation result is False
+```
+
+### RE0048 - IGIP High: Sum of Project IGIP High must be equal to IGIP High
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+
+$$\sum_{i=1}^n G^{\text{P10}}_{\text{prj}} = G^{\text{P10}}$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project Apple IGIP High = 1000
+    project Mango IGIP High = 500
+
+    field Fruit IGIP High = 1500
+
+then
+    Validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project Apple IGIP High = 1000
+    project Mango IGIP High = 500
+
+    field Fruit IGIP High = 2000
+
+then
+    Validation result is False
+```
+
+### RE0049 - Oil Reserves: 1P should be higher than zero if 3P is higher than zero
+
+Severity: `strict` :no_entry:
 
 The following equation should be true:
 
 $$
-\Delta N_{ps}^{\text{ 2P}} > 0  \implies \Delta N_{ps}^{\text{ 1P}} > 0
+\Delta N_{ps}^{\text{ 3P}} > 0  \implies \Delta N_{ps}^{\text{ 1P}} > 0
 $$
 
 ```python
@@ -761,14 +851,14 @@ $$
 import esdc
 ```
 
-### RE0047 - Condensate Reserves: 1P should be higher than zero if 2P is higher than zero
+### RE0050 - Condensate Reserves: 1P should be higher than zero if 3P is higher than zero
 
-Severity: `warning` :warning:
+Severity: `strict` :no_entry:
 
 The following equation should be true:
 
 $$
-\Delta N_{ps}^{c \text{ 2P}} > 0  \implies \Delta N_{ps}^{c \text{ 1P}} > 0
+\Delta N_{ps}^{c \text{ 3P}} > 0  \implies \Delta N_{ps}^{c \text{ 1P}} > 0
 $$
 
 ```python
@@ -776,14 +866,14 @@ $$
 import esdc
 ```
 
-### RE0048 - Associated Gas Reserves: 1P should be higher than zero if 2P is higher than zero
+### RE0051 - Associated Gas Reserves: 1P should be higher than zero if 3P is higher than zero
 
-Severity: `warning` :warning:
+Severity: `strict` :no_entry:
 
 The following equation should be true:
 
 $$
-\Delta G_{ps}^{a \text{ 2P}} > 0  \implies \Delta G_{ps}^{a \text{ 1P}} > 0
+\Delta G_{ps}^{a \text{ 3P}} > 0  \implies \Delta G_{ps}^{a \text{ 1P}} > 0
 $$
 
 ```python
@@ -791,9 +881,9 @@ $$
 import esdc
 ```
 
-### RE0049 - Non Associated Reserves: 1P should be higher than zero if 2P is higher than zero
+### RE0052 - Non Associated Reserves: 1P should be higher than zero if 3P is higher than zero
 
-Severity: `warning` :warning:
+Severity: `strict` :no_entry:
 
 The following equation should be true:
 
@@ -803,149 +893,5 @@ $$
 
 ```python
 
-import esdc
-```
-
-### RE0050 - Oil Reserves: 2P should be higher than zero if 3P is higher than zero
-
-Severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-\Delta N_{ps}^{\text{ 3P}} > 0  \implies \Delta N_{ps}^{\text{ 2P}} > 0
-$$
-
-```python
-
-import esdc
-```
-
-### RE0051 - Condensate Reserves: 2P should be higher than zero if 3P is higher than zero
-
-Severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-\Delta N_{ps}^{c \text{ 3P}} > 0  \implies \Delta N_{ps}^{c \text{ 2P}} > 0
-$$
-
-```python
-
-import esdc
-```
-
-### RE0052 - Associated Gas Reserves: 2P should be higher than zero if 3P is higher than zero
-
-Severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-\Delta G_{ps}^{a \text{ 3P}} > 0  \implies \Delta G_{ps}^{a \text{ 2P}} > 0
-$$
-
-```python
-
-import esdc
-```
-
-### RE0053 - Non Associated Gas Reserves: 2P should be higher than zero if 3P is higher than zero
-
-Severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-\Delta G_{ps}^{\text{ 3P}} > 0  \implies \Delta G_{ps}^{\text{ 2P}} > 0
-$$
-
-```python
-
-import esdc
-```
-
-### RE0054 - IOIP: Low Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-N^{\text{P90}}_{\text{study, field}} \neq \empty \implies N^{\text{P90}} = N^{\text{P90}}_{\text{study, field}}
-$$
-
-```python
-import esdc
-```
-
-### RE0055 - IOIP: Mid Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-N^{\text{P50}}_{\text{study, field}} \neq \empty \implies N^{\text{P50}} = N^{\text{P50}}_{\text{study, field}}
-$$
-
-```python
-import esdc
-```
-
-### RE0056 - IOIP: High Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-N^{\text{P10}}_{\text{study, field}} \neq \empty \implies N^{\text{P10}} = N^{\text{P10}}_{\text{study, field}}
-$$
-
-```python
-import esdc
-```
-
-### RE0057 - IGIP: Low Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-G^{\text{P90}}_{\text{study, field}} \neq \empty \implies G^{\text{P90}} = G^{\text{P90}}_{\text{study, field}}
-$$
-
-```python
-import esdc
-```
-
-### RE0058 - IGIP: Mid Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-G^{\text{P50}}_{\text{study, field}}\neq \empty \implies G^{\text{P50}} = G^{\text{P50}}_{\text{study, field}}
-$$
-
-```python
-import esdc
-```
-
-### RE0059 - IGIP: High Case value should be equal to the result of GGR Study Report
-
-severity: `warning` :warning:
-
-The following equation should be true:
-
-$$
-G^{\text{P10}}_{\text{study, field}} \neq \empty \implies G^{\text{P10}} = G^{\text{P10}}_{\text{study, field}}
-$$
-
-```python
 import esdc
 ```
