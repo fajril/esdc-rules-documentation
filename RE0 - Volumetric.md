@@ -612,6 +612,8 @@ return esdc.reserves['gn']['hgh'][-1] <= esdc.resources['gn']['hgh'][-1]
 
 Severity:  `strict` :no_entry:
 
+Notes: _Implemented for reporting status of 31.12.2022_
+
 The following equation must be true:
 
 $$\sum_{i=1}^n N^{\text{P90}}_{\text{prj}} = N^{\text{P90}}$$
@@ -649,6 +651,8 @@ then
 ### RE0044 - IOIP Mid: Sum of Project IOIP Mid must be equal to IOIP Mid
 
 Severity:  `strict` :no_entry:
+
+Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
@@ -688,6 +692,8 @@ then
 
 Severity:  `strict` :no_entry:
 
+Notes: _Implemented for reporting status of 31.12.2022_
+
 The following equation must be true:
 
 $$\sum_{i=1}^n N^{\text{P10}}_{\text{prj}} = N^{\text{P10}}$$
@@ -725,6 +731,8 @@ then
 ### RE0046 - IGIP Low: Sum of Project IGIP Low must be equal to IGIP Low
 
 Severity:  `strict` :no_entry:
+
+Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
@@ -764,6 +772,8 @@ then
 
 Severity:  `strict` :no_entry:
 
+Notes: _Implemented for reporting status of 31.12.2022_
+
 The following equation must be true:
 
 $$\sum_{i=1}^n G^{\text{P50}}_{\text{prj}} = G^{\text{P50}}$$
@@ -801,6 +811,8 @@ then
 ### RE0048 - IGIP High: Sum of Project IGIP High must be equal to IGIP High
 
 Severity:  `strict` :no_entry:
+
+Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
@@ -840,6 +852,8 @@ then
 
 Severity: `strict` :no_entry:
 
+Notes: _Implemented for reporting status of 31.12.2022_
+
 The following equation should be true:
 
 $$
@@ -854,6 +868,8 @@ import esdc
 ### RE0050 - Condensate Reserves: 1P should be higher than zero if 3P is higher than zero
 
 Severity: `strict` :no_entry:
+
+Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation should be true:
 
@@ -870,6 +886,8 @@ import esdc
 
 Severity: `strict` :no_entry:
 
+Notes: _Implemented for reporting status of 31.12.2022_
+
 The following equation should be true:
 
 $$
@@ -885,10 +903,12 @@ import esdc
 
 Severity: `strict` :no_entry:
 
+Notes: _Implemented for reporting status of 31.12.2022_
+
 The following equation should be true:
 
 $$
-\Delta G_{ps}^{\text{ 2P}} > 0  \implies \Delta G_{ps}^{\text{ 1P}} > 0
+\Delta G_{ps}^{\text{ 3P}} > 0  \implies \Delta G_{ps}^{\text{ 1P}} > 0
 $$
 
 ```python
