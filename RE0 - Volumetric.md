@@ -854,7 +854,7 @@ Severity: `strict` :no_entry:
 
 Notes: _Implemented for reporting status of 31.12.2022_
 
-The following equation should be true:
+The following equation must be true:
 
 $$
 \Delta N_{ps}^{\text{ 3P}} > 0  \implies \Delta N_{ps}^{\text{ 1P}} > 0
@@ -871,7 +871,7 @@ Severity: `strict` :no_entry:
 
 Notes: _Implemented for reporting status of 31.12.2022_
 
-The following equation should be true:
+The following equation must be true:
 
 $$
 \Delta N_{ps}^{c \text{ 3P}} > 0  \implies \Delta N_{ps}^{c \text{ 1P}} > 0
@@ -888,7 +888,7 @@ Severity: `strict` :no_entry:
 
 Notes: _Implemented for reporting status of 31.12.2022_
 
-The following equation should be true:
+The following equation must be true:
 
 $$
 \Delta G_{ps}^{a \text{ 3P}} > 0  \implies \Delta G_{ps}^{a \text{ 1P}} > 0
@@ -905,7 +905,7 @@ Severity: `strict` :no_entry:
 
 Notes: _Implemented for reporting status of 31.12.2022_
 
-The following equation should be true:
+The following equation must be true:
 
 $$
 \Delta G_{ps}^{\text{ 3P}} > 0  \implies \Delta G_{ps}^{\text{ 1P}} > 0
