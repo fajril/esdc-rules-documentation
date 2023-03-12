@@ -466,11 +466,13 @@ return esdc.inplace['gn']['mid'][-1] > eur_P10 if eur_P10 > 0
 
 ### RE2027 - IGIP Low: IGIP Low Case must be higher than 0 if Sum of all projects Condensate GRR/CR/PR 3R/3C/3U higher than 0
 
+Notes: _Corrected rules. Check eSDC._
+
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{i=1}^n \left( \Delta N_{p, n, i}^{c\text{ P10}} + N_{p, s, i}^c \right) > 0 \implies G^{\text{P50}} > 0$$
+$$\sum_{i=1}^n \left( \Delta N_{p, n, i}^{c\text{ P10}} + N_{p, s, i}^c \right) > 0 \implies G^{\text{P90}} > 0$$
 
 ```python
 import esdc
@@ -480,14 +482,124 @@ return esdc.inplace['gn']['low'][-1] > 0 if esdc.resources['con']['hgh'][-1].gro
 
 ### RE2028 - IOIP Low: IOIP Low Case must be higher than 0 if Sum of all projects Associated Gas GRR/CR/PR 3R/3C/3U higher than 0
 
+Notes: _Corrected rules. Check eSDC._
+
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\sum_{i=1}^n \left( \Delta G_{p, n, i}^{a\text{ P10}} + G_{p, s, i}^a \right) > 0 \implies N^{\text{P50}} > 0$$
+$$\sum_{i=1}^n \left( \Delta G_{p, n, i}^{a\text{ P10}} + G_{p, s, i}^a \right) > 0 \implies N^{\text{P90}} > 0$$
 
 ```python
 import esdc
 
 return esdc.inplace['oil']['low'][-1] > 0 if esdc.resources['gn']['hgh'][-1].groupby('field').sum() > 0
+```
+
+### RE2029 - IOIP Low: IOIP Low Case must be higher than sum of all projects oil EUR GRR/CR/PR 1R/1C/1U
+
+Notes: _New Rules_
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+$$N^{\text{P90}} > \sum_{i=1}^n \left( \Delta N_{p, n, i}^{\text{ P90}} + N_{p, s, i} \right) > 0 $$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if 
+    Oil sales cumulative production = 1000
+    IOIP Low = 1500
+
+then
+    validation result is True
+```
+
+``` al
+if 
+    Oil GRR/CR/PR = 1000
+    IOIP Low = 1500
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if 
+    Oil sales cumulative production = 1000
+    IOIP Low = 0
+
+then
+    validation result is False
+```
+
+``` al
+if 
+    Oil GRR/CR/PR = 1000
+    IOIP Low = 0
+
+then
+    validation result is False
+```
+
+### RE2030 - IGIP Low: IGIP Low Case must be higher than sum of all projects non associated gas EUR GRR/CR/PR 1R/1C/1U
+
+Notes: _New Rules_
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+$$G^{\text{P90}} > \sum_{i=1}^n \left( \Delta G_{p, n, i}^{\text{ P90}} + G_{p, s, i} \right) > 0 $$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if 
+    non associated gas sales cumulative production = 1000
+    IGIP Low = 1500
+
+then
+    validation result is True
+```
+
+``` al
+if 
+    non associated gas GRR/CR/PR = 1000
+    IOIP Low = 1500
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if 
+    non associated gas sales cumulative production = 1000
+    IGIP Low = 0
+
+then
+    validation result is False
+```
+
+``` al
+if 
+    non associated gas GRR/CR/PR = 1000
+    IGIP Low = 0
+
+then
+    validation result is False
 ```

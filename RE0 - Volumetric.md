@@ -612,6 +612,8 @@ return esdc.reserves['gn']['hgh'][-1] <= esdc.resources['gn']['hgh'][-1]
 
 Severity:  `strict` :no_entry:
 
+Notes: _should be moved to RE5_
+
 The following equation must be true:
 
 $$
@@ -655,6 +657,8 @@ then
 
 Severity:  `strict` :no_entry:
 
+Notes: _should be moved to RE5_
+
 The following equation must be true:
 
 $$
@@ -697,6 +701,8 @@ then
 ### RE0045 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must not have reserves for project maturity level E4 to X6
 
 Severity:  `strict` :no_entry:
+
+Notes: _should be moved to RE5_
 
 The following equation must be true:
 

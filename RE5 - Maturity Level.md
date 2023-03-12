@@ -2625,3 +2625,184 @@ if
 then 
     validation result is False
 ```
+
+### RE5048 - GCF Source Rock: GCF Source Rock must be within the range 0 to 1
+
+Notes: _New Rules_
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+0 \leq P_{g, s, t_R} \leq 1
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Source Rock = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Source Rock = 50
+
+then 
+    validation result is False
+```
+
+### RE5049 - GCF Reservoir: GCF Reservoir must be within the range 0 to 1
+
+Notes: _New Rules_
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+0 \leq P_{g, r, t_R} \leq 1
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Reservoir = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Reservoir = 50
+
+then 
+    validation result is False
+```
+
+### RE5050 - GCF Trap and Seal: GCF Trap an Seal must be within the range 0 to 1
+
+Notes: _New Rules_
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+0 \leq P_{g, ts, t_R} \leq 1
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Trap and Seal = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Trap and Seal = 50
+
+then 
+    validation result is False
+```
+
+### RE5051 - GCF Dynamic: GCF Dynamic an Seal must be within the range 0 to 1
+
+Notes: _New Rules_
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+0 \leq P_{g, d, t_R} \leq 1
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    GCF Trap and Seal = 0.5
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    GCF Trap and Seal = 50
+
+then 
+    validation result is False
+```
+
+### RE5052 - Project Level: if project level is E0, E1, E4, E7, then the sales cumulative production must be greater than 0
+
+Notes: _New Rules_
+
+Severity: `strict` :no_entry:
+
+Related to RE5041. The following rule must be true:
+
+$$
+    M_s = \left\{E_0, E_1, E_4, E_7 \right\} \\
+    N_{ps} = N_{ps}^c = G_{ps}^a = G_{ps} = 0 \implies M_{t_R} \not \in M_s
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    oil sales cumulative production = 100
+    project level is E0. On Production
+
+then
+    validation result is True
+```
+
+``` al
+if
+    oil sales cumulative production = 0
+    project level is E1. Production on Hold
+
+then
+    validation result is False
+```
