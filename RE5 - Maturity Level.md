@@ -2807,7 +2807,7 @@ then
     validation result is False
 ```
 
-### RE5053 - Oil, Condensate, Associated Gas, Non Associated Gas GRR/CR/PR P10: If project does not have hydrocarbon volume then the project level must be either E7, E8, A1, or A2
+### RE5053 - Project Level: If project does not have hydrocarbon volume then the project level must be either E7, E8, A1, or A2
 
 Severity:  `strict` :no_entry:
 
@@ -2852,7 +2852,7 @@ then
 
 ```
 
-### RE5054 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must have reserves for project maturity level E0, E1, E2, E3
+### RE5054 - Project Level: Project must have reserves 1P for project maturity level E0, E1, E2, E3
 
 Severity:  `strict` :no_entry:
 
@@ -2897,7 +2897,7 @@ then
     Validation result is False
 ```
 
-### RE5055 - Oil, Condensate, Associated Gas, Non Associated Gas Reserves 1P: Project must not have reserves for project maturity level E4 to X6
+### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6
 
 Severity:  `strict` :no_entry:
 
@@ -2943,4 +2943,139 @@ if
 
 then
     Validation result is False
+```
+
+### RE5055 - Project Remarks: Project must have remarks if there is a discrepancy in resources low
+
+Notes: _Added for resources report 31.12.2022_
+
+Severity: `strict` :no_entry:
+
+$$
+\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P90} > 0 \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5056 - Project Remarks: Project must have remarks if there is a discrepancy in resources mid
+
+Notes: _Added for resources report 31.12.2022_
+
+Severity: `strict` :no_entry:
+
+$$
+\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P50} > 0 \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5057 - Project Remarks: Project must have remarks if there is a discrepancy in resources high
+
+Notes: _Added for resources report 31.12.2022_
+
+Severity: `strict` :no_entry:
+
+$$
+\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P10} > 0 \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5058 - Project Remarks: Project must have remarks if there is a change in project IOIP low
+
+Notes: _Added for resources report 31.12.2022._
+
+Severity: `strict` :no_entry:
+
+$$
+N_{\text{project}, t_R}^{\text{P90}} \neq N_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5059 - Project Remarks: Project must have remarks if there is a change in project IOIP mid
+
+Notes: _Added for resources report 31.12.2022_
+
+Severity: `strict` :no_entry:
+
+$$
+N_{\text{project}, t_R}^{\text{P50}} \neq N_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5060 - Project Remarks: Project must have remarks if there is a change in project IOIP high
+
+Notes: _Added for resources report 31.12.2022_
+
+Severity: `strict` :no_entry:
+
+$$
+N_{\text{project}, t_R}^{\text{P10}} \neq N_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5061 - Project Remarks: Project must have remarks if there is a change in project IGIP low
+
+Notes: _Added for resources report 31.12.2022._
+
+Severity: `strict` :no_entry:
+
+$$
+G_{\text{project}, t_R}^{\text{P90}} \neq G_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5062 - Project Remarks: Project must have remarks if there is a change in project IGIP mid
+
+Notes: _Added for resources report 31.12.2022_
+
+Severity: `strict` :no_entry:
+
+$$
+G_{\text{project}, t_R}^{\text{P50}} \neq G_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
+```
+
+### RE5063 - Project Remarks: Project must have remarks if there is a change in project IGIP high
+
+Notes: _Added for resources report 31.12.2022_
+
+Severity: `strict` :no_entry:
+
+$$
+G_{\text{project}, t_R}^{\text{P10}} \neq G_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \empty
+$$
+
+```python
+
+import esdc
 ```
