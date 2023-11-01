@@ -2426,7 +2426,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_{t_R} \not \in \empty
+M_{t_R} \not \in \emptyset
 $$
 
 ```python
@@ -2460,7 +2460,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_s = \lbrace A_1, A_2 \right\}\\
+M_s = \lbrace A_1, A_2 \rbrace\\
 \left( \Delta N_{pn}^{\text{ P10}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P10}} > 0 \right) \implies M_{t_R} \not \in M_s
 $$
 
@@ -2497,7 +2497,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-P_{g, s, t_R} \not \in \empty
+P_{g, s, t_R} \not \in \emptyset
 $$
 
 ```python
@@ -2531,7 +2531,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-P_{g, r, t_R} \not \in \empty
+P_{g, r, t_R} \not \in \emptyset
 $$
 
 ```python
@@ -2565,7 +2565,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-P_{g, ts, t_R} \not \in \empty
+P_{g, ts, t_R} \not \in \emptyset
 $$
 
 ```python
@@ -2599,7 +2599,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-P_{g, m, t_R} \not \in \empty
+P_{g, m, t_R} \not \in \emptyset
 $$
 
 ```python
@@ -2945,14 +2945,14 @@ then
     Validation result is False
 ```
 
-### RE5055 - Project Remarks: Project must have remarks if there is a discrepancy in resources low
+### RE5056 - Project Remarks: Project must have remarks if there is a discrepancy in resources low
 
 Notes: _Added for resources report 31.12.2022_
 
 Severity: `strict` :no_entry:
 
 $$
-\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P90} > 0 \implies M_{\text{remarks}, t_R} \notin \empty
+\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P90} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -2960,14 +2960,14 @@ $$
 import esdc
 ```
 
-### RE5056 - Project Remarks: Project must have remarks if there is a discrepancy in resources mid
+### RE5057 - Project Remarks: Project must have remarks if there is a discrepancy in resources mid
 
 Notes: _Added for resources report 31.12.2022_
 
 Severity: `strict` :no_entry:
 
 $$
-\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P50} > 0 \implies M_{\text{remarks}, t_R} \notin \empty
+\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P50} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -2975,14 +2975,14 @@ $$
 import esdc
 ```
 
-### RE5057 - Project Remarks: Project must have remarks if there is a discrepancy in resources high
+### RE5058 - Project Remarks: Project must have remarks if there is a discrepancy in resources high
 
 Notes: _Added for resources report 31.12.2022_
 
 Severity: `strict` :no_entry:
 
 $$
-\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P10} > 0 \implies M_{\text{remarks}, t_R} \notin \empty
+\sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P10} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -2990,14 +2990,14 @@ $$
 import esdc
 ```
 
-### RE5058 - Project Remarks: Project must have remarks if there is a change in project IOIP low
+### RE5059 - Project Remarks: Project must have remarks if there is a change in project IOIP low
 
 Notes: _Added for resources report 31.12.2022._
 
 Severity: `strict` :no_entry:
 
 $$
-N_{\text{project}, t_R}^{\text{P90}} \neq N_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \empty
+N_{\text{project}, t_R}^{\text{P90}} \neq N_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3005,14 +3005,14 @@ $$
 import esdc
 ```
 
-### RE5059 - Project Remarks: Project must have remarks if there is a change in project IOIP mid
+### RE5060 - Project Remarks: Project must have remarks if there is a change in project IOIP mid
 
 Notes: _Added for resources report 31.12.2022_
 
 Severity: `strict` :no_entry:
 
 $$
-N_{\text{project}, t_R}^{\text{P50}} \neq N_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \empty
+N_{\text{project}, t_R}^{\text{P50}} \neq N_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3020,14 +3020,14 @@ $$
 import esdc
 ```
 
-### RE5060 - Project Remarks: Project must have remarks if there is a change in project IOIP high
+### RE5061 - Project Remarks: Project must have remarks if there is a change in project IOIP high
 
 Notes: _Added for resources report 31.12.2022_
 
 Severity: `strict` :no_entry:
 
 $$
-N_{\text{project}, t_R}^{\text{P10}} \neq N_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \empty
+N_{\text{project}, t_R}^{\text{P10}} \neq N_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3035,14 +3035,14 @@ $$
 import esdc
 ```
 
-### RE5061 - Project Remarks: Project must have remarks if there is a change in project IGIP low
+### RE5062 - Project Remarks: Project must have remarks if there is a change in project IGIP low
 
 Notes: _Added for resources report 31.12.2022._
 
 Severity: `strict` :no_entry:
 
 $$
-G_{\text{project}, t_R}^{\text{P90}} \neq G_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \empty
+G_{\text{project}, t_R}^{\text{P90}} \neq G_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3050,14 +3050,14 @@ $$
 import esdc
 ```
 
-### RE5062 - Project Remarks: Project must have remarks if there is a change in project IGIP mid
+### RE5063 - Project Remarks: Project must have remarks if there is a change in project IGIP mid
 
 Notes: _Added for resources report 31.12.2022_
 
 Severity: `strict` :no_entry:
 
 $$
-G_{\text{project}, t_R}^{\text{P50}} \neq G_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \empty
+G_{\text{project}, t_R}^{\text{P50}} \neq G_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3065,14 +3065,14 @@ $$
 import esdc
 ```
 
-### RE5063 - Project Remarks: Project must have remarks if there is a change in project IGIP high
+### RE5064 - Project Remarks: Project must have remarks if there is a change in project IGIP high
 
 Notes: _Added for resources report 31.12.2022_
 
 Severity: `strict` :no_entry:
 
 $$
-G_{\text{project}, t_R}^{\text{P10}} \neq G_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \empty
+G_{\text{project}, t_R}^{\text{P10}} \neq G_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
