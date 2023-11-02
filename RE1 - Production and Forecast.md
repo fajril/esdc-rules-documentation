@@ -456,7 +456,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$ \forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{o, t}^{s} \leq q_{o, t}^{\text{tp}}$$
+$$ \forall t \in \lbrace t_R + 1, \dots , t_R + m \rbrace \mid q_{o, t}^{s} \leq q_{o, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -470,7 +470,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{c, t}^{s} \leq q_{c, t}^{\text{tp}}$$
+$$\forall t \in \lbrace t_R + 1, \dots , t_R + m \rbrace \mid q_{c, t}^{s} \leq q_{c, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -484,7 +484,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{a, t}^{s} \leq q_{a, t}^{\text{tp}}$$
+$$\forall t \in \lbrace t_R + 1, \dots , t_R + m \rbrace \mid q_{a, t}^{s} \leq q_{a, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -498,7 +498,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\forall t \in \left\{t_R + 1, \dots , t_R + m \right\} \mid q_{n, t}^{s} \leq q_{n, t}^{\text{tp}}$$
+$$\forall t \in \lbrace t_R + 1, \dots , t_R + m \rbrace \mid q_{n, t}^{s} \leq q_{n, t}^{\text{tp}}$$
 
 ```python
 import esdc
@@ -624,7 +624,7 @@ Severity: `warning` :warning:
 
 The following equation must be true:
 
-$$\forall t \in \left\{t_R + 1, \dots , t_R + n \right\} \mid q_{oc, t}^{\text{wpnb}} = \left. q_{o, t}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{c, t}^{s} \right \vert_{\sum \text{Working Area}}$$
+$$\forall t \in \lbrace t_R + 1, \dots , t_R + n \rbrace \mid q_{oc, t}^{\text{wpnb}} = \left. q_{o, t}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{c, t}^{s} \right \vert_{\sum \text{Working Area}}$$
 
 ```python
 import esdc
@@ -637,7 +637,7 @@ Severity: `warning` :warning:
 
 The following equation must be true:
 
-$$\forall t \in \left\{t_R + 1, \dots , t_R + n \right\} \mid q_{an, t}^{\text{wpnb}} = \left. q_{a, t}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{n, t}^{s} \right \vert_{\sum \text{Working Area}}$$
+$$\forall t \in \lbrace t_R + 1, \dots , t_R + n \rbrace \mid q_{an, t}^{\text{wpnb}} = \left. q_{a, t}^{s} \right \vert_{\sum \text{Working Area}} + \left. q_{n, t}^{s} \right \vert_{\sum \text{Working Area}}$$
 
 ```python
 import esdc

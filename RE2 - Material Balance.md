@@ -8,7 +8,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{p, n, t}^{\text{P90}} = \Delta N_{p, n, t - 1}^{\text{P90}} + \Delta D_{N}^\text{um P90} + \Delta D_{N}^\text{ppa P90} + \Delta D_{N}^\text{wi P90} + \Delta D_{N}^\text{uc P90} - \left(N_{p, s, t} - N_{p, s, t - 1}\right)$$
+$$\Delta N_{p, n, t}^{\text{P90}} = \Delta N_{p, n, t - 1}^{\text{P90}} + \Delta D_{N}^\text{um P90} + \Delta D_{N}^\text{ppa P90} + \Delta D_{N}^\text{wi P90} + \Delta D_{N}^\text{uc P90} + \Delta D_{N}^\text{cio P90} - \left(N_{p, s, t} - N_{p, s, t - 1}\right)$$
 
 ```python
 import esdc
@@ -27,7 +27,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{p, n, t}^{c\text{ P90}} = \Delta N_{p, n, t - 1}^{c\text{ P90}} + \Delta D_{N^c}^\text{um P90} + \Delta D_{N^c}^\text{ppa P90} + \Delta D_{N^c}^\text{wi P90} + \Delta D_{N^c}^\text{uc P90} - \left(N_{p, s, t}^c - N_{p, s, t - 1}^c\right)$$
+$$\Delta N_{p, n, t}^{c\text{ P90}} = \Delta N_{p, n, t - 1}^{c\text{ P90}} + \Delta D_{N^c}^\text{um P90} + \Delta D_{N^c}^\text{ppa P90} + \Delta D_{N^c}^\text{wi P90} + \Delta D_{N^c}^\text{uc P90} + \Delta D_{N^c}^\text{cio P90} - \left(N_{p, s, t}^c - N_{p, s, t - 1}^c\right)$$
 
 ```python
 import esdc
@@ -46,7 +46,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta G_{p, n, t}^{a\text{ P90}} = \Delta G_{p, n, t - 1}^{a\text{ P90}} + \Delta D_{G^a}^\text{um P90} + \Delta D_{G^a}^\text{ppa P90} + \Delta D_{G^a}^\text{wi P90} + \Delta D_{G^a}^\text{uc P90} - \left(G_{p, s, t}^a - G_{p, s, t - 1}^a\right)$$
+$$\Delta G_{p, n, t}^{a\text{ P90}} = \Delta G_{p, n, t - 1}^{a\text{ P90}} + \Delta D_{G^a}^\text{um P90} + \Delta D_{G^a}^\text{ppa P90} + \Delta D_{G^a}^\text{wi P90} + \Delta D_{G^a}^\text{uc P90} + \Delta D_{G^a}^\text{cio P90} - \left(G_{p, s, t}^a - G_{p, s, t - 1}^a\right)$$
 
 ```python
 import esdc
@@ -65,7 +65,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta G_{p, n, t}^{\text{P90}} = \Delta G_{p, n, t - 1}^{\text{ P90}} + \Delta D_{G}^\text{um P90} + \Delta D_{G}^\text{ppa P90} + \Delta D_{G}^\text{wi P90} + \Delta D_{G}^\text{uc P90} - \left(G_{p, s, t} - G_{p, s, t - 1}\right)$$
+$$\Delta G_{p, n, t}^{\text{P90}} = \Delta G_{p, n, t - 1}^{\text{ P90}} + \Delta D_{G}^\text{um P90} + \Delta D_{G}^\text{ppa P90} + \Delta D_{G}^\text{wi P90} + \Delta D_{G}^\text{uc P90} + \Delta D_{G}^\text{cio P90} - \left(G_{p, s, t} - G_{p, s, t - 1}\right)$$
 
 ```python
 import esdc
@@ -84,7 +84,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{p, n, t}^{\text{P50}} = \Delta N_{p, n, t - 1}^{\text{P50}} + \Delta D_{N}^\text{um P50} + \Delta D_{N}^\text{ppa P50} + \Delta D_{N}^\text{wi P50} + \Delta D_{N}^\text{uc P50} - \left(N_{p, s, t} - N_{p, s, t - 1}\right)$$
+$$\Delta N_{p, n, t}^{\text{P50}} = \Delta N_{p, n, t - 1}^{\text{P50}} + \Delta D_{N}^\text{um P50} + \Delta D_{N}^\text{ppa P50} + \Delta D_{N}^\text{wi P50} + \Delta D_{N}^\text{uc P50} + \Delta D_{N}^\text{cio P50} - \left(N_{p, s, t} - N_{p, s, t - 1}\right)$$
 
 ```python
 import esdc
@@ -103,7 +103,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{p, n, t}^{c\text{ P50}} = \Delta N_{p, n, t - 1}^{c\text{ P50}} + \Delta D_{N^c}^\text{um P50} + \Delta D_{N^c}^\text{ppa P50} + \Delta D_{N^c}^\text{wi P50} + \Delta D_{N^c}^\text{uc P50} - \left(N_{p, s, t}^c - N_{p, s, t - 1}^c\right)$$
+$$\Delta N_{p, n, t}^{c\text{ P50}} = \Delta N_{p, n, t - 1}^{c\text{ P50}} + \Delta D_{N^c}^\text{um P50} + \Delta D_{N^c}^\text{ppa P50} + \Delta D_{N^c}^\text{wi P50} + \Delta D_{N^c}^\text{uc P50} + \Delta D_{N^c}^\text{cio P50} - \left(N_{p, s, t}^c - N_{p, s, t - 1}^c\right)$$
 
 ```python
 import esdc
@@ -122,7 +122,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta G_{p, n, t}^{a\text{ P50}} = \Delta G_{p, n, t - 1}^{a\text{ P50}} + \Delta D_{G^a}^\text{um P50} + \Delta D_{G^a}^\text{ppa P50} + \Delta D_{G^a}^\text{wi P50} + \Delta D_{G^a}^\text{uc P50} - \left(G_{p, s, t}^a - G_{p, s, t - 1}^a\right)$$
+$$\Delta G_{p, n, t}^{a\text{ P50}} = \Delta G_{p, n, t - 1}^{a\text{ P50}} + \Delta D_{G^a}^\text{um P50} + \Delta D_{G^a}^\text{ppa P50} + \Delta D_{G^a}^\text{wi P50} + \Delta D_{G^a}^\text{uc P50} + \Delta D_{G^a}^\text{cio P50} - \left(G_{p, s, t}^a - G_{p, s, t - 1}^a\right)$$
 
 ```python
 import esdc
@@ -141,7 +141,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta G_{p, n, t}^{\text{P50}} = \Delta G_{p, n, t - 1}^{\text{ P50}} + \Delta D_{G}^\text{um P50} + \Delta D_{G}^\text{ppa P50} + \Delta D_{G}^\text{wi P50} + \Delta D_{G}^\text{uc P50} - \left(G_{p, s, t} - G_{p, s, t - 1}\right)$$
+$$\Delta G_{p, n, t}^{\text{P50}} = \Delta G_{p, n, t - 1}^{\text{ P50}} + \Delta D_{G}^\text{um P50} + \Delta D_{G}^\text{ppa P50} + \Delta D_{G}^\text{wi P50} + \Delta D_{G}^\text{uc P50} + \Delta D_{G}^\text{cio P50} - \left(G_{p, s, t} - G_{p, s, t - 1}\right)$$
 
 ```python
 import esdc
@@ -160,7 +160,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{p, n, t}^{\text{P10}} = \Delta N_{p, n, t - 1}^{\text{P10}} + \Delta D_{N}^\text{um P10} + \Delta D_{N}^\text{ppa P10} + \Delta D_{N}^\text{wi P10} + \Delta D_{N}^\text{uc P10} - \left(N_{p, s, t} - N_{p, s, t - 1}\right)$$
+$$\Delta N_{p, n, t}^{\text{P10}} = \Delta N_{p, n, t - 1}^{\text{P10}} + \Delta D_{N}^\text{um P10} + \Delta D_{N}^\text{ppa P10} + \Delta D_{N}^\text{wi P10} + \Delta D_{N}^\text{uc P10} + \Delta D_{N}^\text{cio P10} - \left(N_{p, s, t} - N_{p, s, t - 1}\right)$$
 
 ```python
 import esdc
@@ -179,7 +179,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{p, n, t}^{c\text{ P10}} = \Delta N_{p, n, t - 1}^{c\text{ P10}} + \Delta D_{N^c}^\text{um P10} + \Delta D_{N^c}^\text{ppa P10} + \Delta D_{N^c}^\text{wi P10} + \Delta D_{N^c}^\text{uc P10} - \left(N_{p, s, t}^c - N_{p, s, t - 1}^c\right)$$
+$$\Delta N_{p, n, t}^{c\text{ P10}} = \Delta N_{p, n, t - 1}^{c\text{ P10}} + \Delta D_{N^c}^\text{um P10} + \Delta D_{N^c}^\text{ppa P10} + \Delta D_{N^c}^\text{wi P10} + \Delta D_{N^c}^\text{uc P10} + \Delta D_{N^c}^\text{cio P10} - \left(N_{p, s, t}^c - N_{p, s, t - 1}^c\right)$$
 
 ```python
 import esdc
@@ -198,7 +198,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta G_{p, n, t}^{a\text{ P10}} = \Delta G_{p, n, t - 1}^{a\text{ P10}} + \Delta D_{G^a}^\text{um P10} + \Delta D_{G^a}^\text{ppa P10} + \Delta D_{G^a}^\text{wi P10} + \Delta D_{G^a}^\text{uc P10} - \left(G_{p, s, t}^a - G_{p, s, t - 1}^a\right)$$
+$$\Delta G_{p, n, t}^{a\text{ P10}} = \Delta G_{p, n, t - 1}^{a\text{ P10}} + \Delta D_{G^a}^\text{um P10} + \Delta D_{G^a}^\text{ppa P10} + \Delta D_{G^a}^\text{wi P10} + \Delta D_{G^a}^\text{uc P10} + \Delta D_{G^a}^\text{cio P10} - \left(G_{p, s, t}^a - G_{p, s, t - 1}^a\right)$$
 
 ```python
 import esdc
@@ -217,7 +217,7 @@ Severity: `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta G_{p, n, t}^{\text{P10}} = \Delta G_{p, n, t - 1}^{\text{ P10}} + \Delta D_{G}^\text{um P10} + \Delta D_{G}^\text{ppa P10} + \Delta D_{G}^\text{wi P10} + \Delta D_{G}^\text{uc P10} - \left(G_{p, s, t} - G_{p, s, t - 1}\right)$$
+$$\Delta G_{p, n, t}^{\text{P10}} = \Delta G_{p, n, t - 1}^{\text{ P10}} + \Delta D_{G}^\text{um P10} + \Delta D_{G}^\text{ppa P10} + \Delta D_{G}^\text{wi P10} + \Delta D_{G}^\text{uc P10} + \Delta D_{G}^\text{cio P10} - \left(G_{p, s, t} - G_{p, s, t - 1}\right)$$
 
 ```python
 import esdc
