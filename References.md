@@ -61,7 +61,7 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $q_{n, t \dots t_m}^{\text{tp}}$ | Non Associated Gas Total Potential yearly rate forecast|
 | $q_{oc, t \dots t_m}^{\text{wpnb}}$ | Oil + Condensate yearly rate forecast reported in WP&B|
 | $q_{an, t \dots t_m}^{\text{wpnb}}$ | Associated + Non Associated Gas yearly rate forecast reported in WP&B |
-| $M$ | Maturity Level, $\left\{E_0, \dots, E_8, X_0, \dots, X_6 \rbrace$ |
+| $M$ | Maturity Level, $\lbrace E_0, \dots, E_8, X_0, \dots, X_6 \rbrace$ |
 | $P_g$ | Geological Chance Factor |
 | $P_{g, s}$ | Probability of source rock exist |
 | $P_{g, r}$ | Probability of reservoir exist |
