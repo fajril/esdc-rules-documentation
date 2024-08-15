@@ -105,3 +105,35 @@ Severity: `Strict` :no_entry:
 ### RE60XX - Gas Initial Saturation: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
+
+### RE60XX - Oil Shrinkage Factor: High Value must be lower than one
+
+Severity: `Strict` :no_entry:
+
+### RE60XX - Oil Shrinkage Factor: Low Value must be lower than or equal to Middle Value
+
+Severity: `Strict` :no_entry:
+
+### RE60XX - Oil Shrinkage Factor: Middle Value must be lower than or equal to High Value
+
+Severity: `Strict` :no_entry:
+
+### RE60XX - Oil Shrinkage Factor: Low Value must be greater than or equal to zero
+
+Severity: `Strict` :no_entry:
+
+### RE60XX - Gas Shrinkage Factor: High Value must be lower than one
+
+Severity: `Strict` :no_entry:
+
+### RE60XX - Gas Shrinkage Factor: Low Value must be lower than or equal to Middle Value
+
+Severity: `Strict` :no_entry:
+
+### RE60XX - Gas Shrinkage Factor: Middle Value must be lower than or equal to High Value
+
+Severity: `Strict` :no_entry:
+
+### RE60XX - Gas Shrinkage Factor: Low Value must be greater than or equal to zero
+
+Severity: `Strict` :no_entry:
