@@ -102,3 +102,6 @@ Severity: `Strict` :no_entry:
 
 Severity: `Strict` :no_entry:
 
+### RE60XX - Gas Initial Saturation: Low Value must be greater than or equal to zero
+
+Severity: `Strict` :no_entry:
