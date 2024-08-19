@@ -122,9 +122,6 @@ Severity: `Strict` :no_entry:
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Shrinkage Factor: High Value must be lower than one
-
-Severity: `Strict` :no_entry:
 
 ### RE60XX - Gas Shrinkage Factor: Low Value must be lower than or equal to Middle Value
 
@@ -134,6 +131,6 @@ Severity: `Strict` :no_entry:
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Shrinkage Factor: Low Value must be greater than or equal to zero
+### RE60XX - Gas Shrinkage Factor: Low Value must be greater than or equal to One
 
 Severity: `Strict` :no_entry:
