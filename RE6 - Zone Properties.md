@@ -2,135 +2,156 @@
 
 ## List  of Rules
 
-### RE60XX - Porosity: Low Value must be greater than or equal to zero
+### RE6001 - Porosity: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Porosity: High Value must be lower than or equal to 0.476
+### RE6002 - Porosity: High Value must be lower than or equal to 0.476
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Porosity: Low Value must be lower than or equal to Middle Value
+### RE6003 - Porosity: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Porosity: Middle Value must be lower than or equal to High Value
+### RE6004 - Porosity: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Permeability: Low Value must be greater than or equal to zero
+### RE6005 - Permeability: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Permeability: Low Value must be lower than or equal to Middle Value
+### RE6006 - Permeability: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Permeability: Middle Value must be lower than or equal to High Value
+### RE6007 - Permeability: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - NTG: Low Value must be greater than or equal to zero
+### RE6008 - NTG: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - NTG: High Value must be lower than one
+### RE6009 - NTG: High Value must be lower than one
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - NTG: Low Value must be lower than or equal to Middle Value
+### RE6010 - NTG: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - NTG: Middle Value must be lower than or equal to High Value
+### RE6011 - NTG: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - GRV: Low Value must be greater than or equal to zero
+### RE6012 - GRV: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - GRV: Low Value must be lower than or equal to Middle Value
+### RE6013 - GRV: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - GRV: Middle Value must be lower than or equal to High Value
+### RE6014 - GRV: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Net Pay: Low Value must be greater than or equal to zero
+### RE6015 - Net Pay: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Net Pay: Low Value must be lower than or equal to Middle Value
+### RE6016 - Net Pay: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Net Pay: Middle Value must be lower than or equal to High Value
+### RE6017 - Net Pay: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Initial Saturation: Low Value must be greater than or equal to zero
+### RE6018 - Oil Initial Saturation: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Initial Saturation: High Value must be lower than one
+### RE6019 - Oil Initial Saturation: High Value must be lower than one
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Initial Saturation: Low Value must be lower than or equal to Middle Value
+### RE6020 - Oil Initial Saturation: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Initial Saturation: Middle Value must be lower than or equal to High Value
+### RE6021 - Oil Initial Saturation: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Initial Saturation: Low Value must be greater than or equal to zero
+### RE6022 - Oil Initial Saturation: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Initial Saturation: High Value must be lower than one
+### RE6023 - Gas Initial Saturation: High Value must be lower than one
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Initial Saturation: Low Value must be lower than or equal to Middle Value
+### RE6024 - Gas Initial Saturation: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Initial Saturation: Middle Value must be lower than or equal to High Value
+### RE6025 - Gas Initial Saturation: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Initial Saturation: Low Value must be greater than or equal to zero
+### RE6026 - Gas Initial Saturation: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Shrinkage Factor: High Value must be lower than one
+### RE6027 - Oil Shrinkage Factor: High Value must be lower than one
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Shrinkage Factor: Low Value must be lower than or equal to Middle Value
+### RE6028 - Oil Shrinkage Factor: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Shrinkage Factor: Middle Value must be lower than or equal to High Value
+### RE6029 - Oil Shrinkage Factor: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Oil Shrinkage Factor: Low Value must be greater than or equal to zero
+### RE6030 - Oil Shrinkage Factor: Low Value must be greater than or equal to zero
 
 Severity: `Strict` :no_entry:
 
 
-### RE60XX - Gas Shrinkage Factor: Low Value must be lower than or equal to Middle Value
+### RE6031 - Gas Shrinkage Factor: Low Value must be lower than or equal to Middle Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Shrinkage Factor: Middle Value must be lower than or equal to High Value
+### RE6032 - Gas Shrinkage Factor: Middle Value must be lower than or equal to High Value
 
 Severity: `Strict` :no_entry:
 
-### RE60XX - Gas Shrinkage Factor: Low Value must be greater than or equal to One
+### RE6033 - Gas Shrinkage Factor: Low Value must be greater than or equal to One
+
+Severity: `Strict` :no_entry:
+
+### RE6034 - GCF Reservoir: GCF Reservoir must be within the range 0 to 1
+
+Severity: `Strict` :no_entry:
+
+### RE6035 - GCF Trap & Seal: GCF Trap & Seal must be within the range 0 to 1
+
+Severity: `Strict` :no_entry:
+
+### RE6036 - GCF Source Rock: GCF Source Rock must be within the range 0 to 1
+
+Severity: `Strict` :no_entry:
+
+
+### RE6037 - GCF Migration: GCF Migration must be within the range 0 to 1
+
+Severity: `Strict` :no_entry:
+
+### RE6037 - Gas Oil Fluid Contact: Depth of Gas Oil Contact must be higher than Oil Water Contact
 
 Severity: `Strict` :no_entry:
