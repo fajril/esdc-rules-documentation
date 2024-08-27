@@ -152,6 +152,14 @@ Severity: `Strict` :no_entry:
 
 Severity: `Strict` :no_entry:
 
-### RE6037 - Gas Oil Fluid Contact: Depth of Gas Oil Contact must be higher than Oil Water Contact
+### RE6038 - Gas Oil Fluid Contact: Depth of Gas Oil Contact must be higher than Oil Water Contact
+
+Severity: `Strict` :no_entry:
+
+### RE6039 - Gas Water Fluid Contact: Gas Water Oil Contact must be empty if reservoir fluida consists of oil and water only
+
+Severity: `Strict` :no_entry:
+
+### RE6040 - Oil Water Fluid Contact: Oil Water Contact must be empty if reservoir fluida consists of gas and water only
 
 Severity: `Strict` :no_entry:
