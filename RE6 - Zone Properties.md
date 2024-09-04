@@ -394,9 +394,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$
-\left(\frac{dP}{dL}\right)_{o} < \left(\frac{P}{Z}\right)_{w}  
-$$
+$$\left(\frac{dP}{dL}\right)_{o} < \left(\frac{P}{Z}\right)_{w}  $$
 
 ### RE6039 - Pressure Gradient: Oil Pressure Gradient must be greater than Gas Pressure Gradient
 
@@ -404,9 +402,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$
-\left(\frac{dP}{dL}\right)_{g} < \left(\frac{P}{Z}\right)_{o}  
-$$
+$$\left(\frac{dP}{dL}\right)_{g} < \left(\frac{P}{Z}\right)_{o}$$
 
 ### RE6040 - Gas to Oil Ratio (Rs): Rs should be filled if the reservoir contains Oil
 
@@ -486,6 +482,4 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$
-\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}
-$$
+$$\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}$$
