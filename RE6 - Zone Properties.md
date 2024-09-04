@@ -488,6 +488,8 @@ $$\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}$$
 
 Severity: `Strict` :no_entry:
 
+The following equation must be true:
+
 $$
-X_{CO_{2}}+X_{C_1}+X_{C_2}+X_{C_3}+X_{iC_3}+X_{nC_4}+X_{iC_4}+X_{iC_5}+n_{C_5}+C_{6+} = 1
+X_{CO_{2}}+X_{N_{2}}+X_{H_{2}S}+X_{C_1}+X_{C_2}+X_{C_3}+X_{iC_3}+X_{nC_4}+X_{iC_4}+X_{iC_5}+X_{n_{C_5}}+X_{C_{6+}} = 1
 $$
