@@ -483,3 +483,11 @@ Severity: `Strict` :no_entry:
 The following rule must be true:
 
 $$\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}$$
+
+### RE6048 - Composition: Sum of Composition fraction must be one
+
+Severity: `Strict` :no_entry:
+
+$$
+X_{CO_{2}}+X_{C_1}+X_{C_2}+X_{C_3}+X_{iC_3}+X_{nC_4}+X_{iC_4}+X_{iC_5}+n_{C_5}+C_{6+} = 1
+$$
