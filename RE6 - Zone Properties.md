@@ -487,5 +487,5 @@ Severity: `Strict` :no_entry:
 The following rule must be true:
 
 $$
-\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}  
+\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}
 $$
