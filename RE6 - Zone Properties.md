@@ -8,9 +8,9 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-\[
+$$
 \phi^{P90} > 0
-\]
+$$
 
 ### RE6002 - Porosity: High Value must be lower than or equal to 0.476
 
