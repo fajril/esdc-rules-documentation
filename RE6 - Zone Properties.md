@@ -19,7 +19,7 @@ Severity: `Strict` :no_entry:
 The following rule must be true:
 
 $$
-\phi^{P10} \leq 0.467
+\phi^{P10} \leq 0.476
 $$
 
 ### RE6003 - Porosity: Low Value must be lower than or equal to Middle Value
@@ -374,7 +374,7 @@ Severity: `Strict` :no_entry:
 The following rule must be true:
 
 $$
-P_{res,ab}<P_{res,i}
+P_{res,ab} < P_{res,i}
 $$
 
 ### RE6037 - Oil Saturation: Critical Oil Saturation must be greater than residual oil saturation
@@ -385,7 +385,7 @@ The following rule must be true:
 
 
 $$
-S_{wr}<S_{w,cr}
+S_{wr} < S_{w,cr}
 $$
 
 ### RE6038 - Pressure Gradient: Water Pressure Gradient must be greater than Oil Pressure Gradient
