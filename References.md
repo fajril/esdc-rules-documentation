@@ -76,6 +76,20 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $S_w$ | Water saturation
 | $E_o$ | Oil shrinkage factor |
 | $E_g$ | Gas shrinkage factor |
+| $h_{net}$ | Net Pay |
+| $S_{oi}$ | Initial Oil Saturation |
+| $S_{gi}$ | Initial Gas Saturation |
+| $OWC$ | Oil Water Contact |
+| $GWC$ | Gas Water Contact |
+| $(\frac{dp}{dL})_{o}$ | Oil Pressure Gradient |
+| $(\frac{dp}{dL})_{w}$ | Water Pressure Gradient |
+| $(\frac{dp}{dL})_{g}$ | Gas Pressure Gradient |
+| $\mu_{oi}$ | Initial Oil Viscocity |
+| $\mu_{ob}$ | Oil Viscocity at Bubble Point |
+| $Z$ | Gas Deviation Factor |
+| $X_{CO_{2}}$ | Mole Fraction of Carbon Dioxide |
+| $X_{H_{2}S}$ | Mole Fraction of Hydrogen Sulfide |
+| $X_{N_{2}}$ | Mole Fraction of Nitrogen |
 
 ## Keyword Reference
 

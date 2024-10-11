@@ -374,7 +374,7 @@ Severity: `Strict` :no_entry:
 The following rule must be true:
 
 $$
-P_{res,ab} < P_{res,i}
+p_{res,ab} < p_{res,i}
 $$
 
 ### RE6037 - Oil Saturation: Critical Oil Saturation must be greater than residual oil saturation
@@ -394,7 +394,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$\left(\frac{dP}{dL}\right)_{o} < \left(\frac{P}{Z}\right)_{w}  $$
+$$\left(\frac{dp}{dL}\right)_{o} < \left(\frac{dp}{dL}\right)_{w}  $$
 
 ### RE6039 - Pressure Gradient: Oil Pressure Gradient must be greater than Gas Pressure Gradient
 
@@ -402,7 +402,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$\left(\frac{dP}{dL}\right)_{g} < \left(\frac{P}{Z}\right)_{o}$$
+$$\left(\frac{dp}{dL}\right)_{g} < \left(\frac{dp}{dL}\right)_o$$
 
 ### RE6040 - Gas to Oil Ratio (Rs): Rs should be filled if the reservoir contains Oil
 
@@ -482,7 +482,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}$$
+$$\left(\frac{p}{Z}\right)_{ab} < \left(\frac{p}{Z}\right)_{i}$$
 
 ### RE6048 - Composition: Sum of Composition fraction must be one
 
