@@ -87,9 +87,20 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $\mu_{oi}$ | Initial Oil Viscocity |
 | $\mu_{ob}$ | Oil Viscocity at Bubble Point |
 | $Z$ | Gas Deviation Factor |
+| $Z_i$ | Initial Gas Deviation Factor |
+| $Z_{ab}$ | Gas Deviation Factor at Abandoned Reservoir Pressure|
 | $X_{CO_{2}}$ | Mole Fraction of Carbon Dioxide |
 | $X_{H_{2}S}$ | Mole Fraction of Hydrogen Sulfide |
 | $X_{N_{2}}$ | Mole Fraction of Nitrogen |
+| $X_{C_{1}}$ | Mole Fraction of Methane |
+| $X_{C_{2}}$ | Mole Fraction of Ethane |
+| $X_{C_{3}}$ | Mole Fraction of Propane |
+| $X_{iC_{3}}$ | Mole Fraction of Iso-propane |
+| $X_{nC_{4}}$ | Mole Fraction of Normal Butane |
+| $X_{iC_{4}}$ | Mole Fraction of Iso-butane |
+| $X_{nC_{5}}$ | Mole Fraction of Normal Pentane |
+| $X_{iC_{5}}$ | Mole Fraction of Iso-Pentane |
+| $X_{C_{6+}}$ | Mole Fraction of Components Heavier than Pentane |
 
 ## Keyword Reference
 
@@ -114,6 +125,8 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | `perm_abs` | uncertainty | zone, field, working area | `har_mean` | Absolute Permeability |
 | `gcf_srock` | - | zone, field, working area | `mean` | GCF Source Rock |
 | `depth_avg` | - | zone, field, working area, basin, vol. calc. method, all play elements | `mean`| Average Reservoir Depth
+| `visc_init_oil` | - | zone, field, working area | `mean` | Initial Oil Viscocity |
+| `visc_init_gas` | - | zone, field, working area | `mean` | Initial Gas Viscocity |
 
 ## Syntax reference
 
@@ -156,6 +169,7 @@ esdc.discrepancy[fluid_type]
 | RE3        | Reservoir Properties    |
 | RE4        | Analytics               |
 | RE5        | Maturity Level          |
+| RE6        | Zone Properties         |
 
 ## Project Maturity Level
 
