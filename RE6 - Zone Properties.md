@@ -374,7 +374,7 @@ Severity: `Strict` :no_entry:
 The following rule must be true:
 
 $$
-P_{res,ab} < P_{res,i}
+p_{res,ab} < p_{res,i}
 $$
 
 ### RE6037 - Oil Saturation: Critical Oil Saturation must be greater than residual oil saturation
@@ -394,7 +394,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$\left(\frac{dP}{dL}\right)_o < \left(\frac{P}{Z}\right)_w  $$
+$$\left(\frac{dp}{dL}\right)_{o} < \left(\frac{dp}{dL}\right)_{w}  $$
 
 ### RE6039 - Pressure Gradient: Oil Pressure Gradient must be greater than Gas Pressure Gradient
 
@@ -402,7 +402,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$\left(\frac{dP}{dL}\right)_g < \left(\frac{P}{Z}\right)_o$$
+$$\left(\frac{dp}{dL}\right)_{g} < \left(\frac{dp}{dL}\right)_o$$
 
 ### RE6040 - Gas to Oil Ratio (Rs): Rs should be filled if the reservoir contains Oil
 
@@ -482,7 +482,7 @@ Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$\left(\frac{P}{Z}\right)_{ab} < \left(\frac{P}{Z}\right)_{i}$$
+$$\left(\frac{p}{Z}\right)_{ab} < \left(\frac{p}{Z}\right)_{i}$$
 
 ### RE6048 - Composition: Sum of Composition fraction must be one
 
@@ -492,4 +492,124 @@ The following equation must be true:
 
 $$
 X_{CO_{2}}+X_{N_{2}}+X_{H_{2}S}+X_{C_1}+X_{C_2}+X_{C_3}+X_{iC_3}+X_{nC_4}+X_{iC_4}+X_{iC_5}+X_{n_{C_5}}+X_{C_{6+}} = 1
+$$
+
+### RE6049 - IOIP: Low Case must be positive or equal to 0
+
+Severity: `Strict` :no_entry:
+
+The following equation must be true:
+
+$$
+N^{P90} \geq 0
+$$
+
+### RE6050 - IGIP: Low Case must be positive or equal to 0
+
+Severity: `Strict` :no_entry:
+
+The following equation must be true:
+
+$$
+G^{P90} \geq 0
+$$
+
+### RE6051 - IOIP: Low Case must be less than or equal to Mid Case
+
+Severity: `Strict` :no_entry:
+
+The following equation must be true:
+
+$$
+N^{P90} \leq N^{P50}
+$$
+
+### RE6052 - IOIP: Mid Case must be less than or equal to High Case
+
+Severity: `Strict` :no_entry:
+
+The following equation must be true:
+
+$$
+N^{P50} \leq N^{P10}
+$$
+
+### RE6053 - IGIP: Low Case must be less than or equal to Mid Case
+
+Severity: `Strict` :no_entry:
+
+The following equation must be true:
+
+$$
+G^{P90} \leq G^{P50}
+$$
+
+### RE6054 - IGIP: Mid Case must be less than or equal to High Case
+
+Severity: `Strict` :no_entry:
+
+The following equation must be true:
+
+$$
+G^{P50} \leq G^{P10}
+$$
+
+### RE6055 - IOIP: Low Case value should be lower than or equal to the result of Volumetric Method
+
+Severity: `Warning` :warning:
+
+The following equation must be true:
+
+$$
+(V_{gr}^{\text{P90}} \neq \emptyset) \land (NTG^{\text{P90}} \neq \emptyset) \land (\phi^{\text{P90}} \neq \emptyset) \land (S_o^{\text{P90}}\neq \emptyset) \land (E_o^{\text{P90}} \neq \emptyset) \implies N^{\text{P90}} \leq 7758 \cdot V_{gr}^{\text{P90}} \cdot NTG^{\text{P90}} \cdot \phi^{\text{P90}} \cdot S_o^{\text{P90}} \cdot E_o^{\text{P90}}
+$$
+
+### RE6056 - IOIP: Mid Case value should be lower than or equal to the result of Volumetric Method
+
+Severity: `Warning` :warning:
+
+The following equation must be true:
+
+$$
+(V_{gr}^{\text{P50}} \neq \emptyset) \land (NTG^{\text{P50}} \neq \emptyset) \land (\phi^{\text{P50}} \neq \emptyset) \land (S_o^{\text{P50}}\neq \emptyset) \land (E_o^{\text{P50}} \neq \emptyset) \implies N^{\text{P50}} \leq 7758 \cdot V_{gr}^{\text{P50}} \cdot NTG^{\text{P50}} \cdot \phi^{\text{P50}} \cdot S_o^{\text{P50}} \cdot E_o^{\text{P50}}
+$$
+
+### RE6057 - IOIP: High Case value should be lower than or equal to the result of Volumetric Method
+
+Severity: `Warning` :warning:
+
+The following equation must be true:
+
+$$
+(V_{gr}^{\text{P10}} \neq \emptyset) \land (NTG^{\text{P10}} \neq \emptyset) \land (\phi^{\text{P10}} \neq \emptyset) \land (S_g^{\text{P10}}\neq \emptyset) \land (E_g^{\text{P10}} \neq \emptyset) \implies G^{\text{P10}} \leq 7758 \cdot V_{gr}^{\text{P10}} \cdot NTG^{\text{P10}} \cdot \phi^{\text{P10}} \cdot S_g^{\text{P10}} \cdot E_g^{\text{P10}}
+$$
+
+### RE6058 - IOIP: Low Case value should be lower than or equal to the result of Volumetric Method
+
+Severity: `Warning` :warning:
+
+The following equation must be true:
+
+$$
+(V_{gr}^{\text{P90}} \neq \emptyset) \land (NTG^{\text{P90}} \neq \emptyset) \land (\phi^{\text{P90}} \neq \emptyset) \land (S_g^{\text{P90}}\neq \emptyset) \land (E_g^{\text{P90}} \neq \emptyset) \implies G^{\text{P90}} \leq 43560 \cdot V_{gr}^{\text{P90}} \cdot NTG^{\text{P90}} \cdot \phi^{\text{P90}} \cdot S_g^{\text{P90}} \cdot E_g^{\text{P90}}
+$$
+
+### RE6059 - IOIP: Mid Case value should be lower than or equal to the result of Volumetric Method
+
+Severity: `Warning` :warning:
+
+The following equation must be true:
+
+$$
+(V_{gr}^{\text{P50}} \neq \emptyset) \land (NTG^{\text{P50}} \neq \emptyset) \land (\phi^{\text{P50}} \neq \emptyset) \land (S_g^{\text{P50}}\neq \emptyset) \land (E_g^{\text{P50}} \neq \emptyset) \implies N^{\text{P50}} \leq 43560 \cdot V_{gr}^{\text{P50}} \cdot NTG^{\text{P50}} \cdot \phi^{\text{P50}} \cdot S_g^{\text{P50}} \cdot E_g^{\text{P50}}
+$$
+
+### RE6060 - IOIP: High Case value should be lower than or equal to the result of Volumetric Method
+
+Severity: `Warning` :warning:
+
+The following equation must be true:
+
+$$
+(V_{gr}^{\text{P10}} \neq \emptyset) \land (NTG^{\text{P10}} \neq \emptyset) \land (\phi^{\text{P10}} \neq \emptyset) \land (S_g^{\text{P10}}\neq \emptyset) \land (E_g^{\text{P10}} \neq \emptyset) \implies N^{\text{P10}} \leq 43560 \cdot V_{gr}^{\text{P10}} \cdot NTG^{\text{P10}} \cdot \phi^{\text{P10}} \cdot S_g^{\text{P10}} \cdot E_g^{\text{P10}}
 $$
