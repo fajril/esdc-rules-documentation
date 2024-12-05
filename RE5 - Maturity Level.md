@@ -2461,7 +2461,7 @@ The following rule must be true:
 
 $$
 M_s = \lbrace A_1, A_2 \rbrace\\
-\left( \Delta N_{pn}^{\text{ P10}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P10}} > 0 \right) \implies M_{t_R} \not \in M_s
+\Delta N_{pn}^{\text{P10}}  + \Delta N_{pn}^{c \text{ P10}} +\Delta G_{pn}^{a \text{ P10}} + \Delta G_{pn}^{\text{P10}}  \implies M_{t_R} \not \in M_s
 $$
 
 ```python
@@ -3088,7 +3088,7 @@ The following rule must be true:
 
 $$
 M_s = \lbrace A_1, A_2 \rbrace\\
-\left( N_{project}^{\text{ P10}} > 0 \right) \lor \left( G_{project}^{\text{ P10}} > 0 \right) \implies M_{t_R} \not \in M_s
+ N_{project}^{\text{ P10}}  +  G_{project}^{\text{ P10}} =0 \implies M_{t_R} \not \in M_s
 $$
 
 ```python
