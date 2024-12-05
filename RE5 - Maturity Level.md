@@ -3079,3 +3079,40 @@ $$
 
 import esdc
 ```
+
+### RE5065 - Project Level: If the project have hydrocarbon inplace volume, project level can not be in A1. Dry nor A2. Dissolved
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_s = \lbrace A_1, A_2 \rbrace\\
+\left( N_{project}^{\text{ P10}} > 0 \right) \lor \left( G_{project}^{\text{ P10}} > 0 \right) \implies M_{t_R} \not \in M_s
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project level is E0. On Production
+    Project Initial Oil in Place High Value = 1000
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project level is A1. Dry
+    Project Initial Oil in Place High Value = 1000
+
+then 
+    validation result is False
+```
