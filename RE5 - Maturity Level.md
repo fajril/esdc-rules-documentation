@@ -1,4 +1,4 @@
-# RE5 - Maturity Level
+5# RE5 - Maturity Level
 
 ## List of Rules
 
@@ -3077,5 +3077,69 @@ $$
 
 ```python
 
+import esdc
+```
+
+### RE5065 - Project Level: If the project have hydrocarbon inplace volume, project level can not be in A1. Dry nor A2. Dissolved
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_s = \lbrace A_1, A_2 \rbrace\\
+ N_{project}^{\text{ P10}}  +  G_{project}^{\text{ P10}} =0 \implies M_{t_R} \not \in M_s
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project level is E0. On Production
+    Project Initial Oil in Place High Value = 1000
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project level is A1. Dry
+    Project Initial Oil in Place High Value = 1000
+
+then 
+    validation result is False
+```
+
+### RE5066 - Project Level: Project must have onstream actual for project maturity level E0, E1, E4, E7
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+
+$$
+M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
+M_{t_R} \notin M_s \implies  t_{act} \notin \empty
+$$
+
+```python
+import esdc
+```
+
+### RE5067 - Project Level: Onstream actual must be lower than reporting year
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+$$
+t_{act} < t_R 
+$$
+```python
 import esdc
 ```
