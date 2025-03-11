@@ -295,7 +295,7 @@ $$
 E_{g}^{P50} \leq E_{g}^{P10}
 $$
 
-### RE6029 - GCF Reservoir must be greater than zero and GCF Reservoir must be lower than or equal to one
+### RE6030 - GCF Reservoir must be greater than zero and GCF Reservoir must be lower than or equal to one
 
 Severity: `Strict` :no_entry:
 
@@ -305,7 +305,7 @@ $$
 0 < P_{g,r} \leq 1
 $$
 
-### RE6030 - GCF Trap & Seal must be greater than zero and GCF Trap & Seal must be lower than or equal to one
+### RE6031 - GCF Trap & Seal must be greater than zero and GCF Trap & Seal must be lower than or equal to one
 
 Severity: `Strict` :no_entry:
 
@@ -315,7 +315,7 @@ $$
 0 < P_{g,ts} \leq 1
 $$
 
-### RE6031 - GCF Source Rock must be greater than zero and GCF Source Rock must be lower than or equal to one
+### RE6032 - GCF Source Rock must be greater than zero and GCF Source Rock must be lower than or equal to one
 
 Severity: `Strict` :no_entry:
 
@@ -326,7 +326,7 @@ $$
 $$
 
 
-### RE6032 - GCF Migration must be greater than zero and GCF Migration must be lower than or equal to one
+### RE6033 - GCF Migration must be greater than zero and GCF Migration must be lower than or equal to one
 
 Severity: `Strict` :no_entry:
 
@@ -336,7 +336,7 @@ $$
 0 < P_{g,m} \leq 1
 $$
 
-### RE6033 - Gas Oil Contact (GOC): Depth of Gas Oil Contact must be higher than Oil Water Contact (OWC)
+### RE6034 - Gas Oil Contact (GOC): Depth of Gas Oil Contact must be higher than Oil Water Contact (OWC)
 
 Severity: `Strict` :no_entry:
 
@@ -347,7 +347,7 @@ $$
 $$
 
 
-### RE6034 - Gas Water Contact: Gas Water Contact must be empty if reservoir fluid consists of oil and water only
+### RE6035 - Gas Water Contact: Gas Water Contact must be empty if reservoir fluid consists of oil and water only
 
 Severity: `Strict` :no_entry:
 
@@ -357,7 +357,7 @@ $$
 G = 0 \implies GWC = 0
 $$
 
-### RE6035 - Oil Water Contact: Oil Water Contact must be empty if reservoir fluid consists of gas and water only
+### RE6036 - Oil Water Contact: Oil Water Contact must be empty if reservoir fluid consists of gas and water only
 
 Severity: `Strict` :no_entry:
 
@@ -367,7 +367,7 @@ $$
 N = 0 \implies OWC = 0
 $$
 
-### RE6036 - Reservoir Pressure: Initial Reservoir Pressure must be greater than abandonment reservoir pressure
+### RE6037 - Reservoir Pressure: Initial Reservoir Pressure must be greater than abandonment reservoir pressure
 
 Severity: `Strict` :no_entry:
 
@@ -377,7 +377,7 @@ $$
 p_{res,ab} < p_{res,i}
 $$
 
-### RE6037 - Oil Saturation: Critical Oil Saturation must be greater than residual oil saturation
+### RE6038 - Oil Saturation: Critical Oil Saturation must be greater than residual oil saturation
 
 Severity: `Strict` :no_entry:
 
@@ -388,15 +388,18 @@ $$
 S_{wr} < S_{w,cr}
 $$
 
-### RE6038 - Pressure Gradient: Water Pressure Gradient must be greater than Oil Pressure Gradient
+### RE6039 - Pressure Gradient: Water Pressure Gradient must be greater than Oil Pressure Gradient
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
+
 $$\left(\frac{dp}{dL}\right)_{o} < \left(\frac{dp}{dL}\right)_{w}  $$
 
-### RE6039 - Pressure Gradient: Oil Pressure Gradient must be greater than Gas Pressure Gradient
+
+
+### RE6040 - Pressure Gradient: Oil Pressure Gradient must be greater than Gas Pressure Gradient
 
 Severity: `Strict` :no_entry:
 
@@ -404,7 +407,8 @@ The following rule must be true:
 
 $$\left(\frac{dp}{dL}\right)_{g} < \left(\frac{dp}{dL}\right)_o$$
 
-### RE6040 - Gas to Oil Ratio (Rs): Rs should be filled if the reservoir contains Oil
+
+### RE6041 - Gas to Oil Ratio (Rs): Rs should be filled if the reservoir contains Oil
 
 Severity: `Strict` :no_entry:
 
@@ -414,7 +418,7 @@ $$
 N > 0 \implies R_{s} \neq \varnothing    
 $$
 
-### RE6041 - Specific Gravity: Oil Specific Gravity must be within the range 0 to 1
+### RE6042 - Specific Gravity: Oil Specific Gravity must be within the range 0 to 1
 
 Severity: `Strict` :no_entry:
 
@@ -424,7 +428,7 @@ $$
 0 < \gamma_{o} < 1   
 $$
 
-### RE6042 - Specific Gravity: Oil specific gravity must filled if the reservoir contain Oil or Condensate
+### RE6043 - Specific Gravity: Oil specific gravity must filled if the reservoir contain Oil or Condensate
 
 Severity: `Strict` :no_entry:
 
@@ -434,7 +438,7 @@ $$
 N > 0 \implies \gamma_{o} \neq \varnothing    
 $$
 
-### RE6043 - Viscocity: Oil Viscocity (at Initial and Bubble Point) must be within the range 0.1 cP to 100 cP
+### RE6044 - Viscocity: Oil Viscocity (at Initial and Bubble Point) must be within the range 0.1 cP to 100 cP
 
 Severity: `Warning` :warning:
 
@@ -446,7 +450,7 @@ $$
 0.01 < \mu_o < 100
 $$
 
-### RE6044 - Viscocity: Oil Viscocity (at Initial and Bubble Point) must be empty if the reservoir does not contain Oil or Condensate
+### RE6045 - Viscocity: Oil Viscocity (at Initial and Bubble Point) must be empty if the reservoir does not contain Oil or Condensate
 
 Severity: `Strict` :no_entry:
 
@@ -456,7 +460,7 @@ $$
 N = 0 \implies (\mu_{oi} \neq \varnothing \text{ and } \mu_{ob} \neq \varnothing)
 $$
 
-### RE6045 - Viscocity: Oil Viscocity at Initial must be greater than Oil Viscocity at Bubble Point 
+### RE6046 - Viscocity: Oil Viscocity at Initial must be greater than Oil Viscocity at Bubble Point 
 
 Severity: `Strict` :no_entry:
 
@@ -466,7 +470,7 @@ $$
 \mu_{ob} < \mu_{oi}
 $$
 
-### RE6046 - Gas Deviation Factor (Z): Gas Deviation Factor (at Initial and Abandonment) must be filled if IGIP is more than zero
+### RE6047 - Gas Deviation Factor (Z): Gas Deviation Factor (at Initial and Abandonment) must be filled if IGIP is more than zero
 
 Severity: `Strict` :no_entry:
 
@@ -476,7 +480,7 @@ $$
 G > 0 \implies (Z_{i} \neq \varnothing \text{ and } Z_{ab} \neq \varnothing)
 $$
 
-### RE6047 - P/Z (Pressure over Gas Deviation Factor) at Initial must be greater than P/Z at abandonment
+### RE6048 - P/Z (Pressure over Gas Deviation Factor) at Initial must be greater than P/Z at abandonment
 
 Severity: `Strict` :no_entry:
 
@@ -484,7 +488,8 @@ The following rule must be true:
 
 $$\left(\frac{p}{Z}\right)_{ab} < \left(\frac{p}{Z}\right)_{i}$$
 
-### RE6048 - Composition: Sum of Composition fraction must be one
+
+### RE6049 - Composition: Sum of Composition fraction must be one
 
 Severity: `Strict` :no_entry:
 
@@ -493,6 +498,7 @@ The following equation must be true:
 $$
 X_{CO_{2}}+X_{N_{2}}+X_{H_{2}S}+X_{C_1}+X_{C_2}+X_{C_3}+X_{iC_3}+X_{nC_4}+X_{iC_4}+X_{iC_5}+X_{n_{C_5}}+X_{C_{6+}} = 1
 $$
+
 
 ### RE6049 - IOIP: Low Case must be positive or equal to 0
 
