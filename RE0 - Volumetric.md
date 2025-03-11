@@ -915,3 +915,96 @@ $$
 
 import esdc
 ```
+
+### RE0053 - Project IOIP Low: if P90 higher than zero then IOIP Low Value must be higher than sum of Sales Cummulative Production and 1P Reserves
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+$$
+N_{proj}^{\text{P90}} > 0  \implies \Delta N_{ps}^{\text{1P}} + N_{p, n, t} < N_{proj}^{\text{P90}}
+$$
+
+```python
+
+import esdc
+```
+
+### RE0054 - Project IOIP Middle: if P50 higher than zero then IOIP Middle Value must be higher than sum of Cummulative Production and 2P Reserves
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+$$
+N_{proj}^{\text{P50}} > 0  \implies \Delta N_{ps}^{\text{2P}} + N_{p, n, t} < N_{proj}^{\text{P50}}
+$$
+
+```python
+
+import esdc
+```
+
+### RE0055 - Project IOIP High: if P10 higher than zero then IOIP Middle Value must be higher than sum of Cummulative Production and 3P Reserves
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+
+$$
+N_{proj}^{\text{P10}} > 0  \implies \Delta N_{ps}^{\text{3P}} + N_{p, n, t} < N_{proj}^{\text{P10}}
+$$
+
+```python
+
+import esdc
+```
+
+### RE0056 - Project IGIP Low: if P90 higher than zero then IGIP Low Value must be higher than sum of Sales Cummulative Production and 1P Reserves
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+$$
+G_{proj}^{\text{P90}} > 0  \implies \Delta G_{ps}^{\text{1P}} + G_{p, n, t} < G_{proj}^{\text{P90}}
+$$
+
+```python
+
+import esdc
+```
+
+### RE0057 - Project IGIP Middle: if P50 higher than zero then IGIP Middle Value must be higher than sum of Cummulative Production and 2P Reserves
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+
+$$
+G_{proj}^{\text{P50}} > 0  \implies \Delta G_{ps}^{\text{2P}} + G_{p, n, t} < G_{proj}^{\text{P50}}
+$$
+
+```python
+
+import esdc
+```
+
+### RE0058 - Project IGIP High: if P10 higher than zero then IgIP Middle Value must be higher than sum of Cummulative Production and 3P Reserves
+
+Severity: `strict` :no_entry:
+
+The following equation must be true:
+
+
+$$
+G_{proj}^{\text{P10}} > 0  \implies \Delta G_{ps}^{\text{3P}} + G_{p, n, t} < G_{proj}^{\text{P10}}
+$$
+
+```python
+
+import esdc
+```
