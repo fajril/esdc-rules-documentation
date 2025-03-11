@@ -2461,7 +2461,7 @@ The following rule must be true:
 
 $$
 M_s = \lbrace A_1, A_2 \rbrace\\
-\left( \Delta N_{pn}^{\text{ P10}} > 0 \right) \lor \left(\Delta N_{pn}^{c \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{a \text{ P10}} > 0 \right) \lor \left(\Delta G_{pn}^{\text{P10}} > 0 \right) \implies M_{t_R} \not \in M_s
+\Delta N_{pn}^{\text{P10}}  + \Delta N_{pn}^{c \text{ P10}} +\Delta G_{pn}^{a \text{ P10}} + \Delta G_{pn}^{\text{P10}}  \implies M_{t_R} \not \in M_s
 $$
 
 ```python
@@ -2852,7 +2852,7 @@ then
 
 ```
 
-### RE5054 - Project Level: Project must have reserves 1P for project maturity level E0, E1, E2, E3
+### RE5054 - Project Level: The project must have 1P reserves for maturity levels E0, E1, E2, and E3, and the reporting year not after the end of the PSC
 
 Severity:  `strict` :no_entry:
 
@@ -2862,7 +2862,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
-\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_{t_R} \in M_s
+\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land (PSC_{end}\neq t_r-1) \implies M_{t_R} \in M_s
 $$
 
 ```python
@@ -2897,7 +2897,7 @@ then
     Validation result is False
 ```
 
-### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6
+### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6 Except the end of PSC not within the next year
 
 Severity:  `strict` :no_entry:
 
@@ -2907,7 +2907,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
-\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_{t_R} \notin M_s
+\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \land (PSC_{end}\neq t_r-1) \implies M_{t_R} \notin M_s
 $$
 
 ```python
@@ -3077,5 +3077,70 @@ $$
 
 ```python
 
+import esdc
+```
+
+### RE5065 - Project Level: If the project have hydrocarbon inplace volume, project level can not be in A1. Dry nor A2. Dissolved
+
+Severity: `strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_s = \lbrace A_1, A_2 \rbrace\\
+ N_{project}^{\text{ P10}}  +  G_{project}^{\text{ P10}} =0 \implies M_{t_R} \not \in M_s
+$$
+
+```python
+import esdc
+```
+
+The following example should pass:
+
+``` al
+if
+    project level is E0. On Production
+    Project Initial Oil in Place High Value = 1000
+
+then 
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project level is A1. Dry
+    Project Initial Oil in Place High Value = 1000
+
+then 
+    validation result is False
+
+```
+
+### RE5066 - Project Level: Project must have onstream actual for project maturity level E0, E1, E4, E7
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+
+$$
+M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
+M_{t_R} \notin M_s \implies  t_{act} \notin \empty
+$$
+
+```python
+import esdc
+```
+
+### RE5067 - Project Level: Onstream actual must be lower than reporting year
+
+Severity:  `strict` :no_entry:
+
+The following equation must be true:
+$$
+t_{act} < t_R 
+$$
+```python
 import esdc
 ```
