@@ -1,4 +1,4 @@
-5# RE5 - Maturity Level
+# RE5 - Maturity Level
 
 ## List of Rules
 
@@ -2852,7 +2852,7 @@ then
 
 ```
 
-### RE5054 - Project Level: Project must have reserves 1P for project maturity level E0, E1, E2, E3
+### RE5054 - Project Level: The project must have 1P reserves for maturity levels E0, E1, E2, and E3, and the reporting year not after the end of the PSC
 
 Severity:  `strict` :no_entry:
 
@@ -2862,7 +2862,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
-\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_{t_R} \in M_s
+\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land (PSC_{end}\neq t_r-1) \implies M_{t_R} \in M_s
 $$
 
 ```python
@@ -2897,7 +2897,7 @@ then
     Validation result is False
 ```
 
-### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6
+### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6 Except the end of PSC not within the next year
 
 Severity:  `strict` :no_entry:
 
@@ -2907,7 +2907,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
-\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \implies M_{t_R} \notin M_s
+\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \land (PSC_{end}\neq t_r-1) \implies M_{t_R} \notin M_s
 $$
 
 ```python
