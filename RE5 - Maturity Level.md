@@ -2852,17 +2852,17 @@ then
 
 ```
 
-### RE5054 - Project Level: The project must have 1P reserves for maturity levels E0, E1, E2, and E3, and the reporting year not after the end of the PSC
+### RE5054 - Project Level: The project must have 1P reserves for maturity levels E0, E1, E2, and E3, and 1P reserve runs out due to production
 
 Severity:  `strict` :no_entry:
 
-Notes: _Moved from RE0, previously RE0044_
+Notes: add another criteria as of 24 march 2025
 
 The following equation must be true:
 
 $$
-M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
-\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land (PSC_{end}\neq t_r-1) \implies M_{t_R} \in M_s
+M_s = \lbrace E_0,E_1, E_2, E_3 \rbrace\\
+\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P90} + q_{o, t_R} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P90} + q_{c, t_R} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left( \Delta D_{G}^\text{gtr P90} + q_{n, t_R} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P90} + q_{a, t_R} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) \right) \implies M_{t_R} \in M_s
 $$
 
 ```python
@@ -2897,17 +2897,17 @@ then
     Validation result is False
 ```
 
-### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6 Except the end of PSC not within the next year
+### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6. or project maturity level E0 if the project approaching the end of production 
 
 Severity:  `strict` :no_entry:
 
-Notes: _Moved from RE0, previously RE0045_
+Notes: remove E0 as of 24 march 2025
 
 The following equation must be true:
 
 $$
-M_s = \lbrace E_0, E_1, E_2, E_3 \rbrace\\
-\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right) \land (PSC_{end}\neq t_r-1) \implies M_{t_R} \notin M_s
+M_s = \lbrace E_1, E_2, E_3 \rbrace\\
+\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right)  \implies M_{t_R} \notin M_s
 $$
 
 ```python
@@ -3141,6 +3141,23 @@ The following equation must be true:
 $$
 t_{act} < t_R 
 $$
+```python
+import esdc
+```
+
+
+### RE5068 - Project Level: 2P reserves can be zero at project level E0 if the yearly production equals to 2P reserves in the previous year.
+Severity:  `strict` :no_entry:
+
+Notes: New Rules As of 25 March 2025
+
+The following equation must be true:
+
+
+$$
+\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P50} + q_{o, t_R} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P50} + q_{c, t_R} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \land \left( \Delta D_{G}^\text{gtr P50} + q_{n, t_R} = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P50} + q_{a, t_R} = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
+$$
+
 ```python
 import esdc
 ```
