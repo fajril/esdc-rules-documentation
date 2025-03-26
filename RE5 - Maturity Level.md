@@ -3140,7 +3140,7 @@ Severity:  `strict` :no_entry:
 Notes: New Rules As of 25 March 2025
 
 $$
-\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P90} + q_{o, t_R} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P90} + q_{c, t_R} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left( \Delta D_{G}^\text{gtr P90} + q_{n, t_R} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P90} + q_{a, t_R} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) \right) \implies M_{t_R} = E_0
+\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land M_{t_R} = E_0 \implies  \left( \Delta D_{N}^\text{gtr P90} + q_{o, t_R} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P90} + q_{c, t_R} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left( \Delta D_{G}^\text{gtr P90} + q_{n, t_R} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P90} + q_{a, t_R} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) 
 $$
 
 The following example should fail:
@@ -3167,7 +3167,7 @@ then
 if
     Previous Oil reserves 1P = 200 
 
-    Current Oil reserves 1P = 0
+    Current Oil reserves 1P = 100
 
     previous sales oil cumulative production = 900
 
@@ -3175,7 +3175,7 @@ if
 
     oil commerciality discrepancy 1P = -100
 
-    project level is E1. Production on Hold
+    project level is E0. On Production
 
 then
     Validation result is False
@@ -3190,7 +3190,7 @@ The following equation must be true:
 
 
 $$
-\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P50} + q_{o, t_R} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P50} + q_{c, t_R} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \land \left( \Delta D_{G}^\text{gtr P50} + q_{n, t_R} = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P50} + q_{a, t_R} = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
+\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P50} + q_{o, t_R} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \lor \left( \Delta D_{N^c}^\text{gtr P50} + q_{c, t_R} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \lor \left( \Delta D_{G}^\text{gtr P50} + q_{n, t_R} = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \lor \left( \Delta D_{G^a}^\text{gtr P50} + q_{a, t_R} = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
 $$
 
 ```python
