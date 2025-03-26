@@ -2852,7 +2852,7 @@ then
 
 ```
 
-### RE5054 - Project Level: The project must have 1P reserves for maturity levels E0, E1, E2, and E3, and 1P reserve runs out due to production
+### RE5054 - Project Level: The project must have 1P reserves for maturity levels E1, E2, and E3
 
 Severity:  `strict` :no_entry:
 
@@ -2861,8 +2861,8 @@ Notes: add another criteria as of 24 march 2025
 The following equation must be true:
 
 $$
-M_s = \lbrace E_0,E_1, E_2, E_3 \rbrace\\
-\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P90} + q_{o, t_R} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P90} + q_{c, t_R} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left( \Delta D_{G}^\text{gtr P90} + q_{n, t_R} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P90} + q_{a, t_R} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) \right) \implies M_{t_R} \in M_s
+M_s = \lbrace E_1, E_2, E_3 \rbrace\\
+\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_{t_R} \in M_s
 $$
 
 ```python
@@ -2874,24 +2874,12 @@ The following example should pass:
 
 ``` al
 if
-    Oil Reserves 1P = 1000
-    project level is E0. On Production
+    Oil reserves 1P = 100
+    con reserves 1P = 100
+    ga reserves 1P = 100
+    gn reserves 1P = 100
 
-then
-    Validation result is True
-
-```
-
-The following example should fail:
-
-``` al
-if
-    Oil reserves 1P = 0
-    con reserves 1P = 0
-    ga reserves 1P = 0
-    gn reserves 1P = 0
-
-    project level is E0. On Production
+    project level is X0. Development Pending
 
 then
     Validation result is False
@@ -3145,8 +3133,55 @@ $$
 import esdc
 ```
 
+### RE5068 - Project Level: The project must have 1P reserves  and 1P reserve runs out due to production for maturity levels E0
 
-### RE5068 - Project Level: 2P reserves can be zero at project level E0 if the yearly production equals to 2P reserves in the previous year.
+Severity:  `strict` :no_entry:
+
+Notes: New Rules As of 25 March 2025
+
+$$
+\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P90} + q_{o, t_R} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P90} + q_{c, t_R} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left( \Delta D_{G}^\text{gtr P90} + q_{n, t_R} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P90} + q_{a, t_R} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) \right) \implies M_{t_R} = E_0
+$$
+
+The following example should fail:
+
+``` al
+if
+    Previous Oil reserves 1P = 100 
+
+    Current Oil reserves 1P = 200
+
+    previous sales oil cumulative production = 900
+
+    current sales oil cumulative production = 1200
+
+    oil commerciality discrepancy 1P = -100
+
+    project level is E0. On Production
+
+then
+    Validation result is True
+```
+
+``` al
+if
+    Previous Oil reserves 1P = 200 
+
+    Current Oil reserves 1P = 0
+
+    previous sales oil cumulative production = 900
+
+    current sales oil cumulative production = 1200
+
+    oil commerciality discrepancy 1P = -100
+
+    project level is E1. Production on Hold
+
+then
+    Validation result is False
+```
+
+### RE5069 - Project Level: 2P reserves can be zero at project level E0 if the yearly production equals to 2P reserves in the previous year.
 Severity:  `strict` :no_entry:
 
 Notes: New Rules As of 25 March 2025
@@ -3160,4 +3195,42 @@ $$
 
 ```python
 import esdc
+```
+
+The following example should fail:
+
+``` al
+if
+    Previous Oil reserves 2P = 200 
+
+    Current Oil reserves 2P = 0
+
+    previous sales oil cumulative production = 900
+
+    current sales oil cumulative production = 1200
+
+    oil commerciality discrepancy 2P = -100
+
+    project level is E0. On Production
+
+then
+    Validation result is True
+```
+
+``` al
+if
+    Previous Oil reserves 2P = 200 
+
+    Current Oil reserves 2P = 0
+
+    previous sales oil cumulative production = 900
+
+    current sales oil cumulative production = 1200
+
+    oil commerciality discrepancy 2P = -100
+
+    project level is E1. Production on Hold
+
+then
+    Validation result is False
 ```
