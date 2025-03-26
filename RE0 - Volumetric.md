@@ -993,7 +993,7 @@ $$
 import esdc
 ```
 
-### RE0058 - Project IGIP High: if P10 higher than zero then IgIP Middle Value must be higher than sum of Cummulative Production and 3P Reserves
+### RE0058 - Project IGIP High: if P10 higher than zero then IGIP Middle Value must be higher than sum of Cummulative Production and 3P Reserves
 
 Severity: `strict` :no_entry:
 
