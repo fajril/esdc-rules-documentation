@@ -711,12 +711,12 @@ then
     validation result is False
 ```
 
-### RE5013 - Project Level: If in the previous report the project level is E7. Production not Viable and the project does have GROOVY report, then the project level must be in E4. Production Pending
+### RE5013 - Project Level: If and only if in the previous report the project level is E7. Production not Viable and the project does have GROOVY report, then the project level must be in E4. Production Pending
 
 Severity: `strict` :no_entry:
 
 $$
-\left(M_{t_R - 1} = E_7 \right) \land \left(G_r \equiv \top \right) \implies M_{t_R} = E_4
+\left(M_{t_R - 1} = E_7 \right) \land \left(G_r \equiv \top \right) \iff M_{t_R} = E_4
 $$
 
 ```python
@@ -743,6 +743,19 @@ if
     previous project level is E7. Production not Viable
     groovy status is True
     project level is E7. Production not Viable
+
+then
+    validation result is False
+    
+```
+
+The following example should fail:
+
+``` al
+if
+    previous project level is E7. Production not Viable
+    groovy status is False
+    project level is E4. Production Pending
 
 then
     validation result is False
