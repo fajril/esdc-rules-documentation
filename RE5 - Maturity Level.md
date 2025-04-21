@@ -3153,7 +3153,7 @@ Severity:  `strict` :no_entry:
 Notes: New Rules As of 25 March 2025
 
 $$
-\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land M_{t_R} = E_0 \implies  \left( \Delta D_{N}^\text{gtr P90} + q_{o, t_R} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{N^c}^\text{gtr P90} + q_{c, t_R} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left( \Delta D_{G}^\text{gtr P90} + q_{n, t_R} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left( \Delta D_{G^a}^\text{gtr P90} + q_{a, t_R} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) 
+\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land M_{t_R} = E_0 \implies  \left(q_{o, t_R} - \Delta D_{N}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{c, t_R} - \Delta D_{N^c}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left(q_{n, t_R} - \Delta D_{G}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{a, t_R} - \Delta D_{G^a}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) 
 $$
 
 The following example should fail:
@@ -3203,7 +3203,7 @@ The following equation must be true:
 
 
 $$
-\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left( \Delta D_{N}^\text{gtr P50} + q_{o, t_R} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \lor \left( \Delta D_{N^c}^\text{gtr P50} + q_{c, t_R} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \lor \left( \Delta D_{G}^\text{gtr P50} + q_{n, t_R} = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \lor \left( \Delta D_{G^a}^\text{gtr P50} + q_{a, t_R} = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
+\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left(q_{o, t_R} -\Delta D_{N}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{c, t_R} - \Delta D_{N^c}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \lor \left(q_{n, t_R}-\Delta D_{G}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{a, t_R}-\Delta D_{G^a}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
 $$
 
 ```python
