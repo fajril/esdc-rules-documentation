@@ -2829,7 +2829,7 @@ Notes: _Moved from RE0, previously RE0043_
 The following equation must be true:
 
 $$
-M_s = \lbrace E_7, E_8, A_1, A_2 \rbrace\\
+M_s = \lbrace E_0, E_7, E_8, A_1, A_2 \rbrace\\
 \Delta N_{pn}^{\text{ P10}} = \Delta N_{pn}^{c \text{ P10}} = \Delta G_{pn}^{a \text{ P10}} = \Delta G_{pn}^{\text{P10}} = 0 \implies M_{t_R} \in M_s
 $$
 
@@ -2858,7 +2858,7 @@ if
     con GRR/CR/PR High Value = 0
     ga GRR/CR/PR High Value = 0
     gn GRR/CR/PR High Value = 0
-    project level is E0. On Production
+    project level is E1. Production on Hold
 
 then
     Validation result is False
@@ -3145,6 +3145,14 @@ $$
 ```python
 import esdc
 ```
+### RE5068 - Project Level:
+Severity:  `strict` :no_entry:
+
+$$
+\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left(q_{o, t_R} > 0\right) \lor \left(q_{c, t_R} >0\right) \lor \left(q_{n, t_R}>0 \right) \lor \left(q_{a, t_R}>0\right) \right) \implies M_{t_R} = E_0
+$$
+
+
 
 ### RE5068 - Project Level: The project must have 1P reserves  and 1P reserve runs out due to production for maturity levels E0
 
