@@ -632,7 +632,7 @@ then
 ``` al
 if 
     previous project level is E5. Development Unclarified
-    project level is E3. Justified for Development
+    project level is E5. Development Unclarified
 
 then 
     validation result is True
@@ -3127,7 +3127,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
-M_{t_R} \notin M_s \implies  t_{act} \notin \empty
+M_{t_R} \notin M_s \implies t_{act} \notin \emptyset
 $$
 
 ```python
