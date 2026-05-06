@@ -8,12 +8,12 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | --- | --- |
 | $N^{\text{P90/P50/P10}}$ | Initial Oil in Place |
 | $G^{\text{P90/P50/P10}}$ | Initial Gas in Place |
-| $N_{\text{project}}^{\text{P90/P50/P10}}$ | Project Initial Oil in Place |
-| $G_{\text{project}}^{\text{P90/P50/P10}}$ | Project Initial Gas in Place |
+| $N_{\text{prj}}^{\text{P90/P50/P10}}$ | Project Initial Oil in Place |
+| $G_{\text{prj}}^{\text{P90/P50/P10}}$ | Project Initial Gas in Place |
 | $N_{pg}$ | Oil Gross Cumulative Production |
 | $N_{pg}^c$ | Condensate Gross Cumulative Production |
 | $G_{pg}$ | Non Associated Gas Gross Cumulative Production|
-| $G_{pg}^a$ | Associated Gas Net Cumulative Production |
+| $G_{pg}^a$ | Associated Gas Gross Cumulative Production |
 | $N_{pn}$ | Oil Net Cumulative Production |
 | $N_{pn}^c$ | Condensate Net Cumulative Production |
 | $G_{pn}$ | Non Associated Gas Net Cumulative Production|

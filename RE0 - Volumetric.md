@@ -54,7 +54,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 
-$$N^{\text{P90}} < N^{\text{P50}}$$
+$$N^{\text{P90}} \leq N^{\text{P50}}$$
 
 ```python
 import esdc
@@ -68,7 +68,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 
-$$N^{\text{P50}} < N^{\text{P10}}$$
+$$N^{\text{P50}} \leq N^{\text{P10}}$$
 
 ```python
 import esdc
@@ -82,7 +82,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 
-$$G^{\text{P90}} < G^{\text{P50}}$$
+$$G^{\text{P90}} \leq G^{\text{P50}}$$
 
 ```python
 import esdc
@@ -90,13 +90,13 @@ import esdc
 return esdc.inplace['gn']['low'][-1] <= esdc.inplace['gn']['mid'][-1]
 ```
 
-### RE0006 - IGIP: Mid Case must be less or equal than High Case
+### RE0006 - IGIP: Mid Case must be less than or equal to High Case
 
 Severity:  `strict` :no_entry:
 
 The following equation must be true:
 
-$$G^{\text{P50}} < G^{\text{P10}}$$
+$$G^{\text{P50}} \leq G^{\text{P10}}$$
 
 ```python
 import esdc
@@ -129,7 +129,7 @@ $$\Delta N_{pn}^{c \text{ P90}} \geq 0$$
 ```python
 import esdc
 
-return esdc.resources['oil']['low'][-1] >= 0
+return esdc.resources['con']['low'][-1] >= 0
 ```
 
 ### RE0009 - Associated Gas GRR/CR/PR: 1R/1C/1U must be higher than or equal to 0
@@ -208,7 +208,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta G_{ps}^{\text{ 1P}} \geq 0$$
+$$\Delta G_{ps}^{\text{1P}} \geq 0$$
 
 ```python
 import esdc
@@ -222,7 +222,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{pn}^{\text{P90}} \leq \Delta N_{p}^{\text{P50}} $$
+$$\Delta N_{pn}^{\text{P90}} \leq \Delta N_{pn}^{\text{P50}} $$
 
 ```python
 import esdc
@@ -362,7 +362,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 
-$$\Delta N_{ps}^{c \text{ 1P}} \leq \Delta N_{ps}^{c \text{ 1P}} $$
+$$\Delta N_{ps}^{c \text{ 1P}} \leq \Delta N_{ps}^{c \text{ 2P}} $$
 
 ```python
 import esdc
@@ -594,7 +594,7 @@ import esdc
 return esdc.reserves['gn']['mid'][-1] <= esdc.resources['gn']['mid'][-1]
 ```
 
-### RE0042 - Associated Gas Reserves: 3P must be less than or equal to 3R
+### RE0042 - Non Associated Gas Reserves: 3P must be less than or equal to 3R
 
 Severity:  `strict` :no_entry:
 
@@ -616,7 +616,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n N^{\text{P90}}_{\text{prj}} = N^{\text{P90}}$$
+$$\sum_{i=1}^n N_{\text{prj}}^{\text{P90}} = N^{\text{P90}}$$
 
 ```python
 import esdc
@@ -656,7 +656,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n N^{\text{P50}}_{\text{prj}} = N^{\text{P50}}$$
+$$\sum_{i=1}^n N_{\text{prj}}^{\text{P50}} = N^{\text{P50}}$$
 
 ```python
 import esdc
@@ -696,7 +696,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n N^{\text{P10}}_{\text{prj}} = N^{\text{P10}}$$
+$$\sum_{i=1}^n N_{\text{prj}}^{\text{P10}} = N^{\text{P10}}$$
 
 ```python
 import esdc
@@ -736,7 +736,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n G^{\text{P90}}_{\text{prj}} = G^{\text{P90}}$$
+$$\sum_{i=1}^n G_{\text{prj}}^{\text{P90}} = G^{\text{P90}}$$
 
 ```python
 import esdc
@@ -776,7 +776,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n G^{\text{P50}}_{\text{prj}} = G^{\text{P50}}$$
+$$\sum_{i=1}^n G_{\text{prj}}^{\text{P50}} = G^{\text{P50}}$$
 
 ```python
 import esdc
@@ -816,7 +816,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n G^{\text{P10}}_{\text{prj}} = G^{\text{P10}}$$
+$$\sum_{i=1}^n G_{\text{prj}}^{\text{P10}} = G^{\text{P10}}$$
 
 ```python
 import esdc
@@ -857,7 +857,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 The following equation must be true:
 
 $$
-\Delta N_{ps}^{\text{ 3P}} > 0  \implies \Delta N_{ps}^{\text{ 1P}} > 0
+\Delta G_{ps}^{\text{3P}} \u003e 0  \implies \Delta G_{ps}^{\text{1P}} \u003e 0
 $$
 
 ```python
@@ -899,7 +899,7 @@ $$
 import esdc
 ```
 
-### RE0052 - Non Associated Reserves: 1P should be higher than zero if 3P is higher than zero
+### RE0052 - Non Associated Gas Reserves: 1P should be higher than zero if 3P is higher than zero
 
 Severity: `strict` :no_entry:
 
@@ -916,14 +916,14 @@ $$
 import esdc
 ```
 
-### RE0053 - Project IOIP Low: if P90 higher than zero then IOIP Low Value must be higher than sum of Sales Cummulative Production and 1P Reserves
+### RE0053 - Project IOIP Low: if P90 higher than zero then IOIP Low Value must be higher than sum of Gross Cumulative Production and 1P Reserves
 
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
 $$
-N_{proj}^{\text{P90}} > 0  \implies \Delta N_{ps}^{\text{1P}} + N_{p, n, t} < N_{proj}^{\text{P90}}
+N_{\text{prj}}^{\text{P90}} > 0  \implies \Delta N_{ps}^{\text{1P}} + N_{pg} < N_{\text{prj}}^{\text{P90}}
 $$
 
 ```python
@@ -931,14 +931,14 @@ $$
 import esdc
 ```
 
-### RE0054 - Project IOIP Middle: if P50 higher than zero then IOIP Middle Value must be higher than sum of Cummulative Production and 2P Reserves
+### RE0054 - Project IOIP Middle: if P50 higher than zero then IOIP Middle Value must be higher than sum of Gross Cumulative Production and 2P Reserves
 
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
 $$
-N_{proj}^{\text{P50}} > 0  \implies \Delta N_{ps}^{\text{2P}} + N_{p, n, t} < N_{proj}^{\text{P50}}
+N_{\text{prj}}^{\text{P50}} > 0  \implies \Delta N_{ps}^{\text{2P}} + N_{pg} < N_{\text{prj}}^{\text{P50}}
 $$
 
 ```python
@@ -946,7 +946,7 @@ $$
 import esdc
 ```
 
-### RE0055 - Project IOIP High: if P10 higher than zero then IOIP Middle Value must be higher than sum of Cummulative Production and 3P Reserves
+### RE0055 - Project IOIP High: if P10 higher than zero then IOIP High Value must be higher than sum of Gross Cumulative Production and 3P Reserves
 
 Severity: `strict` :no_entry:
 
@@ -954,7 +954,7 @@ The following equation must be true:
 
 
 $$
-N_{proj}^{\text{P10}} > 0  \implies \Delta N_{ps}^{\text{3P}} + N_{p, n, t} < N_{proj}^{\text{P10}}
+N_{\text{prj}}^{\text{P10}} > 0  \implies \Delta N_{ps}^{\text{3P}} + N_{pg} < N_{\text{prj}}^{\text{P10}}
 $$
 
 ```python
@@ -962,14 +962,14 @@ $$
 import esdc
 ```
 
-### RE0056 - Project IGIP Low: if P90 higher than zero then IGIP Low Value must be higher than sum of Sales Cummulative Production and 1P Reserves
+### RE0056 - Project IGIP Low: if P90 higher than zero then IGIP Low Value must be higher than sum of Gross Cumulative Production and 1P Reserves
 
 Severity: `strict` :no_entry:
 
 The following equation must be true:
 
 $$
-G_{proj}^{\text{P90}} > 0  \implies \Delta G_{ps}^{\text{1P}} + G_{p, n, t} < G_{proj}^{\text{P90}}
+G_{\text{prj}}^{\text{P90}} > 0  \implies \Delta G_{ps}^{\text{1P}} + G_{pg} < G_{\text{prj}}^{\text{P90}}
 $$
 
 ```python
@@ -977,7 +977,7 @@ $$
 import esdc
 ```
 
-### RE0057 - Project IGIP Middle: if P50 higher than zero then IGIP Middle Value must be higher than sum of Cummulative Production and 2P Reserves
+### RE0057 - Project IGIP Middle: if P50 higher than zero then IGIP Middle Value must be higher than sum of Gross Cumulative Production and 2P Reserves
 
 Severity: `strict` :no_entry:
 
@@ -985,7 +985,7 @@ The following equation must be true:
 
 
 $$
-G_{proj}^{\text{P50}} > 0  \implies \Delta G_{ps}^{\text{2P}} + G_{p, n, t} < G_{proj}^{\text{P50}}
+G_{\text{prj}}^{\text{P50}} > 0  \implies \Delta G_{ps}^{\text{2P}} + G_{pg} < G_{\text{prj}}^{\text{P50}}
 $$
 
 ```python
@@ -993,7 +993,7 @@ $$
 import esdc
 ```
 
-### RE0058 - Project IGIP High: if P10 higher than zero then IGIP Middle Value must be higher than sum of Cummulative Production and 3P Reserves
+### RE0058 - Project IGIP High: if P10 higher than zero then IGIP High Value must be higher than sum of Gross Cumulative Production and 3P Reserves
 
 Severity: `strict` :no_entry:
 
@@ -1001,7 +1001,7 @@ The following equation must be true:
 
 
 $$
-G_{proj}^{\text{P10}} > 0  \implies \Delta G_{ps}^{\text{3P}} + G_{p, n, t} < G_{proj}^{\text{P10}}
+G_{\text{prj}}^{\text{P10}} > 0  \implies \Delta G_{ps}^{\text{3P}} + G_{pg} < G_{\text{prj}}^{\text{P10}}
 $$
 
 ```python
