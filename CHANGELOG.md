@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-05-07
+
+### Fixed
+
+- **RE1011, RE1012**: Fixed Python code from `esdc.cumprod['ga/gn']['net']` to `['sls']` to match "Sales" title and formula.
+- **RE1020**: Fixed Python code from `esdc.cumprod['oil']['net']` to `['gn']['net']` to match "Non Associated Gas Net" title.
+- **RE1017–RE1020**: Added Notes: _Not Implemented_ for Net Cumprod rules.
+- **RE1029**: Fixed tautological formula `$N_{ps} \leq N_{ps}$` to `$N_{ps} \leq N_{pg}$`.
+- **RE1044**: Fixed formula variable from `$q_{a, t}^{\text{tp}}$` to `$q_{n, t}^{\text{tp}}$` to match "Non Associated Gas" title.
+- **RE1033–RE1036, RE1045–RE1046**: Fixed set notation range from `$\lbrace t_R + 1, \dots, t_R + m/n \rbrace$` to `$\lbrace t_R + 1, \dots, t_m \rbrace$`.
+- **RE1037–RE1044**: Fixed summation upper bound from `$m$` to `$t_m$` to match References.md symbol definition.
+- **RE1037–RE1044**: Fixed subscript inconsistency: removed comma in `$N_{p, s}$` → `$N_{ps}$`, `$G_{p, n}$` → `$G_{pn}$`, etc.
+- **RE1035**: Fixed title capitalization "for each year" → "For each year".
+- **RE1036**: Fixed double space in title.
+- **RE1043**: Fixed double space "Associated  Gas" → "Associated Gas".
+- **RE1038, RE1042, RE1043**: Fixed superscript spacing consistency from `$c\text{ 2P}$` to `$c \text{2P}$`.
+
 ## [1.0.1] - 2026-05-06
 
 ### Fixed
