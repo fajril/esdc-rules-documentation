@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-05-07
+
+### Fixed
+
+- **RE2001–RE2012**: Fixed typo "discprepancies" → "discrepancies" in 12 rule titles.
+- **RE2001–RE2004**: Fixed Python code sign error: `+ prod` → `- prod` for 1R/1C/1U consistency rules.
+- **RE2003, RE2007, RE2011**: Fixed Python code fluid type `['con']` → `['ga']` for Associated Gas `wi` discrepancy.
+- **RE2004, RE2008, RE2012, RE2029, RE2030**: Fixed extra space in P-level superscripts (`^{\text{ P90}}` → `^{\text{P90}}`, etc.).
+- **RE2022**: Fixed formula P-level from P50 to **P10** to match "3P" title (code already correct).
+- **RE2024**: Rewrote entire rule for **Non Associated Gas** (was erroneous copy of RE2023/Associated Gas).
+- **RE2027–RE2028**: Updated Python code to include `cumprod` in EUR sum check, matching formula.
+- **RE2028**: Fixed Python code fluid type `['gn']` → `['ga']` for Associated Gas resources check.
+- **RE2030**: Fixed typo "IOIP Low" → "IGIP Low" in example block.
+- **RE2001–RE2030**: Standardized subscripts: removed commas in `$N_{p,n,t}$` → `$N_{pn,t}$`, `$G_{p,s,t}$` → `$G_{ps,t}$`, etc.
+- **RE2001–RE2030**: Fixed superscript spacing for fluid modifiers (`$c\text{P90}$` → `$c \text{P90}$`, `$a\text{P50}$` → `$a \text{P50}$`).
+- **References.md**:
+  - Added `uc` = **Unaccounted Changes** to syntax reference table.
+  - Added 4 `uc` discrepancy symbols to Symbol Reference.
+  - Fixed pre-existing typo: row for `\Delta D_{G^a}` under Well Intervention incorrectly used `gtr` superscript → corrected to `wi`.
+
 ## [1.0.2] - 2026-05-07
 
 ### Fixed
