@@ -63,6 +63,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added 4 `uc` discrepancy symbols to Symbol Reference.
 - Fixed pre-existing typo: row for `\Delta D_{G^a}` under Well Intervention incorrectly used `gtr` superscript → corrected to `wi`.
 
+#### RE5 - Maturity Level
+- **RE5011**: Fixed missing `E_3` in set `M_s` and corrected fail example from `E3` to `E4`.
+- **RE5012**: Fixed typo in fail example: `X1. Production on Hold` → `E1. Production on Hold`.
+- **RE5014**: Added missing period in title: `E7 Production not Viable` → `E7. Production not Viable`.
+- **RE5018**: Fixed subscript consistency: `M_{t - 2}` → `M_{t_R - 2}`.
+- **RE5023**: Added missing comma in title between `X1` and `X4`.
+- **RE5025**: Fixed set notation: `M_s = \lbrace M_E, X_0, \dots X_4 \rbrace` → `M_s = M_E \cup \lbrace X_0, \dots, X_4 \rbrace`.
+- **RE5031**: Fixed title to match formula: "higher than" → "higher than or equal to".
+- **RE5043**: Fixed formula by adding `> 0` predicate after summation to match title intent.
+- **RE5050**: Fixed typo in title: "an Seal" → "and Seal".
+- **RE5051**: Fixed title, formula subscript (`P_{g,d}` → `P_{g,m}`), and all examples ("Trap and Seal" → "Dynamic").
+- **RE5053**: Fixed title to include `E0` in allowed levels, matching formula: added "E0. On Production" to the list.
+- **RE5054**: Fixed implication direction: `(has reserves) \implies M \in M_s` → `M \in M_s \implies (has reserves)`.
+- **RE5055**: Rewrote title for clarity: "Only maturity levels E1, E2, and E3 require 1P reserves".
+- **RE5059–RE5061**: Standardized subscript: `N_{\text{project}}` → `N_{\text{prj}}`.
+- **RE5062–RE5064**: Standardized subscript: `G_{\text{project}}` → `G_{\text{prj}}`.
+- **RE5065**: Fixed formula predicate (`= 0` → `> 0`), subscript (`project` → `prj`), and superscript spacing (`\text{ P10}` → `\text{P10}`).
+- **RE5066**: Fixed implication direction and corrected `\empty` → `\emptyset`.
+- **RE5068**: Removed duplicate rule entry without title.
+
 ## [1.0.0] - 2026-05-06
 
 ### Added

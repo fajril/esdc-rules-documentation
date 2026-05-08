@@ -601,7 +601,7 @@ The severity of the rule will be changed into `strict` next year.
 The following rule must be true:
 
 $$
-M_s = \lbrace E_0, E_2, E_5\rbrace\\
+M_s = \lbrace E_0, E_2, E_3, E_5\rbrace\\
 M_{t_R - 1} = E_5 \implies M_{t_R} \in M_s
 $$
 
@@ -643,7 +643,7 @@ The following example should fail:
 ``` al
 if 
     previous project level is E5. Development Unclarified
-    project level is E3. Justified for Development
+    project level is E4. Development Pending
 
 then 
     validation result is False
@@ -705,7 +705,7 @@ The following example should fail:
 ``` al
 if 
     previous project level is E6. Further Development
-    project level is X1. Production on Hold
+    project level is E1. Production on Hold
 
 then 
     validation result is False
@@ -762,7 +762,7 @@ then
     
 ```
 
-### RE5014 - Project Level: If in the previous report the project level is E7. Production not Viable, then in the current report the project level must be either E0. On Production, E4. Production Pending, or E7 Production not Viable
+### RE5014 - Project Level: If in the previous report the project level is E7. Production not Viable, then in the current report the project level must be either E0. On Production, E4. Production Pending, or E7. Production not Viable
 
 Severity: `warning` :warning:
 
@@ -1055,7 +1055,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-M_{t_R - 1} = M_{t - 2} = X_1 \implies M_{t_R} \neq X_1
+M_{t_R - 1} = M_{t_R - 2} = X_1 \implies M_{t_R} \neq X_1
 $$
 
 ```python
@@ -1344,7 +1344,7 @@ then
     validation result is False
 ```
 
-### RE5023 - Project Level: if in the previous report the project level is X6. Lead, then in the current report the project level must be either X1. Discovery Under Evaluation X4. Inconclusive Flow, X5. Prospect, or X6. Lead
+### RE5023 - Project Level: if in the previous report the project level is X6. Lead, then in the current report the project level must be either X1. Discovery Under Evaluation, X4. Inconclusive Flow, X5. Prospect, or X6. Lead
 
 Severity: `warning` :warning:
 
@@ -1455,7 +1455,7 @@ The following rule must be true:
 
 $$
 M_E = \lbrace E_0, \dots, E_8 \rbrace\\
-M_s = \lbrace M_E, X_0, \dots X_4 \rbrace\\
+M_s = M_E \cup \lbrace X_0, \dots, X_4 \rbrace\\
 P_g = 1 \implies M_{t_R} \in M_s
 $$
 
@@ -1690,7 +1690,7 @@ then
     validation result is False
 ```
 
-### RE5031 - GCF Total: If in the previous report the project level is X6. Lead and in the current report the project level is X5. Prospect, then current GCF total should be higher than last year
+### RE5031 - GCF Total: If in the previous report the project level is X6. Lead and in the current report the project level is X5. Prospect, then current GCF total should be higher than or equal to last year
 
 Severity: `warning` :warning:
 
@@ -2474,7 +2474,7 @@ The following rule must be true:
 
 $$
 M_s = \lbrace A_1, A_2 \rbrace\\
-\Delta N_{pn}^{\text{P10}}  + \Delta N_{pn}^{c \text{ P10}} +\Delta G_{pn}^{a \text{ P10}} + \Delta G_{pn}^{\text{P10}}  \implies M_{t_R} \not \in M_s
+\Delta N_{pn}^{\text{P10}}  + \Delta N_{pn}^{c \text{ P10}} +\Delta G_{pn}^{a \text{ P10}} + \Delta G_{pn}^{\text{P10}} > 0 \implies M_{t_R} \not \in M_s
 $$
 
 ```python
@@ -2711,7 +2711,7 @@ then
     validation result is False
 ```
 
-### RE5050 - GCF Trap and Seal: GCF Trap an Seal must be within the range 0 to 1
+### RE5050 - GCF Trap and Seal: GCF Trap and Seal must be within the range 0 to 1
 
 Notes: _New Rules_
 
@@ -2747,7 +2747,7 @@ then
     validation result is False
 ```
 
-### RE5051 - GCF Dynamic: GCF Dynamic an Seal must be within the range 0 to 1
+### RE5051 - GCF Dynamic: GCF Dynamic must be within the range 0 to 1
 
 Notes: _New Rules_
 
@@ -2756,7 +2756,7 @@ Severity: `strict` :no_entry:
 The following rule must be true:
 
 $$
-0 \leq P_{g, d, t_R} \leq 1
+0 \leq P_{g, m, t_R} \leq 1
 $$
 
 ```python
@@ -2767,7 +2767,7 @@ The following example should pass:
 
 ``` al
 if
-    GCF Trap and Seal = 0.5
+    GCF Dynamic = 0.5
 
 then 
     validation result is True
@@ -2777,7 +2777,7 @@ The following example should fail:
 
 ``` al
 if
-    GCF Trap and Seal = 50
+    GCF Dynamic = 50
 
 then 
     validation result is False
@@ -2820,7 +2820,7 @@ then
     validation result is False
 ```
 
-### RE5053 - Project Level: If project does not have hydrocarbon volume then the project level must be either E7, E8, A1, or A2
+### RE5053 - Project Level: If project does not have hydrocarbon volume, then the project level must be either E0. On Production, E7. Production not Viable, E8. Further Development not Viable, A1. Dry, or A2. Dissolved
 
 Severity:  `strict` :no_entry:
 
@@ -2875,7 +2875,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_1, E_2, E_3 \rbrace\\
-\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right) \implies M_{t_R} \in M_s
+M_{t_R} \in M_s \implies \left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)
 $$
 
 ```python
@@ -2898,11 +2898,9 @@ then
     Validation result is False
 ```
 
-### RE5055 - Project Level: Project must not have reserves 1P for project maturity level E4 to X6. or project maturity level E0 if the project approaching the end of production 
+### RE5055 - Project Level: Only maturity levels E1, E2, and E3 require 1P reserves
 
 Severity:  `strict` :no_entry:
-
-Notes: remove E0 as of 24 march 2025
 
 The following equation must be true:
 
@@ -2998,7 +2996,7 @@ Notes: _Added for resources report 31.12.2022._
 Severity: `strict` :no_entry:
 
 $$
-N_{\text{project}, t_R}^{\text{P90}} \neq N_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
+N_{\text{prj}, t_R}^{\text{P90}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3013,7 +3011,7 @@ Notes: _Added for resources report 31.12.2022_
 Severity: `strict` :no_entry:
 
 $$
-N_{\text{project}, t_R}^{\text{P50}} \neq N_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
+N_{\text{prj}, t_R}^{\text{P50}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3028,7 +3026,7 @@ Notes: _Added for resources report 31.12.2022_
 Severity: `strict` :no_entry:
 
 $$
-N_{\text{project}, t_R}^{\text{P10}} \neq N_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
+N_{\text{prj}, t_R}^{\text{P10}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3043,7 +3041,7 @@ Notes: _Added for resources report 31.12.2022._
 Severity: `strict` :no_entry:
 
 $$
-G_{\text{project}, t_R}^{\text{P90}} \neq G_{\text{project}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
+G_{\text{prj}, t_R}^{\text{P90}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3058,7 +3056,7 @@ Notes: _Added for resources report 31.12.2022_
 Severity: `strict` :no_entry:
 
 $$
-G_{\text{project}, t_R}^{\text{P50}} \neq G_{\text{project}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
+G_{\text{prj}, t_R}^{\text{P50}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3073,7 +3071,7 @@ Notes: _Added for resources report 31.12.2022_
 Severity: `strict` :no_entry:
 
 $$
-G_{\text{project}, t_R}^{\text{P10}} \neq G_{\text{project}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
+G_{\text{prj}, t_R}^{\text{P10}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
 ```python
@@ -3089,7 +3087,7 @@ The following rule must be true:
 
 $$
 M_s = \lbrace A_1, A_2 \rbrace\\
- N_{project}^{\text{ P10}}  +  G_{project}^{\text{ P10}} =0 \implies M_{t_R} \not \in M_s
+ N_{\text{prj}}^{\text{P10}} + G_{\text{prj}}^{\text{P10}} > 0 \implies M_{t_R} \not \in M_s
 $$
 
 ```python
@@ -3127,7 +3125,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
-M_{t_R} \notin M_s \implies  t_{act} \notin \empty
+M_{t_R} \in M_s \implies  t_{act} \notin \emptyset
 $$
 
 ```python
@@ -3145,13 +3143,6 @@ $$
 ```python
 import esdc
 ```
-### RE5068 - Project Level:
-Severity:  `strict` :no_entry:
-
-$$
-\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left(q_{o, t_R} > 0\right) \lor \left(q_{c, t_R} >0\right) \lor \left(q_{n, t_R}>0 \right) \lor \left(q_{a, t_R}>0\right) \right) \implies M_{t_R} = E_0
-$$
-
 
 
 ### RE5068 - Project Level: The project must have 1P reserves  and 1P reserve runs out due to production for maturity levels E0
