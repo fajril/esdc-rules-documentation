@@ -18,7 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **RE0015**: Fixed RHS formula subscript from `\Delta N_{p}^{\text{P50}}` to `\Delta N_{pn}^{\text{P50}}`.
 - **RE0025**: Fixed tautological formula `\Delta N_{ps}^{c \text{ 1P}} \leq \Delta N_{ps}^{c \text{ 1P}}` to `\Delta N_{ps}^{c \text{ 1P}} \leq \Delta N_{ps}^{c \text{ 2P}}`.
 - **RE0042**: Fixed title from "Associated Gas Reserves" to "Non Associated Gas Reserves" to match formula and code.
+- **RE0049**: Fixed formula from `ΔG_ps` (Non Associated Gas) to `ΔN_ps` (Oil) to match title "Oil Reserves". Replaced invalid `\u003e` Unicode escape with `>`.
 - **RE0043–RE0048**: Fixed subscript/superscript order in formulas from `$X^{\text{Pxx}}_{\text{prj}}` to `$X_{\text{prj}}^{\text{Pxx}}`.
+- **RE0043–RE0048**: Added missing index `i` to summation symbol (`N_{\text{prj}}` → `N_{\text{prj},i}`, `G_{\text{prj}}` → `G_{\text{prj},i}`).
 - **RE0052**: Fixed title from "Non Associated Reserves" to "Non Associated Gas Reserves".
 - **RE0053–RE0058**: Fixed titles and formulas:
   - Changed "Sales Cummulative Production" / "Cummulative Production" to "Gross Cumulative Production".
@@ -50,6 +52,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **RE2001–RE2004**: Fixed Python code sign error: `+ prod` → `- prod` for 1R/1C/1U consistency rules.
 - **RE2003, RE2007, RE2011**: Fixed Python code fluid type `['con']` → `['ga']` for Associated Gas `wi` discrepancy.
 - **RE2004, RE2008, RE2012, RE2029, RE2030**: Fixed extra space in P-level superscripts (`^{\text{ P90}}` → `^{\text{P90}}`, etc.).
+- **RE2002, RE2006, RE2010**: Fixed Python code using `'ga'` (Associated Gas) for Well Intervention discrepancy in Condensate rules — changed to `'con'`.
+- **RE2001–RE2012**: Added missing `cio` (Consumed in Operations) discrepancy term to Python code for all 12 GRR/CR/PR material balance rules. The formulas already included `cio`; only the Python code was missing it.
 - **RE2022**: Fixed formula P-level from P50 to **P10** to match "3P" title (code already correct).
 - **RE2024**: Rewrote entire rule for **Non Associated Gas** (was erroneous copy of RE2023/Associated Gas).
 - **RE2027–RE2028**: Updated Python code to include `cumprod` in EUR sum check, matching formula.
@@ -76,12 +80,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **RE5051**: Fixed title, formula subscript (`P_{g,d}` → `P_{g,m}`), and all examples ("Trap and Seal" → "Dynamic").
 - **RE5053**: Fixed title to include `E0` in allowed levels, matching formula: added "E0. On Production" to the list.
 - **RE5054**: Fixed implication direction: `(has reserves) \implies M \in M_s` → `M \in M_s \implies (has reserves)`.
-- **RE5055**: Rewrote title for clarity: "Only maturity levels E1, E2, and E3 require 1P reserves".
+- **RE5055**: Rewrote title and formula to form iff with RE5054: "Maturity levels E4 through X6 must not have 1P reserves". Changed set from `{E1,E2,E3}` to `{E4,...,X6}` and direction to `M ∈ M_s ⟹ reserves = 0`. Added note about iff relationship. Updated examples.
 - **RE5059–RE5061**: Standardized subscript: `N_{\text{project}}` → `N_{\text{prj}}`.
 - **RE5062–RE5064**: Standardized subscript: `G_{\text{project}}` → `G_{\text{prj}}`.
 - **RE5065**: Fixed formula predicate (`= 0` → `> 0`), subscript (`project` → `prj`), and superscript spacing (`\text{ P10}` → `\text{P10}`).
 - **RE5066**: Fixed implication direction and corrected `\empty` → `\emptyset`.
+- **RE5068**: Fixed discrepancy sign from `q - ΔD` to `q + ΔD` to match RE2 material balance convention. Fixed example 1 label from "should fail" to "should pass".
+- **RE5053**: Redesigned pass example to test rule's consequent directly (all resources P10 = 0, M = E7) instead of vacuously true.
+- **RE5054**: Redesigned pass example to test rule's consequent directly (M = E1 with 1P > 0) instead of vacuously true.
+- **RE5066, RE5067**: Changed symbol `$t_{act}$` to `$t_{ons}$` for consistency.
+- **RE5069**: Restored missing `if` block in fail example.
 - **RE5068**: Removed duplicate rule entry without title.
+
+#### References
+- Added A1 (Dry) and A2 (Dissolved) to Project Maturity Level table.
+- Added 2R/2C/2U = P50 equivalence definition to Symbol Reference paragraph.
+- Added `$t_{ons}$` (Onstream actual date) to Symbol Reference table.
+- Added Discrepancy Applicability note explaining why reserves rules (RE2013–RE2024) only include `gtr` while GRR/CR/PR rules (RE2001–RE2012) include all five discrepancy types.
 
 ## [1.0.0] - 2026-05-06
 

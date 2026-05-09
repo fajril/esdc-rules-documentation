@@ -2,7 +2,7 @@
 
 ## Symbol Reference
 
-The following symbol is used in this documentation. We use P90/P50/P10 as a generic symbol instead of using specific symbols such as R (GRR), C (Contingent), U (Prospective) for generic rules that apply equally to GRR, Contingent Resources, and Prospective Resources. In case of reserves, 1P/2P/3P is used.
+The following symbol is used in this documentation. We use P90/P50/P10 as a generic symbol instead of using specific symbols such as R (GRR), C (Contingent), U (Prospective) for generic rules that apply equally to GRR, Contingent Resources, and Prospective Resources. In case of reserves, 1P/2P/3P is used. The equivalences are: 1R/1C/1U = P90, 2R/2C/2U = P50, 3R/3C/3U = P10.
 
 | Symbols | Definition |
 | --- | --- |
@@ -55,6 +55,7 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | $\Delta D_{G}^\text{uc P90/P50/P10}$ | Non Associated Gas Discrepancy from Unaccounted Changes |
 | $\Delta D_{G^a}^\text{uc P90/P50/P10}$ | Associated Gas Discrepancy from Unaccounted Changes |
 | $t_R$ | current reporting time for resources report |
+| $t_{ons}$ | Onstream actual date |
 | $q_{o, t \dots t_m}^{s}$ | Oil Sales yearly rate forecast|
 | $q_{c, t \dots t_m}^{s}$ | Condensate Sales yearly rate forecast|
 | $q_{a, t \dots t_m}^{s}$ | Associated Gas Sales yearly rate forecast|
@@ -149,6 +150,10 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 | `uc`    | discrepancy | Unaccounted Changes |
 | `cio`   | discrepancy | Consumed in Operations |
 
+### Discrepancy Applicability
+
+In the material balance rules (RE2), GRR/CR/PR rules (RE2001–RE2012) include all five discrepancy types (Update Model, Production Performance Analysis, Well Intervention, Unaccounted Changes, and Consumed in Operations), because these categories reflect changes to the resource base itself. Reserves rules (RE2013–RE2024) include only the Commerciality discrepancy (`gtr`), because the other five discrepancy types apply exclusively to GRR/CR/PR. Reserves only change through commerciality reclassifications and production.
+
 ## Syntax for eSDC Rules
 
 eSDC module API:
@@ -198,6 +203,8 @@ Refer to Indonesia's Framework of Petroleum Resources for more complete definiti
 | 13 | X4   | X      | U      | X4. Inconclusive Flow              |
 | 14 | X5   | X      | U      | X5. Prospect                       |
 | 15 | X6   | X      | U      | X6. Lead                           |
+| 16 | A1   | A      | A      | A1. Dry                             |
+| 17 | A2   | A      | A      | A2. Dissolved                       |
 
 ## Geological Chance Factor
 

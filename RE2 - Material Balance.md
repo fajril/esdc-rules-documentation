@@ -15,6 +15,7 @@ import esdc
 
 discr = esdc.discrepancy['oil']['low']['um'][-1] + esdc.discrepancy['oil']['low']['ppa'][-1]
         + esdc.discrepancy['oil']['low']['wi'][-1] + esdc.discrepancy['oil']['low']['uc'][-1]
+        + esdc.discrepancy['oil']['low']['cio'][-1]
 prod = esdc.cumprod['oil']['sls'][-1] - esdc.cumprod['oil']['sls'][-2]
 new_resources = esdc.resources['oil']['low'][-2] + discr - prod
 
@@ -33,7 +34,8 @@ $$\Delta N_{pn,t}^{c \text{P90}} = \Delta N_{pn,t - 1}^{c \text{P90}} + \Delta D
 import esdc
 
 discr = esdc.discrepancy['con']['low']['um'][-1] + esdc.discrepancy['con']['low']['ppa'][-1]
-        + esdc.discrepancy['ga']['low']['wi'][-1] + esdc.discrepancy['con']['low']['uc'][-1]
+        + esdc.discrepancy['con']['low']['wi'][-1] + esdc.discrepancy['con']['low']['uc'][-1]
+        + esdc.discrepancy['con']['low']['cio'][-1]
 prod = esdc.cumprod['con']['sls'][-1] - esdc.cumprod['con']['sls'][-2]
 new_resources = esdc.resources['con']['low'][-2] + discr - prod
 
@@ -52,7 +54,8 @@ $$\Delta G_{pn,t}^{a \text{P90}} = \Delta G_{pn,t - 1}^{a \text{P90}} + \Delta D
 import esdc
 
 discr = esdc.discrepancy['ga']['low']['um'][-1] + esdc.discrepancy['ga']['low']['ppa'][-1]
-        + esdc.discrepancy['con']['low']['wi'][-1] + esdc.discrepancy['ga']['low']['uc'][-1]
+        + esdc.discrepancy['ga']['low']['wi'][-1] + esdc.discrepancy['ga']['low']['uc'][-1]
+        + esdc.discrepancy['ga']['low']['cio'][-1]
 prod = esdc.cumprod['ga']['sls'][-1] - esdc.cumprod['ga']['sls'][-2]
 new_resources = esdc.resources['ga']['low'][-2] + discr - prod
 
@@ -72,6 +75,7 @@ import esdc
 
 discr = esdc.discrepancy['gn']['low']['um'][-1] + esdc.discrepancy['gn']['low']['ppa'][-1]
         + esdc.discrepancy['gn']['low']['wi'][-1] + esdc.discrepancy['gn']['low']['uc'][-1]
+        + esdc.discrepancy['gn']['low']['cio'][-1]
 prod = esdc.cumprod['gn']['sls'][-1] - esdc.cumprod['gn']['sls'][-2]
 new_resources = esdc.resources['gn']['low'][-2] + discr - prod
 
@@ -91,6 +95,7 @@ import esdc
 
 discr = esdc.discrepancy['oil']['mid']['um'][-1] + esdc.discrepancy['oil']['mid']['ppa'][-1]
         + esdc.discrepancy['oil']['mid']['wi'][-1] + esdc.discrepancy['oil']['mid']['uc'][-1]
+        + esdc.discrepancy['oil']['mid']['cio'][-1]
 prod = esdc.cumprod['oil']['sls'][-1] - esdc.cumprod['oil']['sls'][-2]
 new_resources = esdc.resources['oil']['mid'][-2] + discr - prod
 
@@ -109,7 +114,8 @@ $$\Delta N_{pn,t}^{c \text{P50}} = \Delta N_{pn,t - 1}^{c \text{P50}} + \Delta D
 import esdc
 
 discr = esdc.discrepancy['con']['mid']['um'][-1] + esdc.discrepancy['con']['mid']['ppa'][-1]
-        + esdc.discrepancy['ga']['mid']['wi'][-1] + esdc.discrepancy['con']['mid']['uc'][-1]
+        + esdc.discrepancy['con']['mid']['wi'][-1] + esdc.discrepancy['con']['mid']['uc'][-1]
+        + esdc.discrepancy['con']['mid']['cio'][-1]
 prod = esdc.cumprod['con']['sls'][-1] - esdc.cumprod['con']['sls'][-2]
 new_resources = esdc.resources['con']['mid'][-2] + discr - prod
 
@@ -128,7 +134,8 @@ $$\Delta G_{pn,t}^{a \text{P50}} = \Delta G_{pn,t - 1}^{a \text{P50}} + \Delta D
 import esdc
 
 discr = esdc.discrepancy['ga']['mid']['um'][-1] + esdc.discrepancy['ga']['mid']['ppa'][-1]
-        + esdc.discrepancy['con']['mid']['wi'][-1] + esdc.discrepancy['ga']['mid']['uc'][-1]
+        + esdc.discrepancy['ga']['mid']['wi'][-1] + esdc.discrepancy['ga']['mid']['uc'][-1]
+        + esdc.discrepancy['ga']['mid']['cio'][-1]
 prod = esdc.cumprod['ga']['sls'][-1] - esdc.cumprod['ga']['sls'][-2]
 new_resources = esdc.resources['ga']['mid'][-2] + discr - prod
 
@@ -148,6 +155,7 @@ import esdc
 
 discr = esdc.discrepancy['gn']['mid']['um'][-1] + esdc.discrepancy['gn']['mid']['ppa'][-1]
         + esdc.discrepancy['gn']['mid']['wi'][-1] + esdc.discrepancy['gn']['mid']['uc'][-1]
+        + esdc.discrepancy['gn']['mid']['cio'][-1]
 prod = esdc.cumprod['gn']['sls'][-1] - esdc.cumprod['gn']['sls'][-2]
 new_resources = esdc.resources['gn']['mid'][-2] + discr - prod
 
@@ -167,6 +175,7 @@ import esdc
 
 discr = esdc.discrepancy['oil']['hgh']['um'][-1] + esdc.discrepancy['oil']['hgh']['ppa'][-1]
         + esdc.discrepancy['oil']['hgh']['wi'][-1] + esdc.discrepancy['oil']['hgh']['uc'][-1]
+        + esdc.discrepancy['oil']['hgh']['cio'][-1]
 prod = esdc.cumprod['oil']['sls'][-1] - esdc.cumprod['oil']['sls'][-2]
 new_resources = esdc.resources['oil']['hgh'][-2] + discr - prod
 
@@ -185,7 +194,8 @@ $$\Delta N_{pn,t}^{c \text{P10}} = \Delta N_{pn,t - 1}^{c \text{P10}} + \Delta D
 import esdc
 
 discr = esdc.discrepancy['con']['hgh']['um'][-1] + esdc.discrepancy['con']['hgh']['ppa'][-1]
-        + esdc.discrepancy['ga']['hgh']['wi'][-1] + esdc.discrepancy['con']['hgh']['uc'][-1]
+        + esdc.discrepancy['con']['hgh']['wi'][-1] + esdc.discrepancy['con']['hgh']['uc'][-1]
+        + esdc.discrepancy['con']['hgh']['cio'][-1]
 prod = esdc.cumprod['con']['sls'][-1] - esdc.cumprod['con']['sls'][-2]
 new_resources = esdc.resources['con']['hgh'][-2] + discr - prod
 
@@ -204,7 +214,8 @@ $$\Delta G_{pn,t}^{a \text{P10}} = \Delta G_{pn,t - 1}^{a \text{P10}} + \Delta D
 import esdc
 
 discr = esdc.discrepancy['ga']['hgh']['um'][-1] + esdc.discrepancy['ga']['hgh']['ppa'][-1]
-        + esdc.discrepancy['con']['hgh']['wi'][-1] + esdc.discrepancy['ga']['hgh']['uc'][-1]
+        + esdc.discrepancy['ga']['hgh']['wi'][-1] + esdc.discrepancy['ga']['hgh']['uc'][-1]
+        + esdc.discrepancy['ga']['hgh']['cio'][-1]
 prod = esdc.cumprod['ga']['sls'][-1] - esdc.cumprod['ga']['sls'][-2]
 new_resources = esdc.resources['ga']['hgh'][-2] + discr - prod
 
@@ -224,6 +235,7 @@ import esdc
 
 discr = esdc.discrepancy['gn']['hgh']['um'][-1] + esdc.discrepancy['gn']['hgh']['ppa'][-1]
         + esdc.discrepancy['gn']['hgh']['wi'][-1] + esdc.discrepancy['gn']['hgh']['uc'][-1]
+        + esdc.discrepancy['gn']['hgh']['cio'][-1]
 prod = esdc.cumprod['gn']['sls'][-1] - esdc.cumprod['gn']['sls'][-2]
 new_resources = esdc.resources['gn']['hgh'][-2] + discr - prod
 

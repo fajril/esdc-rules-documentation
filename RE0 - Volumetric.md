@@ -616,7 +616,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n N_{\text{prj}}^{\text{P90}} = N^{\text{P90}}$$
+$$\sum_{i=1}^n N_{\text{prj},i}^{\text{P90}} = N^{\text{P90}}$$
 
 ```python
 import esdc
@@ -656,7 +656,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n N_{\text{prj}}^{\text{P50}} = N^{\text{P50}}$$
+$$\sum_{i=1}^n N_{\text{prj},i}^{\text{P50}} = N^{\text{P50}}$$
 
 ```python
 import esdc
@@ -696,7 +696,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n N_{\text{prj}}^{\text{P10}} = N^{\text{P10}}$$
+$$\sum_{i=1}^n N_{\text{prj},i}^{\text{P10}} = N^{\text{P10}}$$
 
 ```python
 import esdc
@@ -736,7 +736,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n G_{\text{prj}}^{\text{P90}} = G^{\text{P90}}$$
+$$\sum_{i=1}^n G_{\text{prj},i}^{\text{P90}} = G^{\text{P90}}$$
 
 ```python
 import esdc
@@ -776,7 +776,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n G_{\text{prj}}^{\text{P50}} = G^{\text{P50}}$$
+$$\sum_{i=1}^n G_{\text{prj},i}^{\text{P50}} = G^{\text{P50}}$$
 
 ```python
 import esdc
@@ -816,7 +816,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 
 The following equation must be true:
 
-$$\sum_{i=1}^n G_{\text{prj}}^{\text{P10}} = G^{\text{P10}}$$
+$$\sum_{i=1}^n G_{\text{prj},i}^{\text{P10}} = G^{\text{P10}}$$
 
 ```python
 import esdc
@@ -857,7 +857,7 @@ Notes: _Implemented for reporting status of 31.12.2022_
 The following equation must be true:
 
 $$
-\Delta G_{ps}^{\text{3P}} \u003e 0  \implies \Delta G_{ps}^{\text{1P}} \u003e 0
+\Delta N_{ps}^{\text{3P}} > 0  \implies \Delta N_{ps}^{\text{1P}} > 0
 $$
 
 ```python

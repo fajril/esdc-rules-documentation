@@ -2842,12 +2842,15 @@ The following example should pass:
 
 ``` al
 if
-    Oil GRR/CR/PR High Value = 1000
-    project level is E0. On Production
+    Oil GRR/CR/PR High Value = 0
+    con GRR/CR/PR High Value = 0
+    ga GRR/CR/PR High Value = 0
+    gn GRR/CR/PR High Value = 0
+
+    project level is E7. Production not Viable
 
 then
     Validation result is True
-
 ```
 
 The following example should fail:
@@ -2858,11 +2861,11 @@ if
     con GRR/CR/PR High Value = 0
     ga GRR/CR/PR High Value = 0
     gn GRR/CR/PR High Value = 0
+
     project level is E1. Production on Hold
 
 then
     Validation result is False
-
 ```
 
 ### RE5054 - Project Level: The project must have 1P reserves for maturity levels E1, E2, and E3
@@ -2888,25 +2891,27 @@ The following example should pass:
 ``` al
 if
     Oil reserves 1P = 100
-    con reserves 1P = 100
-    ga reserves 1P = 100
-    gn reserves 1P = 100
+    con reserves 1P = 0
+    ga reserves 1P = 0
+    gn reserves 1P = 0
 
-    project level is X0. Development Pending
+    project level is E1. Production on Hold
 
 then
-    Validation result is False
+    Validation result is True
 ```
 
-### RE5055 - Project Level: Only maturity levels E1, E2, and E3 require 1P reserves
+### RE5055 - Project Level: Maturity levels E4 through X6 must not have 1P reserves
 
 Severity:  `strict` :no_entry:
+
+Notes: _RE5054 and RE5055 form an if-and-only-if: reserves > 0 ⟺ M ∈ {E0, E1, E2, E3}. E0 is governed separately by RE5068 and RE5069._
 
 The following equation must be true:
 
 $$
-M_s = \lbrace E_1, E_2, E_3 \rbrace\\
-\left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right)  \implies M_{t_R} \notin M_s
+M_s = \lbrace E_4, E_5, E_6, E_7, E_8, X_0, X_1, X_2, X_3, X_4, X_5, X_6 \rbrace\\
+M_{t_R} \in M_s \implies \left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right)
 $$
 
 ```python
@@ -2933,12 +2938,12 @@ The following example should fail:
 
 ``` al
 if
-    Oil reserves 1P = 0
-    con reserves 1P = 0
-    ga reserves 1P = 0
-    gn reserves 1P = 0
+    Oil reserves 1P = 100
+    con reserves 1P = 100
+    ga reserves 1P = 100
+    gn reserves 1P = 100
 
-    project level is E3. Justified for Development
+    project level is X0. Development Pending
 
 then
     Validation result is False
@@ -3125,7 +3130,7 @@ The following equation must be true:
 
 $$
 M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
-M_{t_R} \in M_s \implies  t_{act} \notin \emptyset
+M_{t_R} \in M_s \implies  t_{ons} \notin \emptyset
 $$
 
 ```python
@@ -3138,7 +3143,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 $$
-t_{act} < t_R 
+t_{ons} < t_R 
 $$
 ```python
 import esdc
@@ -3152,28 +3157,10 @@ Severity:  `strict` :no_entry:
 Notes: New Rules As of 25 March 2025
 
 $$
-\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land M_{t_R} = E_0 \implies  \left(q_{o, t_R} - \Delta D_{N}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{c, t_R} - \Delta D_{N^c}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left(q_{n, t_R} - \Delta D_{G}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{a, t_R} - \Delta D_{G^a}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) 
+\left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land M_{t_R} = E_0 \implies  \left(q_{o, t_R} + \Delta D_{N}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{c, t_R} + \Delta D_{N^c}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left(q_{n, t_R} + \Delta D_{G}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{a, t_R} + \Delta D_{G^a}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) 
 $$
 
-The following example should fail:
-
-``` al
-if
-    Previous Oil reserves 1P = 100 
-
-    Current Oil reserves 1P = 200
-
-    previous sales oil cumulative production = 900
-
-    current sales oil cumulative production = 1200
-
-    oil commerciality discrepancy 1P = -100
-
-    project level is E0. On Production
-
-then
-    Validation result is True
-```
+The following example should pass:`
 
 ``` al
 if
@@ -3202,14 +3189,14 @@ The following equation must be true:
 
 
 $$
-\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left(q_{o, t_R} -\Delta D_{N}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{c, t_R} - \Delta D_{N^c}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \lor \left(q_{n, t_R}-\Delta D_{G}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{a, t_R}-\Delta D_{G^a}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
+\left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left(q_{o, t_R} + \Delta D_{N}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{c, t_R} + \Delta D_{N^c}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \lor \left(q_{n, t_R} + \Delta D_{G}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{a, t_R} + \Delta D_{G^a}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
 $$
 
 ```python
 import esdc
 ```
 
-The following example should fail:
+The following example should pass:
 
 ``` al
 if
@@ -3229,17 +3216,19 @@ then
     Validation result is True
 ```
 
+The following example should fail:
+
 ``` al
 if
-    Previous Oil reserves 2P = 200 
+    Previous Oil reserves 2P = 200
 
-    Current Oil reserves 2P = 0
+    Current Oil reserves 2P = 100
 
     previous sales oil cumulative production = 900
 
-    current sales oil cumulative production = 1200
+    current sales oil cumulative production = 1000
 
-    oil commerciality discrepancy 2P = -100
+    oil commerciality discrepancy 2P = 0
 
     project level is E1. Production on Hold
 
