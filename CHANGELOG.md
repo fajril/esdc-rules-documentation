@@ -13,6 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **RE0–RE5**: Removed all Python code blocks (202 blocks). Formulas are now the single source of truth for rule logic.
 - **References.md**: Replaced `import esdc` API section with Formula-to-Database Column Mapping table, Data Source Reference table, and Conventions (time reference, aggregation).
 - **References.md**: Added mapping from formula symbols to database column names covering In-Place, Resources, Reserves, Cumulative Production, Discrepancy, Forecast, and Maturity Level categories.
+- **RE0002–RE0042, RE0049–RE0058**: Added `al` pass/fail examples to all RE0 rules that previously had none (51 rules, 102 example blocks).
+- **RE0001, RE0002**: Fixed title wording from "positive or equal to 0" to "greater than or equal to zero".
+- **RE0007–RE0014**: Fixed title wording from "higher than or equal to 0" to "greater than or equal to zero".
+- **RE0049–RE0052**: Fixed title wording from "higher than zero" to "greater than zero".
+- **RE0053–RE0058**: Fixed title wording from "higher than" to "greater than".
+- **RE0001, RE0002**: Fixed `al` example capitalization: `oil in place` → `Oil in Place`, `gas in place` → `Gas in Place`.
+- **RE0043–RE0048**: Fixed `al` example capitalization: `Validation result` → `validation result`.
+- **RE0052**: Fixed extra leading space in P-level superscripts (`^{\text{ 3P}}` → `^{\text{3P}}`, `^{\text{ 1P}}` → `^{\text{1P}}`; renders identically).
 
 ### Fixed
 
