@@ -12,10 +12,6 @@ $$
 \left( q_{o, t_R} > 0 \right) \lor \left( q_{c, t_R} > 0 \right) \lor \left( q_{a, t_R} > 0 \right) \lor \left( q_{n, t_R} > 0 \right) \implies M_{t_R} = E_0
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -66,10 +62,6 @@ $$
 \left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \implies M_{t_R} \neq E_0
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -119,10 +111,6 @@ The following rule must be true:
 $$
 \left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1} = E_1\right) \land \left(G_r \equiv \bot \right) \implies M_{t_R} =E_4
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -180,10 +168,6 @@ $$
 \left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1} = M_{t_R - 2} = M_{t_R - 3} = E_1\right)  \implies M_{t_R} = E_4
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -239,10 +223,6 @@ The following rule must be true:
 $$
 \left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1} = M_{t_R-2} = M_{t_R-3} = E_4\right) \land \left(G_r \equiv \bot \right) \implies M_{t_R} = E_7
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -303,10 +283,6 @@ The following rule must be true:
 $$
 \left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1} = E_4\right) \land \left(G_r \equiv \top \right) \implies M_{t_R} = E_4
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -369,10 +345,6 @@ $$
 \left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1}=M_{t_R - 2} = M_{t_R - 3} = E_2\right) \land \left(G_r \equiv \bot \right) \implies M_{t_R} = E_5
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -425,10 +397,6 @@ The following rule must be true:
 $$
 \left( q_{o, t_R} = q_{c, t_R}= q_{a, t_R} = q_{n, t_R} = 0 \right) \land \left(M_{t_R-1}=M_{t_R - 2} = M_{t_R - 3} = E_3\right) \land \left(G_r \equiv \bot \right) \implies M_{t_R} = E_5
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -484,10 +452,6 @@ M_s = \lbrace E_0, E_2, E_5\rbrace\\
 M_{t_R - 1} = E_2 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -539,10 +503,6 @@ $$
 M_s = \lbrace E_0, E_2, E_3, E_5\rbrace\\
 M_{t_R - 1} = E_3 \implies M_{t_R} \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -605,10 +565,6 @@ M_s = \lbrace E_0, E_2, E_3, E_5\rbrace\\
 M_{t_R - 1} = E_5 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -657,10 +613,6 @@ $$
 M_s = \lbrace E_0, E_2, E_3, E_8 \rbrace \\
 M_{t_R - 1} = E_6 \implies M_{t_R} \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -719,10 +671,6 @@ $$
 \left(M_{t_R - 1} = E_7 \right) \land \left(G_r \equiv \top \right) \iff M_{t_R} = E_4
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -773,10 +721,6 @@ $$
 M_s = \lbrace E_0, E_4, E_7 \rbrace \\
 M_{t_R - 1} = E_7 \implies M_{t_R} \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -829,10 +773,6 @@ $$
 M_s = \left\lbrace E_0, E_2, E_3,E_8\right\rbrace \\
 M_{t_R - 1} = E_8 \implies M_{t_R} \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -894,10 +834,6 @@ $$
 M_s = \left\lbrace E_0, E_2, E_3, X_0, X_2, X_3\right\rbrace \\
 M_{t_R - 1} = X_0 \implies M_{t_R} \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -977,10 +913,6 @@ M_s = \left\lbrace E_0, E_2, E_3, X_0, X_1, X_2\right\rbrace \\
 M_{t_R - 1} = X_1 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1058,10 +990,6 @@ $$
 M_{t_R - 1} = M_{t_R - 2} = X_1 \implies M_{t_R} \neq X_1
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1097,10 +1025,6 @@ $$
 M_s = \left\lbrace E_0, E_2, E_3, X_0, X_2\right\rbrace \\
 M_{t_R - 1} = X_2 \implies M_{t_R} \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -1172,10 +1096,6 @@ M_s = \left\lbrace E_0, E_2, E_3, X_3\right\rbrace \\
 M_{t_R - 1} = X_3 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1237,10 +1157,6 @@ M_s = \lbrace E_3, X_0, X_1, X_4 \rbrace \\
 M_{t_R - 1} = X_4 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1295,10 +1211,6 @@ $$
 M_s = \lbrace X_0, X_1, X_4, X_5\rbrace \\
 M_{t_R - 1} = X_5 \implies M_{t_R} \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -1356,10 +1268,6 @@ M_s = \lbrace X_1, X_4, X_5, X_6\rbrace \\
 M_{t_R - 1} = X_6 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1415,10 +1323,6 @@ M_s = \lbrace X_5, X_6\rbrace \\
 0 < P_g < 1 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1459,10 +1363,6 @@ M_s = M_E \cup \lbrace X_0, \dots, X_4 \rbrace\\
 P_g = 1 \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1501,10 +1401,6 @@ $$
 M_A = \lbrace A_1, A_2 \rbrace\\
 P_g = 0 \implies M_{t_R} \in M_A
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -1556,10 +1452,6 @@ $$
 P_{g, s, t_R - 1} \neq 0.5 \implies P_{g, s, t_R} \neq 0.5
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1591,10 +1483,6 @@ The following rule should be true:
 $$
 P_{g, r, t_R - 1} \neq 0.5 \implies P_{g, r, t_R} \neq 0.5
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -1628,10 +1516,6 @@ $$
 P_{g, ts, t_R - 1} \neq 0.5 \implies P_{g, ts, t_R} \neq 0.5
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1664,10 +1548,6 @@ $$
 P_{g, m, t_R - 1} \neq 0.5 \implies P_{g, m, t_R} \neq 0.5
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1699,10 +1579,6 @@ The following rule should be true:
 $$
 \left(M_{t_R - 1} = X_6\right) \land \left(M_{t_R} = X_5\right) \implies P_{g, t_R - 1} \leq P_{g, t_R}
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -1741,10 +1617,6 @@ The following rule should be true:
 $$
 \left( P_{g, s, t_R} = 0.5\right) \lor \left( P_{g, r, t_R} = 0.5 \right) \lor \left( P_{g, ts, t_R} = 0.5 \right) \lor \left( P_{g, m, t_R} = 0.5 \right) \implies M_{t_R} = X_6
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -1833,10 +1705,6 @@ M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, s, t_R} = 1\right) \lor \left( P_{g, s, t_R} = 0\right)
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -1905,10 +1773,6 @@ $$
 M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, r, t_R} = 1\right) \lor \left( P_{g, r, t_R} = 0\right)
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -1979,10 +1843,6 @@ M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, ts, t_R} = 1\right) \lor \left( P_{g, ts, t_R} = 0\right)
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2051,10 +1911,6 @@ $$
 M_A = \lbrace A_1, A_2 \rbrace\\
 M_{t_R} \in M_A \implies \left( P_{g, m, t_R} = 1\right) \lor \left( P_{g, m, t_R} = 0\right)
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2125,10 +1981,6 @@ M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, s, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, s, t_R} \geq P_{g, s, t_R - 1}
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2193,10 +2045,6 @@ $$
 M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, r, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, r, t_R} \geq P_{g, r, t_R - 1}
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2263,10 +2111,6 @@ M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, ts, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, ts, t_R} \geq P_{g, ts, t_R - 1}
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2331,10 +2175,6 @@ $$
 M_A = \lbrace A_1, A_2 \rbrace\\
 \left( P_{g, m, t_R - 1} > 0.5 \right) \land M_{t_R} \not \in M_A \implies P_{g, m, t_R} \geq P_{g, m, t_R - 1}
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2401,10 +2241,6 @@ M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
 \left( N_{ps, t_R} > 0 \right) \lor \left( N_{ps, t_R}^c > 0 \right) \lor \left( G_{ps, t_R}^a > 0 \right) \lor \left( G_{ps, t_R} > 0 \right) \implies M_{t_R} \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2442,10 +2278,6 @@ $$
 M_{t_R} \not \in \emptyset
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2476,10 +2308,6 @@ $$
 M_s = \lbrace A_1, A_2 \rbrace\\
 \Delta N_{pn}^{\text{P10}}  + \Delta N_{pn}^{c \text{ P10}} +\Delta G_{pn}^{a \text{ P10}} + \Delta G_{pn}^{\text{P10}} > 0 \implies M_{t_R} \not \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2513,10 +2341,6 @@ $$
 P_{g, s, t_R} \not \in \emptyset
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2546,10 +2370,6 @@ The following rule must be true:
 $$
 P_{g, r, t_R} \not \in \emptyset
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2581,10 +2401,6 @@ $$
 P_{g, ts, t_R} \not \in \emptyset
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2614,10 +2430,6 @@ The following rule must be true:
 $$
 P_{g, m, t_R} \not \in \emptyset
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2651,10 +2463,6 @@ $$
 0 \leq P_{g, s, t_R} \leq 1
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2686,10 +2494,6 @@ The following rule must be true:
 $$
 0 \leq P_{g, r, t_R} \leq 1
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2723,10 +2527,6 @@ $$
 0 \leq P_{g, ts, t_R} \leq 1
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2758,10 +2558,6 @@ The following rule must be true:
 $$
 0 \leq P_{g, m, t_R} \leq 1
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -2796,10 +2592,6 @@ $$
     N_{ps} = N_{ps}^c = G_{ps}^a = G_{ps} = 0 \implies M_{t_R} \not \in M_s
 $$
 
-```python
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2832,11 +2624,6 @@ $$
 M_s = \lbrace E_0, E_7, E_8, A_1, A_2 \rbrace\\
 \Delta N_{pn}^{\text{ P10}} = \Delta N_{pn}^{c \text{ P10}} = \Delta G_{pn}^{a \text{ P10}} = \Delta G_{pn}^{\text{P10}} = 0 \implies M_{t_R} \in M_s
 $$
-
-```python
-
-import esdc
-```
 
 The following example should pass:
 
@@ -2881,11 +2668,6 @@ M_s = \lbrace E_1, E_2, E_3 \rbrace\\
 M_{t_R} \in M_s \implies \left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)
 $$
 
-```python
-
-import esdc
-```
-
 The following example should pass:
 
 ``` al
@@ -2913,11 +2695,6 @@ $$
 M_s = \lbrace E_4, E_5, E_6, E_7, E_8, X_0, X_1, X_2, X_3, X_4, X_5, X_6 \rbrace\\
 M_{t_R} \in M_s \implies \left( \Delta N_{ps}^{\text{ 1P}} = \Delta N_{ps}^{c \text{ 1P}} = \Delta G_{ps}^{a \text{ 1P}} = \Delta G_{ps}^{\text{1P}} = 0 \right)
 $$
-
-```python
-
-import esdc
-```
 
 The following example should pass:
 
@@ -2959,11 +2736,6 @@ $$
 \sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P90} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
-```python
-
-import esdc
-```
-
 ### RE5057 - Project Remarks: Project must have remarks if there is a discrepancy in resources mid
 
 Notes: _Added for resources report 31.12.2022_
@@ -2973,11 +2745,6 @@ Severity: `strict` :no_entry:
 $$
 \sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P50} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
-
-```python
-
-import esdc
-```
 
 ### RE5058 - Project Remarks: Project must have remarks if there is a discrepancy in resources high
 
@@ -2989,11 +2756,6 @@ $$
 \sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P10} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
-```python
-
-import esdc
-```
-
 ### RE5059 - Project Remarks: Project must have remarks if there is a change in project IOIP low
 
 Notes: _Added for resources report 31.12.2022._
@@ -3003,11 +2765,6 @@ Severity: `strict` :no_entry:
 $$
 N_{\text{prj}, t_R}^{\text{P90}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
-
-```python
-
-import esdc
-```
 
 ### RE5060 - Project Remarks: Project must have remarks if there is a change in project IOIP mid
 
@@ -3019,11 +2776,6 @@ $$
 N_{\text{prj}, t_R}^{\text{P50}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
-```python
-
-import esdc
-```
-
 ### RE5061 - Project Remarks: Project must have remarks if there is a change in project IOIP high
 
 Notes: _Added for resources report 31.12.2022_
@@ -3033,11 +2785,6 @@ Severity: `strict` :no_entry:
 $$
 N_{\text{prj}, t_R}^{\text{P10}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
-
-```python
-
-import esdc
-```
 
 ### RE5062 - Project Remarks: Project must have remarks if there is a change in project IGIP low
 
@@ -3049,11 +2796,6 @@ $$
 G_{\text{prj}, t_R}^{\text{P90}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
-```python
-
-import esdc
-```
-
 ### RE5063 - Project Remarks: Project must have remarks if there is a change in project IGIP mid
 
 Notes: _Added for resources report 31.12.2022_
@@ -3063,11 +2805,6 @@ Severity: `strict` :no_entry:
 $$
 G_{\text{prj}, t_R}^{\text{P50}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
-
-```python
-
-import esdc
-```
 
 ### RE5064 - Project Remarks: Project must have remarks if there is a change in project IGIP high
 
@@ -3079,11 +2816,6 @@ $$
 G_{\text{prj}, t_R}^{\text{P10}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
-```python
-
-import esdc
-```
-
 ### RE5065 - Project Level: If the project have hydrocarbon inplace volume, project level can not be in A1. Dry nor A2. Dissolved
 
 Severity: `strict` :no_entry:
@@ -3094,10 +2826,6 @@ $$
 M_s = \lbrace A_1, A_2 \rbrace\\
  N_{\text{prj}}^{\text{P10}} + G_{\text{prj}}^{\text{P10}} > 0 \implies M_{t_R} \not \in M_s
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 
@@ -3133,10 +2861,6 @@ M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
 M_{t_R} \in M_s \implies  t_{ons} \notin \emptyset
 $$
 
-```python
-import esdc
-```
-
 ### RE5067 - Project Level: Onstream actual must be lower than reporting year
 
 Severity:  `strict` :no_entry:
@@ -3145,10 +2869,6 @@ The following equation must be true:
 $$
 t_{ons} < t_R 
 $$
-```python
-import esdc
-```
-
 
 ### RE5068 - Project Level: The project must have 1P reserves  and 1P reserve runs out due to production for maturity levels E0
 
@@ -3191,10 +2911,6 @@ The following equation must be true:
 $$
 \left(\left( \Delta N_{ps}^{\text{ 2P}} = 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 2P}} = 0 \right) \lor \left(\Delta G_{ps}^{\text{2P}} = 0 \right)\right) \land \left(\left(q_{o, t_R} + \Delta D_{N}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{c, t_R} + \Delta D_{N^c}^\text{gtr P50} = \Delta N_{ps, t_R-1}^{\text{c 2P}}\right) \lor \left(q_{n, t_R} + \Delta D_{G}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{2P}}\right) \lor \left(q_{a, t_R} + \Delta D_{G^a}^\text{gtr P50}  = \Delta G_{ps, t_R-1}^{\text{a 2P}}\right) \right) \implies M_{t_R} = E_0
 $$
-
-```python
-import esdc
-```
 
 The following example should pass:
 

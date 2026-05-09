@@ -154,20 +154,71 @@ The following symbol is used in this documentation. We use P90/P50/P10 as a gene
 
 In the material balance rules (RE2), GRR/CR/PR rules (RE2001–RE2012) include all five discrepancy types (Update Model, Production Performance Analysis, Well Intervention, Unaccounted Changes, and Consumed in Operations), because these categories reflect changes to the resource base itself. Reserves rules (RE2013–RE2024) include only the Commerciality discrepancy (`gtr`), because the other five discrepancy types apply exclusively to GRR/CR/PR. Reserves only change through commerciality reclassifications and production.
 
-## Syntax for eSDC Rules
+## Formula to Database Column Mapping
 
-eSDC module API:
+### Mapping Rules
 
-```python
-import esdc
+The following pattern rules define how formula symbols map to database column names:
 
-esdc.inplace[fluid_type][uncert_level][time_ref]
-esdc.cumprod[fluid_type][commerciality][time_ref].groupby('') # group by field, working area
-esdc.resources[fluid_type][uncert_level][time_ref].groupby('') # group by field, working area
-esdc.forecast[fluid_type][commerciality][time_ref][forecast_time].groupby('') # group by field, working area
-esdc.forecast_wpnb[time_ref][forecast_time]
-esdc.discrepancy[fluid_type]
-```
+| Category | Formula Symbol Pattern | DB Column Prefix | Uncertainty Level |
+|----------|----------------------|------------------|-------------------|
+| In-Place | $N$ (Oil) | `prj_ioip` | via `uncert_level` |
+| In-Place | $G$ (Gas) | `prj_igip` | via `uncert_level` |
+| GRR/CR/PR Resources | $\Delta N_{pn}$ (Oil) | `rec_oil` | P90→low, P50→mid, P10→hgh |
+| GRR/CR/PR Resources | $\Delta N_{pn}^{c}$ (Condensate) | `rec_con` | P90→low, P50→mid, P10→hgh |
+| GRR/CR/PR Resources | $\Delta G_{pn}$ (Non-Assoc Gas) | `rec_gn` | P90→low, P50→mid, P10→hgh |
+| GRR/CR/PR Resources | $\Delta G_{pn}^{a}$ (Assoc Gas) | `rec_ga` | P90→low, P50→mid, P10→hgh |
+| Reserves | $\Delta N_{ps}$ (Oil) | `res_oil` | 1P→low, 2P→mid, 3P→hgh |
+| Reserves | $\Delta N_{ps}^{c}$ (Condensate) | `res_con` | 1P→low, 2P→mid, 3P→hgh |
+| Reserves | $\Delta G_{ps}$ (Non-Assoc Gas) | `res_gn` | 1P→low, 2P→mid, 3P→hgh |
+| Reserves | $\Delta G_{ps}^{a}$ (Assoc Gas) | `res_ga` | 1P→low, 2P→mid, 3P→hgh |
+| Cumulative Production | $N_{pg}$ (Oil Gross) | `cprd_grs_oil` | — |
+| Cumulative Production | $N_{pg}^{c}$ (Condensate Gross) | `cprd_grs_con` | — |
+| Cumulative Production | $G_{pg}$ (Non-Assoc Gas Gross) | `cprd_grs_gn` | — |
+| Cumulative Production | $G_{pg}^{a}$ (Assoc Gas Gross) | `cprd_grs_ga` | — |
+| Cumulative Production | $N_{pn}$ (Oil Net) | `cprd_sls_oil` | — |
+| Cumulative Production | $N_{pn}^{c}$ (Condensate Net) | `cprd_sls_con` | — |
+| Cumulative Production | $G_{pn}$ (Non-Assoc Gas Net) | `cprd_sls_gn` | — |
+| Cumulative Production | $G_{pn}^{a}$ (Assoc Gas Net) | `cprd_sls_ga` | — |
+| Cumulative Production | $N_{ps}$ (Oil Sales) | `cprd_sls_oil` | — |
+| Cumulative Production | $N_{ps}^{c}$ (Condensate Sales) | `cprd_sls_con` | — |
+| Cumulative Production | $G_{ps}$ (Non-Assoc Gas Sales) | `cprd_sls_gn` | — |
+| Cumulative Production | $G_{ps}^{a}$ (Assoc Gas Sales) | `cprd_sls_ga` | — |
+| Discrepancy | $\Delta D_{N}^{\text{type}}$ (Oil) | `dcpy_{type}_oil` | type∈{um,ppa,wi,gtr,uc,cio} |
+| Discrepancy | $\Delta D_{N^{c}}^{\text{type}}$ (Condensate) | `dcpy_{type}_con` | type∈{um,ppa,wi,gtr,uc,cio} |
+| Discrepancy | $\Delta D_{G}^{\text{type}}$ (Non-Assoc Gas) | `dcpy_{type}_gn` | type∈{um,ppa,wi,gtr,uc,cio} |
+| Discrepancy | $\Delta D_{G^{a}}^{\text{type}}$ (Assoc Gas) | `dcpy_{type}_ga` | type∈{um,ppa,wi,gtr,uc,cio} |
+| Forecast | $q_{o}^{s}$ (Oil Sales) | `slf_oil` | — |
+| Forecast | $q_{c}^{s}$ (Condensate Sales) | `slf_con` | — |
+| Forecast | $q_{a}^{s}$ (Assoc Gas Sales) | `slf_ga` | — |
+| Forecast | $q_{n}^{s}$ (Non-Assoc Gas Sales) | `slf_gn` | — |
+| Forecast | $q_{o}^{\text{tp}}$ (Oil Total Potential) | `tpf_oil` | — |
+| Forecast | $q_{c}^{\text{tp}}$ (Condensate Total Potential) | `tpf_con` | — |
+| Forecast | $q_{a}^{\text{tp}}$ (Assoc Gas Total Potential) | `tpf_ga` | — |
+| Forecast | $q_{n}^{\text{tp}}$ (Non-Assoc Gas Total Potential) | `tpf_gn` | — |
+| Maturity Level | $M$ | `project_level` | — |
+| Onstream Actual | $t_{ons}$ | `onstream_actual` | — |
+
+### Data Source Reference
+
+| Variable Category | Formula Symbol | Data Source | DB Table |
+|-------------------|---------------|-------------|----------|
+| In-Place | $N^{\text{P90/P50/P10}}$, $G^{\text{P90/P50/P10}}$ | `inplace` | `project_resources` |
+| GRR/CR/PR Resources | $\Delta N_{pn}^{\text{P90/P50/P10}}$, $\Delta G_{pn}^{\text{P90/P50/P10}}$ | `resources` | `project_resources` |
+| Reserves | $\Delta N_{ps}^{\text{1P/2P/3P}}$, $\Delta G_{ps}^{\text{1P/2P/3P}}$ | `reserves` | `project_resources` |
+| Cumulative Production | $N_{ps}$, $G_{ps}$, $N_{pg}$, $G_{pg}$ | `cumprod` | `project_timeseries` |
+| Discrepancy | $\Delta D_{N}^{\text{type}}$, $\Delta D_{G}^{\text{type}}$ | `discrepancy` | `project_resources` |
+| Forecast | $q_{o,t}^{s}$, $q_{o,t}^{\text{tp}}$ | `forecast` | `project_timeseries` |
+
+### Conventions
+
+**Time reference:**
+- $t$ or subscript $_t$ = current reporting period
+- $t - 1$ or subscript $_{t-1}$ = previous reporting period
+
+**Aggregation:**
+- $\sum_{i=1}^{n}$ = sum across projects within the same field
+- Default scope: project-level data aggregated by field when comparing against field-level in-place values
 
 ## Rules Definition
 
