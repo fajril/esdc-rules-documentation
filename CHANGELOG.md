@@ -21,6 +21,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **RE0001, RE0002**: Fixed `al` example capitalization: `oil in place` → `Oil in Place`, `gas in place` → `Gas in Place`.
 - **RE0043–RE0048**: Fixed `al` example capitalization: `Validation result` → `validation result`.
 - **RE0052**: Fixed extra leading space in P-level superscripts (`^{\text{ 3P}}` → `^{\text{3P}}`, `^{\text{ 1P}}` → `^{\text{1P}}`; renders identically).
+- **RE1001–RE1012**: Fixed title wording from "positive or equal to 0" to "greater than or equal to zero".
+- **RE1013–RE1024**: Fixed title wording from "Can only increase or equal to previous Cumprod" to "Must be greater than or equal to previous Cumprod".
+- **RE1045, RE1046**: Fixed title wording from "should equal to" to "should be equal to".
+- **RE1001–RE1046** (excluding RE1017–RE1020): Added `al` pass/fail examples to all implemented RE1 rules (42 rules, 84 example blocks).
+- **RE2025–RE2030**: Fixed title wording from "higher than" to "greater than".
+- **RE2029, RE2030**: Fixed `al` example capitalization: lowercase variables changed to Title Case, removed extra blank lines, restructured multi-block examples to consistent pass/fail pattern.
+- **RE2001–RE2028**: Added `al` pass/fail examples to all RE2 rules that previously had none (28 rules, 56 example blocks).
+- **RE2029, RE2030**: Restructured existing `al` examples from inconsistent multi-block format to consistent pass/fail pattern (2 blocks each, from 5 and 6 respectively).
 
 ### Fixed
 
@@ -81,6 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed pre-existing typo: row for $\Delta D_{G^a}$ under Well Intervention incorrectly used `gtr` superscript → corrected to `wi`.
 
 #### RE5 - Maturity Level
+- **RE5056–RE5064, RE5066, RE5067**: Added `al` pass/fail examples to 11 rules that previously had none (11 rules, 22 example blocks).
 - **RE5011**: Fixed missing $E_3$ in set $M_s$ and corrected fail example from `E3` to `E4`.
 - **RE5012**: Fixed typo in fail example: `X1. Production on Hold` → `E1. Production on Hold`.
 - **RE5014**: Added missing period in title: `E7 Production not Viable` → `E7. Production not Viable`.

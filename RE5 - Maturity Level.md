@@ -2,7 +2,7 @@
 
 ## List of Rules
 
-### RE5001 - Project Level: If in the current report the sales production is more than zero, then the project level must be in E0. On Production
+### RE5001 - Project Level: If in the current report the sales production is greater than zero, then the project level must be in E0. On Production
 
 Severity: `strict` :no_entry:
 
@@ -326,9 +326,9 @@ if
     last three previous project level is 
         E4. Production Pending, E4. Production Pending, E4. Production Pending
 
-    groovy status is False
+    groovy status is True
 
-    project level is E4. Production Pending
+    project level is E7. Production not Viable
 
 then
     validation result is False
@@ -432,9 +432,9 @@ if
     last three previous project level is 
         E3. Justified for Development, E3. Justified for Development, E3. Justified for Development
 
-    groovy status is True
+    groovy status is False
 
-    project level is E5. Development Unclarified
+    project level is E2. Under Development
 
 then
     validation result is False
@@ -553,7 +553,7 @@ then
     validation result is False
 ```
 
-### RE5011 - Project Level: If in the previous report the project level is E5. Development Unclarified then in the current report the project level should be either E0. On Production, E2. Under Development, or E5. Development Unclarified
+### RE5011 - Project Level: If in the previous report the project level is E5. Development Unclarified then in the current report the project level should be either E0. On Production, E2. Under Development, E3. Justified for Development, or E5. Development Unclarified
 
 Severity: `warning` :warning:
 
@@ -762,7 +762,7 @@ then
     validation result is False
 ```
 
-### RE5015 - Project Level: If in the previous report the project level is E8. Further Development not Viable, then in the current report the project level must be either E0. On Production, E2. Under Development, E3. Justified for Development, or E8 Further Development not Viable
+### RE5015 - Project Level: If in the previous report the project level is E8. Further Development not Viable, then in the current report the project level must be either E0. On Production, E2. Under Development, E3. Justified for Development, or E8. Further Development not Viable
 
 Severity: `warning` :warning:
 
@@ -980,7 +980,7 @@ then
     validation result is False
 ```
 
-### RE5018 - Project Level: If the project level is X1. Discovery under Evaluation for the last two  years, then in the current report project level cannot be in X1. Discovery under Evaluation anymore
+### RE5018 - Project Level: If the project level is X1. Discovery under Evaluation for the last two years, then in the current report project level cannot be in X1. Discovery under Evaluation anymore
 
 Severity: `strict` :no_entry:
 
@@ -1014,7 +1014,7 @@ then
     validation result is False
 ```
 
-### RE5019 - Project Level: if in the previous report the project level is X2. Development Undetermined, then in the current report the project level must be either E0. On Production, E2. Under Development, E3. Justified for Development, X0. Development Pending, or X2. Development Undetermined
+### RE5019 - Project Level: If in the previous report the project level is X2. Development Undetermined, then in the current report the project level must be either E0. On Production, E2. Under Development, E3. Justified for Development, X0. Development Pending, or X2. Development Undetermined
 
 Severity: `warning` :warning:
 
@@ -1084,7 +1084,7 @@ then
     validation result is False
 ```
 
-### RE5020 - Project Level: if in the previous report the project level is X3. Development not Viable, then in the current report the project level must be either E0. On Production, E2. Under Development, E3. Justified for Development, or X3. Development not Viable
+### RE5020 - Project Level: If in the previous report the project level is X3. Development not Viable, then in the current report the project level must be either E0. On Production, E2. Under Development, E3. Justified for Development, or X3. Development not Viable
 
 Severity: `warning` :warning:
 
@@ -1145,7 +1145,7 @@ then
     validation result is False
 ```
 
-### RE5021 - Project Level: if in the previous report the project level is X4. Inconclusive Flow, then in the current report the project level must be either E3. Justified for Development, X0. Development Pending, X1. Discovery Under Evaluation, or X4. Inconclusive Flow
+### RE5021 - Project Level: If in the previous report the project level is X4. Inconclusive Flow, then in the current report the project level must be either E3. Justified for Development, X0. Development Pending, X1. Discovery Under Evaluation, or X4. Inconclusive Flow
 
 Severity: `warning` :warning:
 
@@ -1200,7 +1200,7 @@ then
     validation result is False
 ```
 
-### RE5022 - Project Level: if in the previous report the project level is X5. Prospect, then in the current report the project level must be either X0. Development Pending, X1. Discovery Under Evaluation, X4. Inconclusive Flow, or X5. Prospect
+### RE5022 - Project Level: If in the previous report the project level is X5. Prospect, then in the current report the project level must be either X0. Development Pending, X1. Discovery Under Evaluation, X4. Inconclusive Flow, or X5. Prospect
 
 Severity: `warning` :warning:
 
@@ -1256,7 +1256,7 @@ then
     validation result is False
 ```
 
-### RE5023 - Project Level: if in the previous report the project level is X6. Lead, then in the current report the project level must be either X1. Discovery Under Evaluation, X4. Inconclusive Flow, X5. Prospect, or X6. Lead
+### RE5023 - Project Level: If in the previous report the project level is X6. Lead, then in the current report the project level must be either X1. Discovery Under Evaluation, X4. Inconclusive Flow, X5. Prospect, or X6. Lead
 
 Severity: `warning` :warning:
 
@@ -1351,7 +1351,7 @@ then
     validation result is False
 ```
 
-### RE5025 - Project Level: If GCF Total = 1, then the project level should be X4 or higher
+### RE5025 - Project Level: If GCF Total = 1, then the project level should be X4 or greater
 
 Severity: `strict` :no_entry:
 
@@ -1570,7 +1570,7 @@ then
     validation result is False
 ```
 
-### RE5031 - GCF Total: If in the previous report the project level is X6. Lead and in the current report the project level is X5. Prospect, then current GCF total should be higher than or equal to last year
+### RE5031 - GCF Total: If in the previous report the project level is X6. Lead and in the current report the project level is X5. Prospect, then current GCF total should be greater than or equal to last year
 
 Severity: `warning` :warning:
 
@@ -1970,7 +1970,7 @@ then
     validation result is False
 ```
 
-### RE5037 - GCF Source Rock: If previous GCF Source Rock is higher than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF source rock should be higher than or equal to previous GCF Source Rock
+### RE5037 - GCF Source Rock: If previous GCF Source Rock is greater than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF Source Rock should be greater than or equal to previous GCF Source Rock
 
 Severity: `warning` :warning:
 
@@ -2035,7 +2035,7 @@ then
     validation result is False
 ```
 
-### RE5038 - GCF Reservoir: If previous GCF Reservoir is higher than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF Reservoir should be higher than or equal to previous GCF Reservoir
+### RE5038 - GCF Reservoir: If previous GCF Reservoir is greater than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF Reservoir should be greater than or equal to previous GCF Reservoir
 
 Severity: `warning` :warning:
 
@@ -2100,7 +2100,7 @@ then
     validation result is False
 ```
 
-### RE5039 - GCF Trap and Seal: If previous GCF Trap and Seal is higher than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF Trap and Seal should be higher than or equal to previous GCF Trap and Seal
+### RE5039 - GCF Trap and Seal: If previous GCF Trap and Seal is greater than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF Trap and Seal should be greater than or equal to previous GCF Trap and Seal
 
 Severity: `warning` :warning:
 
@@ -2165,7 +2165,7 @@ then
     validation result is False
 ```
 
-### RE5040 - GCF Dynamic: If previous GCF Dynamic is higher than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF Dynamic should be higher than or equal to previous GCF Dynamic
+### RE5040 - GCF Dynamic: If previous GCF Dynamic is greater than 0.5 and the Project Level is not A1. Dry or A2. Dissolved, then the GCF Dynamic should be greater than or equal to previous GCF Dynamic
 
 Severity: `warning` :warning:
 
@@ -2230,7 +2230,7 @@ then
     validation result is False
 ```
 
-### RE5041 - Project Level: If sales cumulative production is more than zero, then the project level must be either E0, E1, E4, or E7
+### RE5041 - Project Level: If sales cumulative production is greater than zero, then the project level must be either E0, E1, E4, or E7
 
 Severity: `strict` :no_entry:
 
@@ -2257,12 +2257,9 @@ The following example should fail:
 
 ``` al
 if
-    current sales oil cumulative production = 0
-    current sales con cumulative production = 0
-    current sales ga cumulative production = 0
-    current sales gn cumulative production = 0
+    current sales oil cumulative production = 1200
 
-    project level is E7. Production not Viable
+    project level is E2. Under Development
 
 then 
     validation result is False
@@ -2298,7 +2295,7 @@ then
     validation result is False
 ```
 
-### RE5043 - Project Level: If the project have hydrocarbon volume, project level can not be in A1. Dry nor A2. Dissolved
+### RE5043 - Project Level: If the project has hydrocarbon volume, project level cannot be A1. Dry nor A2. Dissolved
 
 Severity: `strict` :no_entry:
 
@@ -2579,7 +2576,7 @@ then
     validation result is False
 ```
 
-### RE5052 - Project Level: if project level is E0, E1, E4, E7, then the sales cumulative production must be greater than 0
+### RE5052 - Project Level: If project level is E0, E1, E4, E7, then the sales cumulative production must be greater than 0
 
 Notes: _New Rules_
 
@@ -2596,8 +2593,12 @@ The following example should pass:
 
 ``` al
 if
-    oil sales cumulative production = 100
-    project level is E0. On Production
+    oil sales cumulative production = 0
+    con sales cumulative production = 0
+    ga sales cumulative production = 0
+    gn sales cumulative production = 0
+
+    project level is E2. Under Development
 
 then
     validation result is True
@@ -2637,7 +2638,7 @@ if
     project level is E7. Production not Viable
 
 then
-    Validation result is True
+    validation result is True
 ```
 
 The following example should fail:
@@ -2652,7 +2653,7 @@ if
     project level is E1. Production on Hold
 
 then
-    Validation result is False
+    validation result is False
 ```
 
 ### RE5054 - Project Level: The project must have 1P reserves for maturity levels E1, E2, and E3
@@ -2680,7 +2681,7 @@ if
     project level is E1. Production on Hold
 
 then
-    Validation result is True
+    validation result is True
 ```
 
 ### RE5055 - Project Level: Maturity levels E4 through X6 must not have 1P reserves
@@ -2708,7 +2709,7 @@ if
     project level is X0. Development Pending
 
 then
-    Validation result is True
+    validation result is True
 ```
 
 The following example should fail:
@@ -2723,7 +2724,7 @@ if
     project level is X0. Development Pending
 
 then
-    Validation result is False
+    validation result is False
 ```
 
 ### RE5056 - Project Remarks: Project must have remarks if there is a discrepancy in resources low
@@ -2736,6 +2737,38 @@ $$
 \sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P90} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
+The following example should pass:
+
+``` al
+if
+    Oil Discrepancy from Unaccounted Changes P90 = 50
+    Oil Discrepancy from Production Performance Analysis P90 = 0
+    Oil Discrepancy from Well Intervention P90 = 0
+    Oil Discrepancy from Update Model P90 = 0
+    Oil Discrepancy from Consumed in Operations P90 = 0
+
+    project remarks = "Discrepancy in resources low"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Oil Discrepancy from Unaccounted Changes P90 = 50
+    Oil Discrepancy from Production Performance Analysis P90 = 0
+    Oil Discrepancy from Well Intervention P90 = 0
+    Oil Discrepancy from Update Model P90 = 0
+    Oil Discrepancy from Consumed in Operations P90 = 0
+
+    project remarks is null
+
+then
+    validation result is False
+```
+
 ### RE5057 - Project Remarks: Project must have remarks if there is a discrepancy in resources mid
 
 Notes: _Added for resources report 31.12.2022_
@@ -2745,6 +2778,38 @@ Severity: `strict` :no_entry:
 $$
 \sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P50} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
+
+The following example should pass:
+
+``` al
+if
+    Oil Discrepancy from Unaccounted Changes P50 = 50
+    Oil Discrepancy from Production Performance Analysis P50 = 0
+    Oil Discrepancy from Well Intervention P50 = 0
+    Oil Discrepancy from Update Model P50 = 0
+    Oil Discrepancy from Consumed in Operations P50 = 0
+
+    project remarks = "Discrepancy in resources mid"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Oil Discrepancy from Unaccounted Changes P50 = 50
+    Oil Discrepancy from Production Performance Analysis P50 = 0
+    Oil Discrepancy from Well Intervention P50 = 0
+    Oil Discrepancy from Update Model P50 = 0
+    Oil Discrepancy from Consumed in Operations P50 = 0
+
+    project remarks is null
+
+then
+    validation result is False
+```
 
 ### RE5058 - Project Remarks: Project must have remarks if there is a discrepancy in resources high
 
@@ -2756,6 +2821,38 @@ $$
 \sum \Delta D_{N, N^{c}, G^{a}, G}^\text{um, ppa, wi, gtr, cio P10} > 0 \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
+The following example should pass:
+
+``` al
+if
+    Oil Discrepancy from Unaccounted Changes P10 = 50
+    Oil Discrepancy from Production Performance Analysis P10 = 0
+    Oil Discrepancy from Well Intervention P10 = 0
+    Oil Discrepancy from Update Model P10 = 0
+    Oil Discrepancy from Consumed in Operations P10 = 0
+
+    project remarks = "Discrepancy in resources high"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Oil Discrepancy from Unaccounted Changes P10 = 50
+    Oil Discrepancy from Production Performance Analysis P10 = 0
+    Oil Discrepancy from Well Intervention P10 = 0
+    Oil Discrepancy from Update Model P10 = 0
+    Oil Discrepancy from Consumed in Operations P10 = 0
+
+    project remarks is null
+
+then
+    validation result is False
+```
+
 ### RE5059 - Project Remarks: Project must have remarks if there is a change in project IOIP low
 
 Notes: _Added for resources report 31.12.2022._
@@ -2765,6 +2862,32 @@ Severity: `strict` :no_entry:
 $$
 N_{\text{prj}, t_R}^{\text{P90}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
+
+The following example should pass:
+
+``` al
+if
+    Project IOIP Low Current = 1200
+    Project IOIP Low Previous = 1000
+
+    project remarks = "Change in project IOIP low"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IOIP Low Current = 1200
+    Project IOIP Low Previous = 1000
+
+    project remarks is null
+
+then
+    validation result is False
+```
 
 ### RE5060 - Project Remarks: Project must have remarks if there is a change in project IOIP mid
 
@@ -2776,6 +2899,32 @@ $$
 N_{\text{prj}, t_R}^{\text{P50}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
+The following example should pass:
+
+``` al
+if
+    Project IOIP Mid Current = 1500
+    Project IOIP Mid Previous = 1000
+
+    project remarks = "Change in project IOIP mid"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IOIP Mid Current = 1500
+    Project IOIP Mid Previous = 1000
+
+    project remarks is null
+
+then
+    validation result is False
+```
+
 ### RE5061 - Project Remarks: Project must have remarks if there is a change in project IOIP high
 
 Notes: _Added for resources report 31.12.2022_
@@ -2785,6 +2934,32 @@ Severity: `strict` :no_entry:
 $$
 N_{\text{prj}, t_R}^{\text{P10}} \neq N_{\text{prj}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
+
+The following example should pass:
+
+``` al
+if
+    Project IOIP High Current = 2000
+    Project IOIP High Previous = 1000
+
+    project remarks = "Change in project IOIP high"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IOIP High Current = 2000
+    Project IOIP High Previous = 1000
+
+    project remarks is null
+
+then
+    validation result is False
+```
 
 ### RE5062 - Project Remarks: Project must have remarks if there is a change in project IGIP low
 
@@ -2796,6 +2971,32 @@ $$
 G_{\text{prj}, t_R}^{\text{P90}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P90}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
+The following example should pass:
+
+``` al
+if
+    Project IGIP Low Current = 5000
+    Project IGIP Low Previous = 4000
+
+    project remarks = "Change in project IGIP low"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP Low Current = 5000
+    Project IGIP Low Previous = 4000
+
+    project remarks is null
+
+then
+    validation result is False
+```
+
 ### RE5063 - Project Remarks: Project must have remarks if there is a change in project IGIP mid
 
 Notes: _Added for resources report 31.12.2022_
@@ -2805,6 +3006,32 @@ Severity: `strict` :no_entry:
 $$
 G_{\text{prj}, t_R}^{\text{P50}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P50}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
+
+The following example should pass:
+
+``` al
+if
+    Project IGIP Mid Current = 6000
+    Project IGIP Mid Previous = 4000
+
+    project remarks = "Change in project IGIP mid"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP Mid Current = 6000
+    Project IGIP Mid Previous = 4000
+
+    project remarks is null
+
+then
+    validation result is False
+```
 
 ### RE5064 - Project Remarks: Project must have remarks if there is a change in project IGIP high
 
@@ -2816,7 +3043,33 @@ $$
 G_{\text{prj}, t_R}^{\text{P10}} \neq G_{\text{prj}, t_{R - 1}}^{\text{P10}} \implies M_{\text{remarks}, t_R} \notin \emptyset
 $$
 
-### RE5065 - Project Level: If the project have hydrocarbon inplace volume, project level can not be in A1. Dry nor A2. Dissolved
+The following example should pass:
+
+``` al
+if
+    Project IGIP High Current = 8000
+    Project IGIP High Previous = 4000
+
+    project remarks = "Change in project IGIP high"
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP High Current = 8000
+    Project IGIP High Previous = 4000
+
+    project remarks is null
+
+then
+    validation result is False
+```
+
+### RE5065 - Project Level: If the project has hydrocarbon in-place volume, project level cannot be A1. Dry nor A2. Dissolved
 
 Severity: `strict` :no_entry:
 
@@ -2861,7 +3114,29 @@ M_s = \lbrace E_0, E_1, E_4, E_7 \rbrace\\
 M_{t_R} \in M_s \implies  t_{ons} \notin \emptyset
 $$
 
-### RE5067 - Project Level: Onstream actual must be lower than reporting year
+The following example should pass:
+
+``` al
+if
+    project level is E0. On Production
+    onstream actual = 2020
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    project level is E0. On Production
+    onstream actual is null
+
+then
+    validation result is False
+```
+
+### RE5067 - Project Level: Onstream actual must be less than reporting year
 
 Severity:  `strict` :no_entry:
 
@@ -2870,7 +3145,29 @@ $$
 t_{ons} < t_R 
 $$
 
-### RE5068 - Project Level: The project must have 1P reserves  and 1P reserve runs out due to production for maturity levels E0
+The following example should pass:
+
+``` al
+if
+    onstream actual = 2020
+    reporting year = 2025
+
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    onstream actual = 2025
+    reporting year = 2025
+
+then
+    validation result is False
+```
+
+### RE5068 - Project Level: The project must have 1P reserves and 1P reserve runs out due to production for maturity levels E0
 
 Severity:  `strict` :no_entry:
 
@@ -2880,7 +3177,7 @@ $$
 \left(\left( \Delta N_{ps}^{\text{ 1P}} > 0 \right) \lor \left(\Delta N_{ps}^{c \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{a \text{ 1P}} > 0 \right) \lor \left(\Delta G_{ps}^{\text{1P}} > 0 \right)\right) \land M_{t_R} = E_0 \implies  \left(q_{o, t_R} + \Delta D_{N}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{c, t_R} + \Delta D_{N^c}^\text{gtr P90} \neq \Delta N_{ps, t_R-1}^{\text{c 1P}}\right) \land \left(q_{n, t_R} + \Delta D_{G}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{1P}}\right) \land \left(q_{a, t_R} + \Delta D_{G^a}^\text{gtr P90} \neq \Delta G_{ps, t_R-1}^{\text{a 1P}}\right) 
 $$
 
-The following example should pass:`
+The following example should fail:
 
 ``` al
 if
@@ -2897,10 +3194,10 @@ if
     project level is E0. On Production
 
 then
-    Validation result is False
+    validation result is False
 ```
 
-### RE5069 - Project Level: 2P reserves can be zero at project level E0 if the yearly production equals to 2P reserves in the previous year.
+### RE5069 - Project Level: 2P reserves can be zero at project level E0 if the yearly production equals 2P reserves in the previous year.
 Severity:  `strict` :no_entry:
 
 Notes: New Rules As of 25 March 2025
@@ -2929,7 +3226,7 @@ if
     project level is E0. On Production
 
 then
-    Validation result is True
+    validation result is True
 ```
 
 The following example should fail:
@@ -2938,16 +3235,16 @@ The following example should fail:
 if
     Previous Oil reserves 2P = 200
 
-    Current Oil reserves 2P = 100
+    Current Oil reserves 2P = 0
 
     previous sales oil cumulative production = 900
 
-    current sales oil cumulative production = 1000
+    current sales oil cumulative production = 1200
 
-    oil commerciality discrepancy 2P = 0
+    oil commerciality discrepancy 2P = -100
 
     project level is E1. Production on Hold
 
 then
-    Validation result is False
+    validation result is False
 ```
