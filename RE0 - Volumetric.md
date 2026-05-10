@@ -1697,3 +1697,187 @@ then
     validation result is False
 ```
 
+### RE0059 - Project IOIP P90: If P90 equals zero, then P50 and P10 must equal zero
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$N_{\text{prj}}^{\text{P90}} = 0 \implies N_{\text{prj}}^{\text{P50}} = 0 \land N_{\text{prj}}^{\text{P10}} = 0$$
+
+The following example should pass:
+
+``` al
+if
+    Project IOIP Low = 0
+    Project IOIP Mid = 0
+    Project IOIP High = 0
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IOIP Low = 0
+    Project IOIP Mid = 500
+    Project IOIP High = 1000
+then
+    validation result is False
+```
+
+### RE0060 - Project IOIP P90: If P90 greater than zero, then P90 must be less than or equal to P50
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$N_{\text{prj}}^{\text{P90}} > 0 \implies N_{\text{prj}}^{\text{P90}} \leq N_{\text{prj}}^{\text{P50}}$$
+
+The following example should pass:
+
+``` al
+if
+    Project IOIP Low = 500
+    Project IOIP Mid = 1000
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IOIP Low = 1500
+    Project IOIP Mid = 1000
+then
+    validation result is False
+```
+
+### RE0061 - Project IOIP P50: If P90 greater than zero, then P50 must be less than or equal to P10
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$N_{\text{prj}}^{\text{P90}} > 0 \implies N_{\text{prj}}^{\text{P50}} \leq N_{\text{prj}}^{\text{P10}}$$
+
+The following example should pass:
+
+``` al
+if
+    Project IOIP Mid = 1000
+    Project IOIP High = 1500
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IOIP Mid = 2000
+    Project IOIP High = 1500
+then
+    validation result is False
+```
+
+### RE0062 - Project IGIP P90: If P90 equals zero, then P50 and P10 must equal zero
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$G_{\text{prj}}^{\text{P90}} = 0 \implies G_{\text{prj}}^{\text{P50}} = 0 \land G_{\text{prj}}^{\text{P10}} = 0$$
+
+The following example should pass:
+
+``` al
+if
+    Project IGIP Low = 0
+    Project IGIP Mid = 0
+    Project IGIP High = 0
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP Low = 0
+    Project IGIP Mid = 500
+    Project IGIP High = 1000
+then
+    validation result is False
+```
+
+### RE0063 - Project IGIP P90: If P90 greater than zero, then P90 must be less than or equal to P50
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$G_{\text{prj}}^{\text{P90}} > 0 \implies G_{\text{prj}}^{\text{P90}} \leq G_{\text{prj}}^{\text{P50}}$$
+
+The following example should pass:
+
+``` al
+if
+    Project IGIP Low = 500
+    Project IGIP Mid = 1000
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP Low = 1500
+    Project IGIP Mid = 1000
+then
+    validation result is False
+```
+
+### RE0064 - Project IGIP P50: If P90 greater than zero, then P50 must be less than or equal to P10
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$G_{\text{prj}}^{\text{P90}} > 0 \implies G_{\text{prj}}^{\text{P50}} \leq G_{\text{prj}}^{\text{P10}}$$
+
+The following example should pass:
+
+``` al
+if
+    Project IGIP Mid = 1000
+    Project IGIP High = 1500
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP Mid = 2000
+    Project IGIP High = 1500
+then
+    validation result is False
+```
+

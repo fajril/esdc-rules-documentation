@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.1.0] - 2026-05-10
+
+### Added
+
+- **RE0059–RE0064**: Added project-level in-place ordering rules to RE0 - Volumetric:
+  - RE0059: Project IOIP P90 — if P90 equals zero, then P50 and P10 must equal zero.
+  - RE0060: Project IOIP P90 — if P90 greater than zero, then P90 must be less than or equal to P50.
+  - RE0061: Project IOIP P50 — if P90 greater than zero, then P50 must be less than or equal to P10.
+  - RE0062: Project IGIP P90 — if P90 equals zero, then P50 and P10 must equal zero.
+  - RE0063: Project IGIP P90 — if P90 greater than zero, then P90 must be less than or equal to P50.
+  - RE0064: Project IGIP P50 — if P90 greater than zero, then P50 must be less than or equal to P10.
+
 ## [1.0.1] - 2026-05-08
 
 ### Changed
