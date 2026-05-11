@@ -15,10 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - RE0060: Project IOIP P10 — must equal zero when P90 equals zero.
   - RE0061: Project IGIP P50 — must equal zero when P90 equals zero.
   - RE0062: Project IGIP P10 — must equal zero when P90 equals zero.
-  - RE0063: Project IOIP P90 — must be less than or equal to P50 when greater than zero.
-  - RE0064: Project IOIP P50 — must be less than or equal to P10 when P90 greater than zero.
-  - RE0065: Project IGIP P90 — must be less than or equal to P50 when greater than zero.
-  - RE0066: Project IGIP P50 — must be less than or equal to P10 when P90 greater than zero.
+  - RE0063: Project IOIP P90 — must be less than or equal to P50.
+  - RE0064: Project IOIP P50 — must be less than or equal to P10.
+  - RE0065: Project IGIP P90 — must be less than or equal to P50.
+  - RE0066: Project IGIP P50 — must be less than or equal to P10.
 - **References.md**: Added naming convention for field-level vs project-level symbols and rule title qualifiers.
 
 ### Changed
@@ -107,6 +107,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `uc` = **Unaccounted Changes** to syntax reference table.
 - Added 4 `uc` discrepancy symbols to Symbol Reference.
 - Fixed pre-existing typo: row for $\Delta D_{G^a}$ under Well Intervention incorrectly used `gtr` superscript → corrected to `wi`.
+
+#### RE0 - Volumetric
+- **RE0063–RE0066**: Simplified formulas by removing redundant `P90 > 0` implication condition. RE0059–RE0062 already cover the P90=0 case (P50=P10=0), so RE0063–RE0066 only need to enforce the ordering unconditionally. Titles updated accordingly.
 
 #### RE5 - Maturity Level
 - **RE5056–RE5064, RE5066, RE5067**: Added `al` pass/fail examples to 11 rules that previously had none (11 rules, 22 example blocks).

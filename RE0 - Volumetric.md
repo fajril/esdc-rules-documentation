@@ -1817,7 +1817,7 @@ then
     validation result is False
 ```
 
-### RE0063 - Project IOIP P90: Must be less than or equal to P50 when greater than zero
+### RE0063 - Project IOIP P90: Must be less than or equal to P50
 
 Severity:  `strict` :no_entry:
 
@@ -1825,7 +1825,7 @@ Notes: _Added on 10 May 2026_
 
 The following equation must be true:
 
-$$N_{\text{prj}}^{\text{P90}} > 0 \implies N_{\text{prj}}^{\text{P90}} \leq N_{\text{prj}}^{\text{P50}}$$
+$$N_{\text{prj}}^{\text{P90}} \leq N_{\text{prj}}^{\text{P50}}$$
 
 The following example should pass:
 
@@ -1847,7 +1847,7 @@ then
     validation result is False
 ```
 
-### RE0064 - Project IOIP P50: Must be less than or equal to P10 when P90 greater than zero
+### RE0064 - Project IOIP P50: Must be less than or equal to P10
 
 Severity:  `strict` :no_entry:
 
@@ -1855,7 +1855,7 @@ Notes: _Added on 10 May 2026_
 
 The following equation must be true:
 
-$$N_{\text{prj}}^{\text{P90}} > 0 \implies N_{\text{prj}}^{\text{P50}} \leq N_{\text{prj}}^{\text{P10}}$$
+$$N_{\text{prj}}^{\text{P50}} \leq N_{\text{prj}}^{\text{P10}}$$
 
 The following example should pass:
 
@@ -1877,7 +1877,7 @@ then
     validation result is False
 ```
 
-### RE0065 - Project IGIP P90: Must be less than or equal to P50 when greater than zero
+### RE0065 - Project IGIP P90: Must be less than or equal to P50
 
 Severity:  `strict` :no_entry:
 
@@ -1885,7 +1885,7 @@ Notes: _Added on 10 May 2026_
 
 The following equation must be true:
 
-$$G_{\text{prj}}^{\text{P90}} > 0 \implies G_{\text{prj}}^{\text{P90}} \leq G_{\text{prj}}^{\text{P50}}$$
+$$G_{\text{prj}}^{\text{P90}} \leq G_{\text{prj}}^{\text{P50}}$$
 
 The following example should pass:
 
@@ -1907,7 +1907,7 @@ then
     validation result is False
 ```
 
-### RE0066 - Project IGIP P50: Must be less than or equal to P10 when P90 greater than zero
+### RE0066 - Project IGIP P50: Must be less than or equal to P10
 
 Severity:  `strict` :no_entry:
 
@@ -1915,7 +1915,7 @@ Notes: _Added on 10 May 2026_
 
 The following equation must be true:
 
-$$G_{\text{prj}}^{\text{P90}} > 0 \implies G_{\text{prj}}^{\text{P50}} \leq G_{\text{prj}}^{\text{P10}}$$
+$$G_{\text{prj}}^{\text{P50}} \leq G_{\text{prj}}^{\text{P10}}$$
 
 The following example should pass:
 
