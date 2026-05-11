@@ -220,6 +220,10 @@ The following pattern rules define how formula symbols map to database column na
 - $\sum_{i=1}^{n}$ = sum across projects within the same field
 - Default scope: project-level data aggregated by field when comparing against field-level in-place values
 
+**Naming convention:**
+- Symbols without subscript `prj` (e.g., $N^{\text{P90}}$, $G^{\text{P50}}$) refer to **field-level** values. In rule titles, "IOIP" or "IGIP" without the "Project" qualifier denotes field-level.
+- Symbols with subscript `prj` (e.g., $N_{\text{prj}}^{\text{P90}}$, $G_{\text{prj}}^{\text{P50}}$) refer to **project-level** values. In rule titles, "Project IOIP" or "Project IGIP" denotes project-level.
+
 ## Rules Definition
 
 | Rules Code | Description             |

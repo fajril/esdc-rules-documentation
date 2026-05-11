@@ -10,13 +10,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- **RE0059–RE0064**: Added project-level in-place ordering rules to RE0 - Volumetric:
-  - RE0059: Project IOIP P90 — if P90 equals zero, then P50 and P10 must equal zero.
-  - RE0060: Project IOIP P90 — if P90 greater than zero, then P90 must be less than or equal to P50.
-  - RE0061: Project IOIP P50 — if P90 greater than zero, then P50 must be less than or equal to P10.
-  - RE0062: Project IGIP P90 — if P90 equals zero, then P50 and P10 must equal zero.
-  - RE0063: Project IGIP P90 — if P90 greater than zero, then P90 must be less than or equal to P50.
-  - RE0064: Project IGIP P50 — if P90 greater than zero, then P50 must be less than or equal to P10.
+- **RE0059–RE0066**: Added project-level in-place ordering rules to RE0 - Volumetric:
+  - RE0059: Project IOIP P50 — must equal zero when P90 equals zero.
+  - RE0060: Project IOIP P10 — must equal zero when P90 equals zero.
+  - RE0061: Project IGIP P50 — must equal zero when P90 equals zero.
+  - RE0062: Project IGIP P10 — must equal zero when P90 equals zero.
+  - RE0063: Project IOIP P90 — must be less than or equal to P50 when greater than zero.
+  - RE0064: Project IOIP P50 — must be less than or equal to P10 when P90 greater than zero.
+  - RE0065: Project IGIP P90 — must be less than or equal to P50 when greater than zero.
+  - RE0066: Project IGIP P50 — must be less than or equal to P10 when P90 greater than zero.
+- **References.md**: Added naming convention for field-level vs project-level symbols and rule title qualifiers.
+
+### Changed
+
+- **RE0054**: Changed title from "Project IOIP Middle" to "Project IOIP P50".
+- **RE0057**: Changed title from "Project IGIP Middle" to "Project IGIP P50".
 
 ## [1.0.1] - 2026-05-08
 

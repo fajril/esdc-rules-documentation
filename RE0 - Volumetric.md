@@ -1534,7 +1534,7 @@ then
     validation result is False
 ```
 
-### RE0054 - Project IOIP Middle: if P50 greater than zero then IOIP Middle Value must be greater than sum of Gross Cumulative Production and 2P Reserves
+### RE0054 - Project IOIP P50: if P50 greater than zero then IOIP P50 Value must be greater than sum of Gross Cumulative Production and 2P Reserves
 
 Severity: `strict` :no_entry:
 
@@ -1631,7 +1631,7 @@ then
     validation result is False
 ```
 
-### RE0057 - Project IGIP Middle: if P50 greater than zero then IGIP Middle Value must be greater than sum of Gross Cumulative Production and 2P Reserves
+### RE0057 - Project IGIP P50: if P50 greater than zero then IGIP P50 Value must be greater than sum of Gross Cumulative Production and 2P Reserves
 
 Severity: `strict` :no_entry:
 
@@ -1697,7 +1697,7 @@ then
     validation result is False
 ```
 
-### RE0059 - Project IOIP P90: If P90 equals zero, then P50 and P10 must equal zero
+### RE0059 - Project IOIP P50: Must equal zero when P90 equals zero
 
 Severity:  `strict` :no_entry:
 
@@ -1705,7 +1705,7 @@ Notes: _Added on 10 May 2026_
 
 The following equation must be true:
 
-$$N_{\text{prj}}^{\text{P90}} = 0 \implies N_{\text{prj}}^{\text{P50}} = 0 \land N_{\text{prj}}^{\text{P10}} = 0$$
+$$N_{\text{prj}}^{\text{P90}} = 0 \implies N_{\text{prj}}^{\text{P50}} = 0$$
 
 The following example should pass:
 
@@ -1713,7 +1713,6 @@ The following example should pass:
 if
     Project IOIP Low = 0
     Project IOIP Mid = 0
-    Project IOIP High = 0
 then
     validation result is True
 ```
@@ -1724,12 +1723,101 @@ The following example should fail:
 if
     Project IOIP Low = 0
     Project IOIP Mid = 500
+then
+    validation result is False
+```
+
+### RE0060 - Project IOIP P10: Must equal zero when P90 equals zero
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$N_{\text{prj}}^{\text{P90}} = 0 \implies N_{\text{prj}}^{\text{P10}} = 0$$
+
+The following example should pass:
+
+``` al
+if
+    Project IOIP Low = 0
+    Project IOIP High = 0
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IOIP Low = 0
     Project IOIP High = 1000
 then
     validation result is False
 ```
 
-### RE0060 - Project IOIP P90: If P90 greater than zero, then P90 must be less than or equal to P50
+### RE0061 - Project IGIP P50: Must equal zero when P90 equals zero
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$G_{\text{prj}}^{\text{P90}} = 0 \implies G_{\text{prj}}^{\text{P50}} = 0$$
+
+The following example should pass:
+
+``` al
+if
+    Project IGIP Low = 0
+    Project IGIP Mid = 0
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP Low = 0
+    Project IGIP Mid = 500
+then
+    validation result is False
+```
+
+### RE0062 - Project IGIP P10: Must equal zero when P90 equals zero
+
+Severity:  `strict` :no_entry:
+
+Notes: _Added on 10 May 2026_
+
+The following equation must be true:
+
+$$G_{\text{prj}}^{\text{P90}} = 0 \implies G_{\text{prj}}^{\text{P10}} = 0$$
+
+The following example should pass:
+
+``` al
+if
+    Project IGIP Low = 0
+    Project IGIP High = 0
+then
+    validation result is True
+```
+
+The following example should fail:
+
+``` al
+if
+    Project IGIP Low = 0
+    Project IGIP High = 1000
+then
+    validation result is False
+```
+
+### RE0063 - Project IOIP P90: Must be less than or equal to P50 when greater than zero
 
 Severity:  `strict` :no_entry:
 
@@ -1759,7 +1847,7 @@ then
     validation result is False
 ```
 
-### RE0061 - Project IOIP P50: If P90 greater than zero, then P50 must be less than or equal to P10
+### RE0064 - Project IOIP P50: Must be less than or equal to P10 when P90 greater than zero
 
 Severity:  `strict` :no_entry:
 
@@ -1789,39 +1877,7 @@ then
     validation result is False
 ```
 
-### RE0062 - Project IGIP P90: If P90 equals zero, then P50 and P10 must equal zero
-
-Severity:  `strict` :no_entry:
-
-Notes: _Added on 10 May 2026_
-
-The following equation must be true:
-
-$$G_{\text{prj}}^{\text{P90}} = 0 \implies G_{\text{prj}}^{\text{P50}} = 0 \land G_{\text{prj}}^{\text{P10}} = 0$$
-
-The following example should pass:
-
-``` al
-if
-    Project IGIP Low = 0
-    Project IGIP Mid = 0
-    Project IGIP High = 0
-then
-    validation result is True
-```
-
-The following example should fail:
-
-``` al
-if
-    Project IGIP Low = 0
-    Project IGIP Mid = 500
-    Project IGIP High = 1000
-then
-    validation result is False
-```
-
-### RE0063 - Project IGIP P90: If P90 greater than zero, then P90 must be less than or equal to P50
+### RE0065 - Project IGIP P90: Must be less than or equal to P50 when greater than zero
 
 Severity:  `strict` :no_entry:
 
@@ -1851,7 +1907,7 @@ then
     validation result is False
 ```
 
-### RE0064 - Project IGIP P50: If P90 greater than zero, then P50 must be less than or equal to P10
+### RE0066 - Project IGIP P50: Must be less than or equal to P10 when P90 greater than zero
 
 Severity:  `strict` :no_entry:
 
