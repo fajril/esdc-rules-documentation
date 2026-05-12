@@ -26,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **RE0054**: Changed title from "Project IOIP Middle" to "Project IOIP P50".
 - **RE0057**: Changed title from "Project IGIP Middle" to "Project IGIP P50".
 
+### Fixed
+
+- **RE5013**: Corrected title and formula from "If and only if" to "If", and `\iff` to `\implies`. The rule was incorrectly changed to a biconditional in commit `5ccabec` (April 2025) by Lukman. Removed the second fail example (Groovy=False, M=E4) which was only a failure under the erroneous iff interpretation — under implication, the antecedent is false so the rule does not apply.
+
 ## [1.0.1] - 2026-05-08
 
 ### Changed
