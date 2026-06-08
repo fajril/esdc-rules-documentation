@@ -3123,13 +3123,13 @@ then
     validation result is False
 ```
 
-### RE5067 - Project Level: Onstream actual must be less than reporting year
+### RE5067 - Project Level: Onstream actual must be less than or equal to reporting year
 
 Severity:  `strict` :no_entry:
 
 The following equation must be true:
 $$
-t_{ons} < t_R 
+t_{ons} \leq t_R 
 $$
 
 The following example should pass:
@@ -3147,7 +3147,7 @@ The following example should fail:
 
 ``` al
 if
-    onstream actual = 2025
+    onstream actual = 2026
     reporting year = 2025
 
 then
