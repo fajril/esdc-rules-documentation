@@ -3134,13 +3134,13 @@ $$
 import esdc
 ```
 
-### RE5067 - Project Level: Onstream actual must be lower than reporting year
+### RE5067 - Project Level: Onstream actual must be lower or equal than reporting year
 
 Severity:  `strict` :no_entry:
 
 The following equation must be true:
 $$
-t_{act} < t_R 
+t_{act} \leq t_{R} 
 $$
 ```python
 import esdc
