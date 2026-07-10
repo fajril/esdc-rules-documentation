@@ -336,14 +336,15 @@ $$
 0 < P_{g,m} \leq 1
 $$
 
-### RE6034 - Gas Oil Contact (GOC): Depth of Gas Oil Contact must be higher than Oil Water Contact (OWC)
+### RE6034 - Gas Oil Contact (GOC): If the project level within  E0 - X4 range then the Depth of Gas Oil Contact (GOC) must be higher than or equal to Oil Water Contact (OWC)
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
 $$
- OWC < GOC   
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R} \in M_s\implies OWC \leq GOC   
 $$
 
 
@@ -374,10 +375,11 @@ Severity: `Strict` :no_entry:
 The following rule must be true:
 
 $$
-p_{res,ab} < p_{res,i}
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \implies p_{res,ab} < p_{res,i}
 $$
 
-### RE6038 - Oil Saturation: Critical Oil Saturation must be greater than residual oil saturation
+### RE6038 - Oil Saturation: Critical Oil Saturation must be greater than or equal to residual oil saturation
 
 Severity: `Strict` :no_entry:
 
@@ -385,60 +387,65 @@ The following rule must be true:
 
 
 $$
-S_{wr} < S_{w,cr}
+S_{wr} \leq S_{w,cr}
 $$
 
-### RE6039 - Pressure Gradient: Water Pressure Gradient must be greater than Oil Pressure Gradient
+### RE6039 - Pressure Gradient: If the project level within  E0 - X4 range then Water Pressure Gradient must be greater than Oil Pressure Gradient
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
 
-$$\left(\frac{dp}{dL}\right)_{o} < \left(\frac{dp}{dL}\right)_{w}  $$
+$$M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \implies \left(\frac{dp}{dL}\right)_{o} < \left(\frac{dp}{dL}\right)_{w}  $$
 
 
 
-### RE6040 - Pressure Gradient: Oil Pressure Gradient must be greater than Gas Pressure Gradient
-
-Severity: `Strict` :no_entry:
-
-The following rule must be true:
-
-$$\left(\frac{dp}{dL}\right)_{g} < \left(\frac{dp}{dL}\right)_o$$
-
-
-### RE6041 - Gas to Oil Ratio (Rs): Rs should be filled if the reservoir contains Oil
+### RE6040 - Pressure Gradient: If the project level within  E0 - X4 range then Oil Pressure Gradient must be greater than Gas Pressure Gradient
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$
-N > 0 \implies R_{s} \neq \varnothing    
-$$
+$$M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \implies \left(\frac{dp}{dL}\right)_{g} < \left(\frac{dp}{dL}\right)_o$$
 
-### RE6042 - Specific Gravity: Oil Specific Gravity must be within the range 0 to 1
+
+### RE6041 - Gas to Oil Ratio (Rs): If the project level within  E0 - X4 range then Rs should be filled if the reservoir contains Oil
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
 $$
-0 < \gamma_{o} < 1   
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \text{ and } N > 0 \implies R_{s} \neq \varnothing    
 $$
 
-### RE6043 - Specific Gravity: Oil specific gravity must filled if the reservoir contain Oil or Condensate
+### RE6042 - Specific Gravity: If the project level within  E0 - X4 range then Oil Specific Gravity must be within the range 0 to 1
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
 $$
-N > 0 \implies \gamma_{o} \neq \varnothing    
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \implies 0 < \gamma_{o} < 1   
 $$
 
-### RE6044 - Viscocity: Oil Viscocity (at Initial and Bubble Point) must be within the range 0.1 cP to 100 cP
+### RE6043 - Specific Gravity: If the project level within  E0 - X4 range then Oil specific gravity must filled if the reservoir contain Oil or Condensate
+
+Severity: `Strict` :no_entry:
+
+The following rule must be true:
+
+$$
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \text{ and } N > 0 \implies \gamma_{o} \neq \varnothing    
+$$
+
+### RE6044 - Viscocity: If the project level within  E0 - X4 range then Oil Viscocity (at Initial and Bubble Point) must be within the range 0.1 cP to 100 cP
 
 Severity: `Warning` :warning:
 
@@ -447,46 +454,51 @@ According to Tarek Ahmed book (Equations of State and PVT Analysis): The viscosi
 The following rule should be true:
 
 $$
-0.01 < \mu_o < 100
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \implies 0.01 < \mu_o < 100
 $$
 
-### RE6045 - Viscocity: Oil Viscocity (at Initial and Bubble Point) must be empty if the reservoir does not contain Oil or Condensate
+### RE6045 - Viscocity: If the project level within  E0 - X4 range then Oil Viscocity (at Initial and Bubble Point) must be empty if the reservoir does not contain Oil or Condensate
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
 $$
-N = 0 \implies (\mu_{oi} \neq \varnothing \text{ and } \mu_{ob} \neq \varnothing)
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \text{ and } N = 0 \implies (\mu_{oi} \neq \varnothing \text{ and } \mu_{ob} \neq \varnothing)
 $$
 
-### RE6046 - Viscocity: Oil Viscocity at Initial must be greater than Oil Viscocity at Bubble Point 
+### RE6046 - Viscocity: If the project level within  E0 - X4 range then Oil Viscocity at Initial must be greater than Oil Viscocity at Bubble Point 
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
 $$
-\mu_{ob} < \mu_{oi}
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \implies \mu_{ob} < \mu_{oi}
 $$
 
-### RE6047 - Gas Deviation Factor (Z): Gas Deviation Factor (at Initial and Abandonment) must be filled if IGIP is more than zero
+### RE6047 - Gas Deviation Factor (Z): If the project level within  E0 - X4 range then the Gas Deviation Factor (at Initial and Abandonment) must be filled if IGIP is more than zero
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
 $$
-G > 0 \implies (Z_{i} \neq \varnothing \text{ and } Z_{ab} \neq \varnothing)
+M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \text{ and }G > 0 \implies (Z_{i} \neq \varnothing \text{ and } Z_{ab} \neq \varnothing)
 $$
 
-### RE6048 - P/Z (Pressure over Gas Deviation Factor) at Initial must be greater than P/Z at abandonment
+### RE6048 - If the project level within  E0 - X4 range then P/Z (Pressure over Gas Deviation Factor) at Initial must be greater than P/Z at abandonment if IGIP is more than zero
 
 Severity: `Strict` :no_entry:
 
 The following rule must be true:
 
-$$\left(\frac{p}{Z}\right)_{ab} < \left(\frac{p}{Z}\right)_{i}$$
+$$M_s = \lbrace E_0,..., E_7, X_0,...,X_4  \rbrace\\ 
+M_{t_R}\in M_s \text{ and }G > 0 \implies \left(\frac{p}{Z}\right)_{ab} < \left(\frac{p}{Z}\right)_{i}$$
 
 
 ### RE6049 - Composition: Sum of Composition fraction must be one

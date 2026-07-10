@@ -3142,7 +3142,7 @@ Severity:  `strict` :no_entry:
 
 The following equation must be true:
 $$
-t_{ons} < t_R 
+t_{ons} \leq t_R 
 $$
 
 The following example should pass:
